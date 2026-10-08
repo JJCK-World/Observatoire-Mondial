@@ -1,0 +1,1854 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Le monde sous tension — Observatoire Mondial</title>
+
+  <meta
+    name="description"
+    content="France, énergie, Ukraine et rivalité économique au cœur de l’actualité du 8 octobre 2026."
+  >
+
+  <meta name="author" content="Observatoire Mondial">
+  <meta name="robots" content="index, follow">
+
+  <link rel="stylesheet" href="../../../../../assets/css/style.css">
+
+  <style>
+    /* =========================================================
+       OBSERVATOIRE MONDIAL
+       ARTICLE 01 — 08 OCTOBRE 2026
+       Mise en page autonome de l'article
+       ========================================================= */
+
+    :root {
+      --om-black: #05070b;
+      --om-dark: #090d14;
+      --om-panel: #0d131d;
+      --om-panel-2: #111923;
+      --om-border: rgba(255,255,255,0.10);
+      --om-white: #f5f7fa;
+      --om-muted: #aeb8c5;
+      --om-blue: #1683ff;
+      --om-cyan: #42c8ff;
+      --om-gold: #d99a18;
+      --om-gold-light: #ffd45a;
+
+      --confirmed: #35d07f;
+      --declared: #4aa3ff;
+      --analysis: #ffad32;
+      --hypothesis: #aeb8c5;
+      --unconfirmed: #ff4f64;
+
+      --max-width: 1120px;
+      --reading-width: 780px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(
+          circle at 50% -10%,
+          rgba(22, 131, 255, 0.13),
+          transparent 38%
+        ),
+        var(--om-black);
+      color: var(--om-white);
+      font-family:
+        Inter,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--om-cyan);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* =========================================================
+       HEADER
+       ========================================================= */
+
+    .article-site-header {
+      border-bottom: 1px solid var(--om-border);
+      background: rgba(5, 7, 11, 0.92);
+      backdrop-filter: blur(14px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .header-inner {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: auto;
+      min-height: 72px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand-name {
+      color: var(--om-white);
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+    }
+
+    .brand-slogan {
+      color: var(--om-muted);
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      margin-top: 6px;
+    }
+
+    .article-number {
+      color: var(--om-gold-light);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* =========================================================
+       PAGE
+       ========================================================= */
+
+    .article-page {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 58px 0 90px;
+    }
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .article-hero {
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .article-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      color: var(--om-gold-light);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .article-kicker::before,
+    .article-kicker::after {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: var(--om-gold);
+    }
+
+    .article-title {
+      margin: 0;
+      font-size: clamp(2.4rem, 6vw, 5.3rem);
+      line-height: 1.03;
+      letter-spacing: -0.045em;
+      font-weight: 850;
+    }
+
+    .article-title span {
+      display: block;
+      color: var(--om-cyan);
+    }
+
+    .article-meta {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 9px 18px;
+
+      color: var(--om-muted);
+      font-size: 0.82rem;
+    }
+
+    .article-meta strong {
+      color: var(--om-white);
+    }
+
+    /* =========================================================
+       CHAPÔ
+       ========================================================= */
+
+    .article-lead {
+      max-width: var(--reading-width);
+      margin: 44px auto 0;
+
+      font-size: 1.18rem;
+      line-height: 1.8;
+      color: #dfe5ec;
+    }
+
+    .article-lead strong {
+      color: var(--om-white);
+    }
+
+    /* =========================================================
+       FEATURE VISUAL
+       ========================================================= */
+
+    .article-visual {
+      width: 100%;
+      min-height: 280px;
+      margin: 54px auto 48px;
+
+      border: 1px solid var(--om-border);
+      border-radius: 24px;
+
+      background:
+        radial-gradient(
+          circle at 50% 40%,
+          rgba(22, 131, 255, 0.20),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #080d15,
+          #101b29 50%,
+          #080b10
+        );
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    .article-visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent 49.8%,
+          rgba(66, 200, 255, 0.12) 50%,
+          transparent 50.2%
+        ),
+        linear-gradient(
+          transparent 49.8%,
+          rgba(66, 200, 255, 0.12) 50%,
+          transparent 50.2%
+        );
+
+      background-size: 70px 70px;
+      opacity: 0.35;
+    }
+
+    .visual-content {
+      position: relative;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .visual-content strong {
+      display: block;
+      font-size: clamp(1.2rem, 3vw, 2rem);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .visual-content small {
+      display: block;
+      color: var(--om-muted);
+      margin-top: 10px;
+    }
+
+    .visual-disclaimer {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: calc(100% - 30px);
+
+      text-align: center;
+      color: #d2d8df;
+      font-size: 0.68rem;
+      letter-spacing: 0.02em;
+    }
+
+    /* =========================================================
+       À RETENIR
+       ========================================================= */
+
+    .key-points {
+      margin: 0 auto 64px;
+      max-width: 940px;
+    }
+
+    .section-label {
+      margin-bottom: 20px;
+
+      color: var(--om-gold-light);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .key-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .key-card {
+      min-height: 145px;
+      padding: 20px;
+
+      border: 1px solid var(--om-border);
+      border-radius: 16px;
+
+      background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.045),
+        rgba(255,255,255,0.015)
+      );
+    }
+
+    .key-card .icon {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+    }
+
+    .key-card strong {
+      display: block;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      margin-bottom: 7px;
+    }
+
+    .key-card span {
+      color: var(--om-muted);
+      font-size: 0.78rem;
+      line-height: 1.45;
+    }
+
+    /* =========================================================
+       ARTICLE BODY
+       ========================================================= */
+
+    .article-body {
+      max-width: var(--reading-width);
+      margin: 0 auto;
+    }
+
+    .article-section {
+      margin-top: 74px;
+      scroll-margin-top: 100px;
+    }
+
+    .section-number {
+      color: var(--om-blue);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+    }
+
+    .article-section h2 {
+      margin: 7px 0 28px;
+
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+    }
+
+    .article-section h3 {
+      margin: 36px 0 14px;
+
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .article-section p {
+      margin: 0 0 21px;
+      color: #d9dfe7;
+      font-size: 1rem;
+    }
+
+    .article-section strong {
+      color: var(--om-white);
+    }
+
+    /* =========================================================
+       CERTAINTY LABELS
+       ========================================================= */
+
+    .certainty {
+      display: inline-flex;
+      align-items: center;
+
+      margin: 4px 0 20px;
+      padding: 7px 11px;
+
+      border-radius: 999px;
+
+      font-size: 0.68rem;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+    }
+
+    .confirmed {
+      color: var(--confirmed);
+      background: rgba(53, 208, 127, 0.09);
+      border: 1px solid rgba(53, 208, 127, 0.25);
+    }
+
+    .declared {
+      color: var(--declared);
+      background: rgba(74, 163, 255, 0.09);
+      border: 1px solid rgba(74, 163, 255, 0.25);
+    }
+
+    .analysis {
+      color: var(--analysis);
+      background: rgba(255, 173, 50, 0.09);
+      border: 1px solid rgba(255, 173, 50, 0.25);
+    }
+
+    .hypothesis {
+      color: var(--hypothesis);
+      background: rgba(174, 184, 197, 0.08);
+      border: 1px solid rgba(174, 184, 197, 0.22);
+    }
+
+    /* =========================================================
+       ANALYSIS BOX
+       ========================================================= */
+
+    .analysis-box {
+      margin: 30px 0;
+      padding: 25px 26px;
+
+      border-left: 3px solid var(--om-gold);
+      border-top: 1px solid var(--om-border);
+      border-right: 1px solid var(--om-border);
+      border-bottom: 1px solid var(--om-border);
+
+      border-radius: 0 15px 15px 0;
+
+      background:
+        linear-gradient(
+          100deg,
+          rgba(217, 154, 24, 0.075),
+          rgba(255,255,255,0.015)
+        );
+    }
+
+    .analysis-box strong {
+      display: block;
+      margin-bottom: 8px;
+
+      color: var(--om-gold-light);
+      font-size: 0.76rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    /* =========================================================
+       LISTES
+       ========================================================= */
+
+    .article-section ul {
+      margin: 20px 0 28px;
+      padding-left: 23px;
+    }
+
+    .article-section li {
+      margin-bottom: 8px;
+      color: #d9dfe7;
+    }
+
+    /* =========================================================
+       CITATION / SOURCE INLINE
+       ========================================================= */
+
+    .source-note {
+      margin: 24px 0;
+
+      padding: 14px 17px;
+
+      border: 1px solid var(--om-border);
+      border-radius: 12px;
+
+      background: rgba(255,255,255,0.025);
+
+      color: var(--om-muted);
+      font-size: 0.82rem;
+      line-height: 1.55;
+    }
+
+    .source-note strong {
+      color: var(--om-white);
+    }
+
+    /* =========================================================
+       RÉUNION
+       ========================================================= */
+
+    .reunion-box {
+      margin-top: 82px;
+      padding: 34px;
+
+      border: 1px solid rgba(217, 154, 24, 0.35);
+      border-radius: 20px;
+
+      background:
+        radial-gradient(
+          circle at 0 0,
+          rgba(217, 154, 24, 0.09),
+          transparent 45%
+        ),
+        rgba(255,255,255,0.025);
+    }
+
+    .reunion-box h2 {
+      margin-top: 7px;
+    }
+
+    /* =========================================================
+       WATCHLIST
+       ========================================================= */
+
+    .watchlist {
+      margin-top: 78px;
+      padding: 32px;
+
+      border: 1px solid var(--om-border);
+      border-radius: 20px;
+
+      background: var(--om-panel);
+    }
+
+    .watch-item {
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      gap: 15px;
+
+      padding: 17px 0;
+      border-bottom: 1px solid var(--om-border);
+    }
+
+    .watch-item:last-child {
+      border-bottom: 0;
+    }
+
+    .watch-number {
+      width: 36px;
+      height: 36px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      color: var(--om-cyan);
+      border: 1px solid rgba(66, 200, 255, 0.3);
+
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+
+    .watch-item strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .watch-item span {
+      color: var(--om-muted);
+      font-size: 0.86rem;
+    }
+
+    /* =========================================================
+       CONCLUSION
+       ========================================================= */
+
+    .conclusion {
+      margin-top: 82px;
+      padding: 38px 32px;
+
+      border-top: 1px solid var(--om-gold);
+      border-bottom: 1px solid var(--om-border);
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(217, 154, 24, 0.055),
+          transparent
+        );
+    }
+
+    .conclusion h2 {
+      margin-top: 8px;
+    }
+
+    .conclusion .emphasis {
+      margin: 30px 0;
+
+      font-size: clamp(1.15rem, 3vw, 1.55rem);
+      line-height: 1.55;
+      font-weight: 750;
+      color: var(--om-white);
+    }
+
+    /* =========================================================
+       TRANSPARENCE
+       ========================================================= */
+
+    .transparency {
+      margin-top: 70px;
+      padding: 28px;
+
+      border: 1px solid var(--om-border);
+      border-radius: 17px;
+
+      background: var(--om-panel);
+    }
+
+    .transparency h2 {
+      margin: 7px 0 18px;
+      font-size: 1.2rem;
+    }
+
+    .transparency p {
+      color: var(--om-muted);
+      font-size: 0.88rem;
+      line-height: 1.65;
+    }
+
+    .error-note {
+      color: var(--om-white) !important;
+      font-weight: 700;
+    }
+
+    /* =========================================================
+       SOURCES
+       ========================================================= */
+
+    .sources {
+      margin-top: 45px;
+    }
+
+    .sources h2 {
+      font-size: 1.15rem;
+      margin-bottom: 16px;
+    }
+
+    .sources ul {
+      padding-left: 20px;
+    }
+
+    .sources li {
+      color: var(--om-muted);
+      font-size: 0.86rem;
+      margin-bottom: 9px;
+    }
+
+    /* =========================================================
+       NAVIGATION
+       ========================================================= */
+
+    .article-navigation {
+      max-width: var(--reading-width);
+      margin: 65px auto 0;
+
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .article-navigation a {
+      display: block;
+
+      padding: 13px 17px;
+
+      border: 1px solid var(--om-border);
+      border-radius: 10px;
+
+      color: var(--om-white);
+      background: rgba(255,255,255,0.025);
+
+      font-size: 0.82rem;
+    }
+
+    .article-navigation a:hover {
+      border-color: rgba(66, 200, 255, 0.45);
+      text-decoration: none;
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    .article-footer {
+      margin-top: 80px;
+      padding-top: 28px;
+
+      border-top: 1px solid var(--om-border);
+
+      text-align: center;
+    }
+
+    .footer-brand {
+      color: var(--om-white);
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+    }
+
+    .footer-slogan {
+      margin-top: 8px;
+      color: var(--om-muted);
+      font-size: 0.75rem;
+    }
+
+    .footer-signature {
+      margin-top: 18px;
+      color: var(--om-gold-light);
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+    }
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .key-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .key-card:last-child {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .header-inner {
+        width: min(100% - 26px, var(--max-width));
+        min-height: 64px;
+      }
+
+      .brand-slogan {
+        display: none;
+      }
+
+      .article-number {
+        font-size: 0.64rem;
+      }
+
+      .article-page {
+        width: min(100% - 26px, var(--max-width));
+        padding-top: 38px;
+      }
+
+      .article-title {
+        font-size: clamp(2.2rem, 12vw, 3.5rem);
+      }
+
+      .article-lead {
+        font-size: 1.02rem;
+        line-height: 1.7;
+      }
+
+      .article-visual {
+        min-height: 220px;
+        border-radius: 17px;
+      }
+
+      .key-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .key-card:last-child {
+        grid-column: auto;
+      }
+
+      .article-section {
+        margin-top: 58px;
+      }
+
+      .reunion-box,
+      .watchlist,
+      .conclusion,
+      .transparency {
+        padding: 23px;
+      }
+
+      .article-navigation {
+        flex-direction: column;
+      }
+
+      .article-navigation a {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =======================================================
+       EN-TÊTE
+       ======================================================= -->
+
+  <header class="article-site-header">
+    <div class="header-inner">
+
+      <a class="brand" href="../../../../../index.html">
+        <span class="brand-name">OBSERVATOIRE MONDIAL</span>
+        <span class="brand-slogan">
+          Observer le monde. Comprendre les enjeux. Anticiper les transformations.
+        </span>
+      </a>
+
+      <span class="article-number">
+        Article 01 · 08.10.2026
+      </span>
+
+    </div>
+  </header>
+
+
+  <main class="article-page">
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <header class="article-hero">
+
+      <div class="article-kicker">
+        Actualités internationales
+      </div>
+
+      <h1 class="article-title">
+        LE MONDE SOUS TENSION
+        <span>France, énergie, Ukraine et rivalité économique</span>
+      </h1>
+
+      <div class="article-meta">
+        <span><strong>Article 01</strong></span>
+        <span>8 octobre 2026</span>
+        <span>Géopolitique</span>
+        <span>Économie</span>
+        <span>Énergie</span>
+      </div>
+
+      <p class="article-lead">
+        Le 8 octobre 2026, plusieurs crises montrent à quel point les dimensions
+        politiques, militaires, énergétiques et économiques du monde sont désormais
+        étroitement liées.
+      </p>
+
+      <p class="article-lead">
+        En France, la mobilisation lycéenne se poursuit tandis que le gouvernement
+        tente d’ouvrir un dialogue. Sur le marché de l’énergie, Paris mobilise une
+        partie de ses réserves stratégiques de diesel. Au Moyen-Orient, les
+        perturbations du trafic maritime dans le détroit d’Ormuz continuent de peser
+        sur les marchés pétroliers. En Ukraine, une nouvelle vague de frappes a fait
+        de nombreuses victimes selon les autorités ukrainiennes. Parallèlement,
+        l’Union européenne cherche à rééquilibrer sa relation commerciale avec la Chine.
+      </p>
+
+      <p class="article-lead">
+        <strong>
+          Une même question apparaît derrière ces événements :
+          quelle capacité les États ont-ils à absorber plusieurs chocs simultanément ?
+        </strong>
+      </p>
+
+    </header>
+
+
+    <!-- =====================================================
+         VISUEL
+         ===================================================== -->
+
+    <section class="article-visual" aria-label="Illustration de l'article">
+
+      <div class="visual-content">
+        <strong>MONDE SOUS TENSION</strong>
+        <small>France · Énergie · Ukraine · Commerce mondial</small>
+      </div>
+
+      <div class="visual-disclaimer">
+        Illustration — ne représente pas la situation en temps réel.
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         À RETENIR
+         ===================================================== -->
+
+    <section class="key-points">
+
+      <div class="section-label">
+        À retenir
+      </div>
+
+      <div class="key-grid">
+
+        <article class="key-card">
+          <div class="icon">🇫🇷</div>
+          <strong>FRANCE</strong>
+          <span>
+            La mobilisation lycéenne reste un dossier politique et social majeur.
+          </span>
+        </article>
+
+        <article class="key-card">
+          <div class="icon">⛽</div>
+          <strong>ÉNERGIE</strong>
+          <span>
+            10 millions de barils de diesel doivent être mis sur le marché.
+          </span>
+        </article>
+
+        <article class="key-card">
+          <div class="icon">🚢</div>
+          <strong>ORMUZ</strong>
+          <span>
+            Le trafic maritime dans le détroit a fortement diminué.
+          </span>
+        </article>
+
+        <article class="key-card">
+          <div class="icon">🇺🇦</div>
+          <strong>UKRAINE</strong>
+          <span>
+            Une nouvelle vague de frappes a fait de nombreuses victimes.
+          </span>
+        </article>
+
+        <article class="key-card">
+          <div class="icon">🇪🇺</div>
+          <strong>UE–CHINE</strong>
+          <span>
+            Bruxelles cherche à réduire son important déséquilibre commercial.
+          </span>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CORPS DE L'ARTICLE
+         ===================================================== -->
+
+    <article class="article-body">
+
+
+      <!-- ===================================================
+           01
+           =================================================== -->
+
+      <section class="article-section" id="france">
+
+        <div class="section-number">01 — FRANCE</div>
+
+        <h2>
+          La mobilisation lycéenne reste au centre des tensions
+        </h2>
+
+        <h3>
+          Niveau de certitude
+        </h3>
+
+        <div class="certainty confirmed">
+          🟢 CONFIRMÉ
+        </div>
+
+        <p>
+          La mobilisation lycéenne se poursuit en France après plusieurs semaines
+          de manifestations.
+        </p>
+
+        <p>
+          Le gouvernement français a engagé un processus de dialogue avec les
+          lycéens. Le ministère de l’Éducation nationale indique notamment que le
+          ministre Édouard Geffray s’est rendu le 8 octobre au lycée Raymond-Kopa
+          de Reims afin de participer à un « temps lycéen » consacré à l’expression
+          des difficultés et des attentes des élèves.
+        </p>
+
+        <p>
+          Cette démarche intervient alors que le mouvement porte notamment sur les
+          conditions d’enseignement, les infrastructures scolaires, les effectifs
+          et l’organisation de la vie scolaire.
+        </p>
+
+        <h3>
+          Maintien de l’ordre
+        </h3>
+
+        <div class="certainty declared">
+          🔵 DÉCLARÉ
+        </div>
+
+        <p>
+          La situation est également devenue une question de maintien de l’ordre.
+        </p>
+
+        <p>
+          Selon Reuters, le gouvernement a suspendu l’utilisation des grenades
+          assourdissantes dans le cadre de l’encadrement des manifestations
+          lycéennes après qu’un adolescent de 15 ans a perdu une main lors d’un
+          affrontement à Lens.
+        </p>
+
+        <p>
+          Le ministre de l’Intérieur a également indiqué que 18 enquêtes avaient
+          été transmises à l’Inspection générale de la Police nationale.
+        </p>
+
+        <div class="source-note">
+          <strong>Source :</strong>
+          Ministère français de l’Éducation nationale et Reuters.
+          Les circonstances précises des incidents restent soumises aux enquêtes
+          en cours.
+        </div>
+
+        <h3>
+          Analyse
+        </h3>
+
+        <div class="certainty analysis">
+          🟠 ANALYSE
+        </div>
+
+        <p>
+          La question dépasse désormais le seul domaine scolaire.
+        </p>
+
+        <p>
+          Le gouvernement doit simultanément répondre aux revendications
+          éducatives, maintenir l’ordre public et éviter que les affrontements
+          ne provoquent une nouvelle aggravation de la crise.
+        </p>
+
+        <p>
+          La capacité à transformer le dialogue annoncé en mesures concrètes
+          constituera donc un élément important de l’évolution du mouvement.
+        </p>
+
+      </section>
+
+
+      <!-- ===================================================
+           02
+           =================================================== -->
+
+      <section class="article-section" id="energie">
+
+        <div class="section-number">02 — ÉNERGIE</div>
+
+        <h2>
+          La France utilise ses réserves stratégiques
+        </h2>
+
+        <div class="certainty confirmed">
+          🟢 CONFIRMÉ
+        </div>
+
+        <p>
+          Le gouvernement français a annoncé le 7 octobre la mise sur le marché
+          de <strong>10 millions de barils de diesel issus des stocks stratégiques</strong>,
+          avec l’objectif de contribuer à réduire les prix à la pompe.
+        </p>
+
+        <p>
+          Le ministère français de l’Économie estime que cette opération pourrait
+          entraîner une baisse comprise entre <strong>12 et 18 centimes d’euro
+          par litre</strong>.
+        </p>
+
+        <p>
+          Il s’agit d’une estimation gouvernementale et non d’une baisse garantie
+          pour chaque consommateur.
+        </p>
+
+        <p>
+          Cette décision intervient dans le cadre d’une mobilisation internationale
+          des stocks pétroliers décidée par les pays du G7.
+        </p>
+
+        <p>
+          Reuters rapporte que les membres du G7 avaient annoncé le 2 octobre la
+          libération coordonnée de <strong>100 millions de barils de pétrole brut
+          et de produits pétroliers</strong>.
+        </p>
+
+        <p>
+          L’Agence internationale de l’énergie a également décidé d’accélérer la
+          mise à disposition de stocks et de donner la priorité au diesel dans le
+          cadre du dispositif.
+        </p>
+
+        <div class="analysis-box">
+          <strong>🟠 Analyse</strong>
+
+          <p>
+            L’utilisation des réserves stratégiques constitue un outil destiné à
+            amortir temporairement un choc d’approvisionnement.
+          </p>
+
+          <p>
+            Elle ne règle cependant pas nécessairement la cause du problème.
+          </p>
+
+          <p>
+            Si les perturbations des flux pétroliers persistent, les États peuvent
+            être confrontés à un arbitrage difficile : utiliser davantage de réserves
+            pour réduire la pression immédiate ou préserver une partie de ces stocks
+            pour faire face à une crise plus longue.
+          </p>
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           03
+           =================================================== -->
+
+      <section class="article-section" id="ormuz">
+
+        <div class="section-number">03 — DÉTROIT D’ORMUZ</div>
+
+        <h2>
+          Le transport maritime devient un facteur économique majeur
+        </h2>
+
+        <div class="certainty confirmed">
+          🟢 CONFIRMÉ
+        </div>
+
+        <p>
+          Le détroit d’Ormuz reste l’un des principaux points de vulnérabilité
+          du commerce énergétique mondial.
+        </p>
+
+        <p>
+          Selon les données citées par Reuters le 8 octobre, seulement
+          <strong>sept navires transportant des marchandises ont franchi le détroit
+          mardi</strong>, soit le niveau le plus faible depuis le 23 juillet.
+        </p>
+
+        <p>
+          Les volumes de pétrole brut passant par Ormuz ont diminué de
+          <strong>27 % sur une semaine</strong>, à environ
+          <strong>10,1 millions de barils par jour</strong>, soit 74 % du niveau
+          observé avant le début de la guerre.
+        </p>
+
+        <p>
+          Reuters indique cependant que l’augmentation des exportations passant
+          par d’autres voies contribue à compenser une partie de cette diminution.
+        </p>
+
+        <p>
+          L’UNCTAD rappelle de son côté l’importance stratégique du détroit d’Ormuz
+          pour le commerce maritime et les exportations énergétiques.
+        </p>
+
+        <div class="analysis-box">
+          <strong>🟠 Analyse</strong>
+
+          <p>
+            Une crise maritime ne produit pas uniquement un effet sur le prix
+            du pétrole.
+          </p>
+
+          <ul>
+            <li>augmentation des coûts d’assurance ;</li>
+            <li>détours plus longs pour les navires ;</li>
+            <li>délais supplémentaires ;</li>
+            <li>diminution temporaire de la capacité de transport ;</li>
+            <li>hausse des coûts logistiques ;</li>
+            <li>pression supplémentaire sur certains prix à la consommation.</li>
+          </ul>
+
+          <p>
+            La question centrale devient donc celle de la
+            <strong>résilience des routes commerciales mondiales</strong>.
+          </p>
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           04
+           =================================================== -->
+
+      <section class="article-section" id="ukraine">
+
+        <div class="section-number">04 — UKRAINE</div>
+
+        <h2>
+          Une nouvelle vague de frappes meurtrières
+        </h2>
+
+        <div class="certainty declared">
+          🟢 CONFIRMÉ / 🔵 DÉCLARÉ
+        </div>
+
+        <p>
+          Le 7 octobre, une importante attaque aérienne a frappé plusieurs
+          régions ukrainiennes.
+        </p>
+
+        <p>
+          Reuters rapporte qu’au moins <strong>28 personnes ont été tuées et plus
+          de 100 blessées</strong>, selon les autorités ukrainiennes.
+          Cinq enfants figurent parmi les morts signalées.
+        </p>
+
+        <p>
+          La ville de Pryluky, dans la région de Tchernihiv, a été particulièrement
+          touchée.
+        </p>
+
+        <p>
+          Selon les autorités ukrainiennes citées par Reuters, un immeuble
+          résidentiel a été détruit et 20 personnes y ont trouvé la mort.
+        </p>
+
+        <p>
+          La Russie a déclaré de son côté que ses forces avaient visé des
+          installations du complexe militaro-industriel ukrainien.
+        </p>
+
+        <div class="source-note">
+          <strong>Important :</strong>
+          cette affirmation constitue une déclaration russe et doit être distinguée
+          des informations concernant les victimes civiles.
+        </div>
+
+        <div class="analysis-box">
+          <strong>🟠 Analyse</strong>
+
+          <p>
+            La poursuite des frappes montre que la guerre conserve une dimension
+            stratégique qui dépasse largement le front terrestre.
+          </p>
+
+          <p>
+            Les infrastructures énergétiques, industrielles et logistiques
+            constituent des éléments essentiels de la capacité d’un État à
+            poursuivre un conflit.
+          </p>
+
+          <p>
+            Pour l’Europe, la guerre continue également de produire des effets
+            indirects : dépenses de défense, soutien financier à l’Ukraine,
+            pression énergétique et conséquences sur les marchés.
+          </p>
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           05
+           =================================================== -->
+
+      <section class="article-section" id="ue-chine">
+
+        <div class="section-number">05 — UNION EUROPÉENNE / CHINE</div>
+
+        <h2>
+          La bataille commerciale s’intensifie
+        </h2>
+
+        <div class="certainty confirmed">
+          🟢 CONFIRMÉ
+        </div>
+
+        <p>
+          L’Union européenne cherche à réduire son déséquilibre commercial
+          avec la Chine.
+        </p>
+
+        <p>
+          Le commissaire européen au Commerce, Maroš Šefčovič, s’est rendu à
+          Pékin pour discuter notamment de l’accès au marché chinois et du
+          déficit commercial européen.
+        </p>
+
+        <p>
+          Reuters rapporte que le déficit commercial de l’Union européenne
+          avec la Chine dépasse désormais <strong>1 milliard d’euros par jour</strong>.
+        </p>
+
+        <p>
+          Les discussions portent notamment sur l’accès des entreprises européennes
+          au marché chinois et sur l’augmentation des exportations chinoises
+          vers l’Europe.
+        </p>
+
+        <p>
+          Les importations européennes de véhicules chinois ont notamment fortement
+          progressé au cours de la période étudiée par Reuters.
+        </p>
+
+        <p>
+          Une réunion des dirigeants européens prévue les
+          <strong>15 et 16 octobre</strong> doit également permettre d’aborder
+          les relations commerciales avec Pékin.
+        </p>
+
+        <div class="analysis-box">
+          <strong>🟠 Analyse</strong>
+
+          <p>
+            La question n’est plus seulement commerciale.
+          </p>
+
+          <p>
+            Elle touche désormais à la politique industrielle européenne.
+          </p>
+
+          <p>
+            L’Union européenne cherche à conserver l’accès aux produits,
+            aux technologies et aux chaînes d’approvisionnement chinoises tout
+            en évitant une dépendance excessive dans des secteurs considérés
+            comme stratégiques.
+          </p>
+
+          <p>
+            Le commerce international devient ainsi de plus en plus lié aux
+            considérations de <strong>sécurité économique</strong>.
+          </p>
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           06
+           =================================================== -->
+
+      <section class="article-section" id="dette">
+
+        <div class="section-number">06 — FRANCE</div>
+
+        <h2>
+          La dette publique atteint 119 % du PIB
+        </h2>
+
+        <div class="certainty confirmed">
+          🟢 CONFIRMÉ
+        </div>
+
+        <p>
+          Selon l’Insee, à la fin du deuxième trimestre 2026, la dette publique
+          française au sens de Maastricht atteignait
+          <strong>3 595,5 milliards d’euros</strong>, soit
+          <strong>119,0 % du PIB</strong>.
+        </p>
+
+        <p>
+          Elle avait augmenté de 59,6 milliards d’euros par rapport au trimestre
+          précédent.
+        </p>
+
+        <p>
+          La dette publique nette atteignait pour sa part
+          <strong>111,4 % du PIB</strong>.
+        </p>
+
+        <p>
+          L’Insee précise que ces données peuvent faire l’objet de révisions.
+        </p>
+
+        <div class="analysis-box">
+          <strong>🟠 Analyse</strong>
+
+          <p>
+            Cette situation constitue une contrainte importante pour les
+            finances publiques françaises.
+          </p>
+
+          <p>
+            Elle intervient alors que l’État doit simultanément financer les
+            services publics, les investissements, la défense, les politiques
+            énergétiques et les mesures destinées à répondre aux crises
+            économiques et sociales.
+          </p>
+
+          <p>
+            La question n’est donc pas seulement celle du niveau de dette.
+          </p>
+
+          <p>
+            Elle concerne également la capacité de l’État à conserver des marges
+            de manœuvre lorsque plusieurs crises apparaissent simultanément.
+          </p>
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           07 — DÉCRYPTAGE
+           =================================================== -->
+
+      <section class="article-section" id="decryptage">
+
+        <div class="section-number">07 — DÉCRYPTAGE</div>
+
+        <h2>
+          Une même réalité derrière plusieurs crises :
+          l’interdépendance
+        </h2>
+
+        <div class="certainty analysis">
+          🟠 ANALYSE
+        </div>
+
+        <p>
+          Les événements de cette journée peuvent sembler appartenir à des
+          domaines totalement différents.
+        </p>
+
+        <p>
+          Pourtant, ils sont liés.
+        </p>
+
+        <div class="analysis-box">
+
+          <p>
+            <strong>Une guerre</strong> peut perturber les routes maritimes.
+          </p>
+
+          <p>
+            <strong>Une perturbation maritime</strong> peut augmenter le coût
+            de l’énergie.
+          </p>
+
+          <p>
+            <strong>Une hausse de l’énergie</strong> peut alimenter l’inflation.
+          </p>
+
+          <p>
+            <strong>L’inflation</strong> peut compliquer les choix budgétaires.
+          </p>
+
+          <p>
+            <strong>Les contraintes budgétaires</strong> peuvent limiter la
+            capacité des États à financer certaines politiques.
+          </p>
+
+        </div>
+
+        <p>
+          Dans le même temps, les tensions commerciales peuvent modifier les
+          chaînes d’approvisionnement et pousser les États à rechercher davantage
+          d’autonomie industrielle.
+        </p>
+
+        <p>
+          La mondialisation n’a donc pas supprimé la géopolitique.
+        </p>
+
+        <p>
+          <strong>Elle l’a rendue plus complexe.</strong>
+        </p>
+
+      </section>
+
+
+      <!-- ===================================================
+           08 — LA RÉUNION
+           =================================================== -->
+
+      <section class="reunion-box" id="reunion">
+
+        <div class="section-number">08 — LA RÉUNION</div>
+
+        <h2>
+          Quelles conséquences possibles ?
+        </h2>
+
+        <div class="certainty hypothesis">
+          ⚪ HYPOTHÈSE
+        </div>
+
+        <p>
+          La Réunion étant une île dépendante des échanges maritimes, les
+          évolutions internationales des coûts du transport et de l’énergie
+          constituent des éléments à surveiller.
+        </p>
+
+        <p>
+          Il serait toutefois incorrect d’affirmer automatiquement qu’une
+          perturbation d’Ormuz entraînera telle ou telle hausse à La Réunion.
+        </p>
+
+        <p>
+          Les conséquences locales dépendent notamment :
+        </p>
+
+        <ul>
+          <li>des routes réellement utilisées par les importateurs ;</li>
+          <li>des stocks disponibles ;</li>
+          <li>des contrats d’approvisionnement ;</li>
+          <li>des coûts du fret ;</li>
+          <li>des prix internationaux ;</li>
+          <li>des décisions publiques ;</li>
+          <li>de la situation des infrastructures portuaires et énergétiques.</li>
+        </ul>
+
+        <p>
+          <strong>
+            À ce stade, Observatoire Mondial présente donc cette question comme
+            une piste d’analyse et non comme une conséquence locale établie.
+          </strong>
+        </p>
+
+      </section>
+
+
+      <!-- ===================================================
+           09 — À SURVEILLER
+           =================================================== -->
+
+      <section class="watchlist" id="surveiller">
+
+        <div class="section-number">09 — À SURVEILLER</div>
+
+        <h2>
+          Les prochains indicateurs importants
+        </h2>
+
+        <div class="certainty hypothesis">
+          ⚪ POINTS DE VIGILANCE
+        </div>
+
+
+        <div class="watch-item">
+
+          <div class="watch-number">01</div>
+
+          <div>
+            <strong>Mobilisation lycéenne</strong>
+            <span>
+              Le dialogue engagé avec les élèves débouchera-t-il sur des mesures
+              concrètes ?
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="watch-item">
+
+          <div class="watch-number">02</div>
+
+          <div>
+            <strong>Énergie</strong>
+            <span>
+              La libération de diesel permettra-t-elle réellement de réduire
+              durablement les prix ?
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="watch-item">
+
+          <div class="watch-number">03</div>
+
+          <div>
+            <strong>Détroit d’Ormuz</strong>
+            <span>
+              Le trafic maritime remontera-t-il ou la baisse se prolongera-t-elle ?
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="watch-item">
+
+          <div class="watch-number">04</div>
+
+          <div>
+            <strong>Ukraine</strong>
+            <span>
+              Les attaques contre les infrastructures énergétiques et industrielles
+              vont-elles s’intensifier ?
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="watch-item">
+
+          <div class="watch-number">05</div>
+
+          <div>
+            <strong>UE–Chine</strong>
+            <span>
+              Les discussions de Pékin permettront-elles d’obtenir des concessions
+              concrètes ?
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="watch-item">
+
+          <div class="watch-number">06</div>
+
+          <div>
+            <strong>France</strong>
+            <span>
+              Comment concilier dette élevée, dépenses publiques et nouvelles
+              contraintes économiques ?
+            </span>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           CONCLUSION
+           =================================================== -->
+
+      <section class="conclusion" id="conclusion">
+
+        <div class="section-number">CONCLUSION</div>
+
+        <h2>
+          Une journée qui révèle la fragilité des interdépendances
+        </h2>
+
+        <p>
+          Le 8 octobre 2026 montre une nouvelle fois que les crises contemporaines
+          ne peuvent plus être analysées séparément.
+        </p>
+
+        <p class="emphasis">
+          La guerre influence l’énergie.<br>
+          L’énergie influence les transports.<br>
+          Les transports influencent les prix.<br>
+          Les prix influencent les politiques publiques.
+        </p>
+
+        <p>
+          Les politiques publiques influencent à leur tour la stabilité sociale
+          et économique.
+        </p>
+
+        <p>
+          Parallèlement, la compétition commerciale entre grandes puissances
+          transforme progressivement les relations économiques internationales.
+        </p>
+
+        <p>
+          La véritable question stratégique n’est donc peut-être plus seulement
+          de savoir <strong>quelle puissance possède le plus de ressources</strong>,
+          mais de déterminer
+          <strong>
+            quelle puissance est capable de résister lorsque plusieurs dépendances
+            sont perturbées simultanément.
+          </strong>
+        </p>
+
+        <p>
+          C’est dans cette capacité d’adaptation, de diversification et de
+          coopération que se joue une partie de la puissance des États au
+          XXI<sup>e</sup> siècle.
+        </p>
+
+      </section>
+
+
+      <!-- ===================================================
+           TRANSPARENCE
+           =================================================== -->
+
+      <section class="transparency" id="transparence">
+
+        <div class="section-number">
+          TRANSPARENCE ÉDITORIALE
+        </div>
+
+        <h2>
+          Méthode et limites
+        </h2>
+
+        <p>
+          Observatoire Mondial s’appuie sur les informations publiques et les
+          sources accessibles et vérifiables au moment de la rédaction.
+          Les faits rapportés sont attribués aux organismes concernés.
+          Les analyses et interprétations sont présentées séparément et restent
+          soumises à l’appréciation du lecteur.
+        </p>
+
+        <p>
+          Les effets éventuels sur La Réunion sont des pistes d’analyse lorsqu’ils
+          ne sont pas directement établis par les sources.
+        </p>
+
+        <p class="error-note">
+          Observatoire Mondial ne prétend pas que cet article est exempt de toute erreur.
+        </p>
+
+        <p>
+          Les informations peuvent évoluer après publication et certaines données
+          peuvent être révisées par les organismes concernés.
+        </p>
+
+      </section>
+
+
+      <!-- ===================================================
+           SOURCES
+           =================================================== -->
+
+      <section class="sources" id="sources">
+
+        <div class="section-number">
+          SOURCES
+        </div>
+
+        <h2>
+          Sources principales
+        </h2>
+
+        <ul>
+
+          <li>
+            Ministère français de l’Éducation nationale —
+            informations relatives au dialogue avec les lycéens.
+          </li>
+
+          <li>
+            Ministère français de l’Économie —
+            dispositif relatif aux stocks stratégiques de diesel.
+          </li>
+
+          <li>
+            Insee —
+            dette publique française au deuxième trimestre 2026.
+          </li>
+
+          <li>
+            UN Trade and Development (UNCTAD) —
+            <em>Review of Maritime Transport</em>.
+          </li>
+
+          <li>
+            Reuters —
+            suivi de la situation énergétique, du détroit d’Ormuz,
+            de la mobilisation lycéenne, de la guerre en Ukraine
+            et des relations UE–Chine.
+          </li>
+
+        </ul>
+
+      </section>
+
+    </article>
+
+
+    <!-- =====================================================
+         NAVIGATION ARTICLE
+         ===================================================== -->
+
+    <nav class="article-navigation" aria-label="Navigation entre les articles">
+
+      <a href="../../../../../index.html">
+        ← Retour à Observatoire Mondial
+      </a>
+
+      <a href="../../../index.html">
+        Tous les articles →
+      </a>
+
+    </nav>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="article-footer">
+
+      <div class="footer-brand">
+        OBSERVATOIRE MONDIAL
+      </div>
+
+      <div class="footer-slogan">
+        Observer le monde. Comprendre les enjeux. Anticiper les transformations.
+      </div>
+
+      <div class="footer-signature">
+        Informer avec rigueur, décrypter sans polémique.
+      </div>
+
+    </footer>
+
+  </main>
+
+</body>
+</html>
