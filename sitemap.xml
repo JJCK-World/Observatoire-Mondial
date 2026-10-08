@@ -1,38 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<urlset
-xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url>
-    <loc>https://VOTRE-NOM.github.io/observatoire-mondial/</loc>
-</url>
+    <url>
+        <loc>https://jjck-world.github.io/Observatoire-Mondial/</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
 
-<url>
-    <loc>https://VOTRE-NOM.github.io/observatoire-mondial/articles/</loc>
-</url>
+    <url>
+        <loc>https://jjck-world.github.io/Observatoire-Mondial/articles/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
 
-<url>
-    <loc>https://VOTRE-NOM.github.io/observatoire-mondial/articles/2026-10-08-monde-sous-tension.html</loc>
-</url>
+    <url>
+        <loc>https://jjck-world.github.io/Observatoire-Mondial/articles/2026/10/08/article-01/</loc>
+        <lastmod>2026-10-08</lastmod>
+        <changefreq>hourly</changefreq>
+        <priority>1.0</priority>
+    </url>
 
-<url>
-    <loc>https://VOTRE-NOM.github.io/observatoire-mondial/analyses/</loc>
-</url>
+    <url>
+        <loc>https://jjck-world.github.io/Observatoire-Mondial/analyses/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-<url>
-    <loc>https://VOTRE-NOM.github.io/observatoire-mondial/monde/</loc>
-</url>
+    <url>
+        <loc>https://jjck-world.github.io/Observatoire-Mondial/monde/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-<url>
-    <loc>https://VOTRE-NOM.github.io/observatoire-mondial/economie/</loc>
-</url>
+    <url>
+        <loc>https://jjck-world.github.io/Observatoire-Mondial/geopolitique/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-<url>
-    <loc>https://VOTRE-NOM.github.io/observatoire-mondial/sciences/</loc>
-</url>
+    <url>
+        <loc>https://jjck-world.github.io/Observatoire-Mondial/economie/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-<url>
-    <loc>https://VOTRE-NOM.github.io/observatoire-mondial/contact/</loc>
-</url>
+    <url>
+        <loc>https://jjck-world.github.io/Observatoire-Mondial/sciences/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://jjck-world.github.io/Observatoire-Mondial/reunion/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
 
 </urlset>
