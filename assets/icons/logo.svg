@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 512 512"
+     role="img"
+     aria-labelledby="title desc">
+
+<title id="title">Observatoire Mondial</title>
+
+<desc id="desc">
+Emblème circulaire représentant l'observation du monde.
+</desc>
+
+<defs>
+
+<linearGradient id="blueGold"
+                x1="0"
+                y1="0"
+                x2="1"
+                y2="1">
+
+<stop offset="0%" stop-color="#006EFF"/>
+<stop offset="55%" stop-color="#00A8FF"/>
+<stop offset="100%" stop-color="#D99A18"/>
+
+</linearGradient>
+
+</defs>
+
+<circle
+cx="256"
+cy="256"
+r="238"
+fill="#02050B"
+stroke="url(#blueGold)"
+stroke-width="12"/>
+
+<circle
+cx="256"
+cy="256"
+r="190"
+fill="none"
+stroke="#00A8FF"
+stroke-width="3"
+opacity=".8"/>
+
+<ellipse
+cx="256"
+cy="256"
+rx="145"
+ry="190"
+fill="none"
+stroke="#59D9FF"
+stroke-width="3"
+opacity=".8"/>
+
+<ellipse
+cx="256"
+cy="256"
+rx="190"
+ry="75"
+fill="none"
+stroke="#59D9FF"
+stroke-width="3"
+opacity=".65"/>
+
+<path
+d="M66 256h380M256 66v380"
+stroke="#59D9FF"
+stroke-width="2"
+opacity=".5"/>
+
+<circle
+cx="256"
+cy="256"
+r="55"
+fill="#000000"
+stroke="#FFD45A"
+stroke-width="6"/>
+
+<circle
+cx="256"
+cy="256"
+r="25"
+fill="#006EFF"/>
+
+<circle
+cx="256"
+cy="256"
+r="10"
+fill="#FFFFFF"/>
+
+<path
+d="M256 18v30M256 464v30M18 256h30M464 256h30"
+stroke="#FFD45A"
+stroke-width="7"
+stroke-linecap="round"/>
+
+</svg>
