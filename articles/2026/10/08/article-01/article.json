@@ -1,0 +1,145 @@
+{
+  "id": "article-01",
+  "numero": 1,
+  "date": "2026-10-08",
+  "datePublication": "8 octobre 2026",
+  "dateMiseAJour": "8 octobre 2026",
+  "heureMiseAJour": "07:00",
+  "statut": "publie",
+  "categorie": [
+    "Actualité",
+    "France",
+    "Monde",
+    "Géopolitique",
+    "Économie"
+  ],
+  "auteur": "Observatoire Mondial",
+  "titre": "France, tensions internationales et risques économiques : les principaux enjeux du 8 octobre 2026",
+  "chapeau": "Mobilisation lycéenne en France, guerre en Ukraine, tensions au Moyen-Orient, sécurité maritime dans le détroit d'Ormuz et situation des finances publiques françaises : Observatoire Mondial rassemble les principaux faits vérifiés et distingue les faits, déclarations et analyses.",
+  "tempsLecture": "8 min",
+  "illustration": {
+    "type": "graphique",
+    "texte": "Illustration — ne représente pas la situation en temps réel."
+  },
+  "sections": [
+    {
+      "type": "niveau",
+      "niveau": "CONFIRME",
+      "titre": "France : le dialogue avec les lycéens se poursuit",
+      "paragraphes": [
+        "À partir du 7 octobre 2026, tous les lycées français consacrent une demi-journée à un temps de dialogue consacré à la démocratie lycéenne. Le ministère de l'Éducation nationale précise que les autres cours sont maintenus.",
+        "Une consultation nationale est également ouverte sur la plateforme Agora jusqu'au 23 octobre 2026. Les lycéens peuvent y exprimer anonymement leurs difficultés, leurs attentes et leurs propositions."
+      ],
+      "sources": [
+        "source-01",
+        "source-02"
+      ]
+    },
+    {
+      "type": "niveau",
+      "niveau": "DECLARE",
+      "titre": "Le gouvernement annonce de nouvelles mesures",
+      "paragraphes": [
+        "Le gouvernement français a annoncé la poursuite du dialogue avec les lycéens et la présentation de premières décisions à la fin du mois d'octobre.",
+        "Le nombre de participants aux mobilisations fait l'objet d'un écart entre les chiffres communiqués par les autorités et ceux avancés par les organisateurs. Ces chiffres doivent donc être présentés avec leur attribution."
+      ],
+      "sources": [
+        "source-03",
+        "source-04"
+      ]
+    },
+    {
+      "type": "niveau",
+      "niveau": "DECLARE",
+      "titre": "Suspension de l'utilisation de certaines grenades",
+      "paragraphes": [
+        "Le gouvernement français a annoncé la suspension temporaire de l'utilisation de grenades de désencerclement dans le contexte des manifestations lycéennes après qu'un adolescent de 15 ans a perdu une partie de sa main à Lens.",
+        "Dix-huit procédures d'enquête ou d'examen ont été rapportées concernant des incidents liés aux forces de l'ordre. Les circonstances précises de chaque dossier doivent être distinguées de l'événement initial."
+      ],
+      "sources": [
+        "source-04"
+      ]
+    },
+    {
+      "type": "niveau",
+      "niveau": "CONFIRME",
+      "titre": "Les finances publiques restent sous pression",
+      "paragraphes": [
+        "Selon l'Insee, la dette publique française au sens de Maastricht atteignait 3 595,5 milliards d'euros à la fin du deuxième trimestre 2026, soit 119,0 % du PIB.",
+        "L'Insee précise que les données trimestrielles peuvent faire l'objet de révisions."
+      ],
+      "sources": [
+        "source-05"
+      ]
+    },
+    {
+      "type": "niveau",
+      "niveau": "CONFIRME",
+      "titre": "Ukraine : une nouvelle phase de frappes",
+      "paragraphes": [
+        "Reuters rapporte qu'une importante vague de frappes russes a touché plusieurs régions ukrainiennes le 7 octobre. Un bilan rapporté par Reuters faisait état d'au moins 28 morts et d'environ 100 blessés.",
+        "Les autorités russes ont déclaré avoir visé des infrastructures liées à l'industrie militaire. Cette affirmation doit être distinguée des faits concernant les frappes et leurs conséquences humaines."
+      ],
+      "sources": [
+        "source-06",
+        "source-07"
+      ]
+    },
+    {
+      "type": "niveau",
+      "niveau": "DECLARE",
+      "titre": "Moyen-Orient : les tensions restent élevées",
+      "paragraphes": [
+        "Les tensions autour de la guerre impliquant Israël, les États-Unis et l'Iran continuent de peser sur la sécurité régionale et sur les transports maritimes.",
+        "Les informations concernant les opérations militaires, les responsabilités et certains bilans doivent être attribuées aux acteurs ou aux organismes qui les communiquent lorsqu'une vérification indépendante n'est pas disponible."
+      ],
+      "sources": [
+        "source-08",
+        "source-09"
+      ]
+    },
+    {
+      "type": "niveau",
+      "niveau": "CONFIRME",
+      "titre": "Détroit d'Ormuz : le risque maritime influence les marchés",
+      "paragraphes": [
+        "Reuters rapporte que les attaques ou incidents visant des navires dans le détroit d'Ormuz ont augmenté, alors que les marchés pétroliers restent sensibles aux risques pesant sur les exportations du Moyen-Orient.",
+        "Le 8 octobre, Reuters indiquait un Brent à 101,53 dollars le baril et un WTI à 89,39 dollars dans les échanges rapportés."
+      ],
+      "sources": [
+        "source-10",
+        "source-11"
+      ]
+    },
+    {
+      "type": "niveau",
+      "niveau": "ANALYSE",
+      "titre": "Ce que ces événements montrent",
+      "paragraphes": [
+        "Les événements du 8 octobre montrent plusieurs formes de vulnérabilité qui se superposent : tensions sociales internes, contraintes budgétaires, conflits armés et risques sur les routes énergétiques.",
+        "Ces événements ne constituent pas nécessairement une seule crise. Ils appartiennent à des dynamiques différentes, mais leur simultanéité peut compliquer les choix des gouvernements et augmenter l'incertitude économique et stratégique.",
+        "L'impact concret sur La Réunion ne doit pas être affirmé sans données locales spécifiques. Une éventuelle influence sur les prix, les transports ou l'approvisionnement doit faire l'objet d'une vérification séparée."
+      ],
+      "sources": [
+        "source-05",
+        "source-10",
+        "source-11"
+      ]
+    },
+    {
+      "type": "niveau",
+      "niveau": "HYPOTHESE",
+      "titre": "Les prochains points à surveiller",
+      "paragraphes": [
+        "Les prochains jours permettront notamment de suivre l'évolution de la mobilisation lycéenne, les décisions annoncées par le gouvernement français, l'évolution des frappes en Ukraine et la situation maritime autour du détroit d'Ormuz.",
+        "Une prolongation des tensions sur les routes énergétiques pourrait maintenir une pression sur les coûts de transport et les marchés pétroliers, mais cette conséquence reste dépendante de l'évolution réelle de la situation."
+      ],
+      "sources": [
+        "source-01",
+        "source-10"
+      ]
+    }
+  ],
+  "transparence": "Observatoire Mondial s'appuie sur les informations publiques et les sources accessibles et vérifiables au moment de la rédaction. Les faits rapportés sont attribués aux organismes concernés. Les analyses et interprétations sont présentées séparément et restent soumises à l'appréciation du lecteur. Les effets éventuels sur La Réunion sont des pistes d'analyse lorsqu'ils ne sont pas directement établis par les sources.",
+  "avertissement": "Observatoire Mondial ne prétend pas que cet article est exempt de toute erreur."
+}
