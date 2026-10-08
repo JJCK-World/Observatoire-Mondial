@@ -1,0 +1,19 @@
+{
+  "name": "Observatoire Mondial",
+  "short_name": "OM",
+  "description": "Observer le monde. Comprendre les enjeux. Anticiper les transformations.",
+  "lang": "fr-FR",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#02050B",
+  "theme_color": "#02050B",
+  "icons": [
+    {
+      "src": "assets/images/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
