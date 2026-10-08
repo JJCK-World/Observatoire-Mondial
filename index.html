@@ -2,62 +2,125 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Observatoire Mondial — Actualité, géopolitique et analyses</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#02050b">
 
     <meta name="description"
-          content="Observatoire Mondial — Observer le monde. Comprendre les enjeux. Anticiper les transformations.">
+          content="Observatoire Mondial — Actualité internationale, géopolitique, économie, sciences, stratégie et transformations du monde.">
 
-    <meta name="author" content="Observatoire Mondial">
-    <meta name="theme-color" content="#02050B">
+    <meta name="author"
+          content="Observatoire Mondial — JJCK">
 
-    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
-    <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="robots"
+          content="index, follow">
+
+    <link rel="canonical"
+          href="https://jjck-world.github.io/Observatoire-Mondial/">
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:title"
+          content="Observatoire Mondial">
+
+    <meta property="og:description"
+          content="Observer le monde. Comprendre les enjeux. Anticiper les transformations.">
+
+    <meta property="og:url"
+          content="https://jjck-world.github.io/Observatoire-Mondial/">
+
+    <meta property="og:site_name"
+          content="Observatoire Mondial">
+
+    <title>Observatoire Mondial — Observer le monde</title>
+
+    <link rel="stylesheet"
+          href="assets/css/style.css">
+
+    <script src="assets/js/script.js"
+            defer></script>
 </head>
 
 <body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
 <header class="site-header">
 
     <div class="header-inner">
 
-        <a class="brand" href="index.html"
-           aria-label="Observatoire Mondial - Accueil">
+        <a href="index.html"
+           class="site-brand"
+           aria-label="Observatoire Mondial — Accueil">
 
-            <img src="assets/images/logo.svg"
-                 alt="Logo Observatoire Mondial"
-                 class="brand-logo">
+            <span class="brand-mark">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
 
-            <div class="brand-text">
-                <strong>OBSERVATOIRE MONDIAL</strong>
-                <span>
-                    Observer le monde. Comprendre les enjeux.
-                    Anticiper les transformations.
-                </span>
-            </div>
+            <span class="brand-text">
+                <strong>OBSERVATOIRE</strong>
+                <span>MONDIAL</span>
+            </span>
 
         </a>
 
-        <button class="menu-button"
+
+        <button class="menu-toggle"
                 type="button"
                 aria-label="Ouvrir le menu"
                 aria-expanded="false"
-                data-menu-button>
-            ☰
+                aria-controls="main-navigation">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
         </button>
 
-        <nav class="main-nav" data-navigation>
 
-            <a href="index.html" class="active">Accueil</a>
-            <a href="articles/index.html">Articles</a>
-            <a href="analyses/index.html">Analyses</a>
-            <a href="monde/index.html">Monde</a>
-            <a href="geopolitique/index.html">Géopolitique</a>
-            <a href="economie/index.html">Économie</a>
-            <a href="sciences/index.html">Sciences</a>
-            <a href="reunion/index.html">Réunion</a>
+        <nav class="main-navigation"
+             id="main-navigation"
+             aria-label="Navigation principale">
+
+            <a href="index.html"
+               class="active">
+                Accueil
+            </a>
+
+            <a href="articles/index.html">
+                Articles
+            </a>
+
+            <a href="monde/index.html">
+                Monde
+            </a>
+
+            <a href="geopolitique/index.html">
+                Géopolitique
+            </a>
+
+            <a href="economie/index.html">
+                Économie
+            </a>
+
+            <a href="sciences/index.html">
+                Sciences
+            </a>
+
+            <a href="reunion/index.html">
+                La Réunion
+            </a>
+
+            <a href="analyses/index.html">
+                Analyses
+            </a>
 
         </nav>
 
@@ -66,22 +129,39 @@
 </header>
 
 
+<!-- =========================================================
+     HERO
+========================================================= -->
+
 <main>
 
-<section class="hero">
+<section class="hero-section">
+
+    <div class="hero-grid"></div>
+
+    <div class="hero-orbit hero-orbit-one"></div>
+    <div class="hero-orbit hero-orbit-two"></div>
 
     <div class="hero-content">
 
-        <span class="eyebrow">JOURNAL INDÉPENDANT</span>
+        <div class="status-label">
+            <span class="status-dot"></span>
+            OBSERVATOIRE MONDIAL
+        </div>
 
         <h1>
             Observer le monde.<br>
-            Comprendre les enjeux.
+            <span>Comprendre les enjeux.</span>
         </h1>
 
-        <p>
-            Actualité mondiale, géopolitique, économie, sciences,
-            technologies et transformations stratégiques.
+        <p class="hero-subtitle">
+            Actualité internationale, géopolitique, économie,
+            sciences et transformations stratégiques.
+        </p>
+
+        <p class="hero-description">
+            Un espace d'information et d'analyse consacré aux
+            grandes transformations du monde contemporain.
         </p>
 
         <div class="hero-actions">
@@ -91,211 +171,534 @@
                 Lire les articles
             </a>
 
-            <a href="analyses/index.html"
+            <a href="methodologie/index.html"
                class="button button-secondary">
-                Voir les analyses
+                Notre méthode
             </a>
 
         </div>
 
     </div>
 
+
+    <div class="hero-data-panel">
+
+        <div class="data-panel-header">
+            <span>SYSTÈME ÉDITORIAL</span>
+            <span class="data-live">ACTIF</span>
+        </div>
+
+        <div class="data-line"></div>
+
+        <div class="data-row">
+            <span>ACTUALITÉ</span>
+            <strong>MONDE</strong>
+        </div>
+
+        <div class="data-row">
+            <span>ANALYSE</span>
+            <strong>STRATÉGIE</strong>
+        </div>
+
+        <div class="data-row">
+            <span>APPROCHE</span>
+            <strong>FACTUELLE</strong>
+        </div>
+
+        <div class="data-row">
+            <span>POSITION</span>
+            <strong>INDÉPENDANTE</strong>
+        </div>
+
+    </div>
+
 </section>
 
 
-<section class="section">
+<!-- =========================================================
+     INTRODUCTION
+========================================================= -->
+
+<section class="intro-section section">
 
     <div class="section-heading">
 
+        <span class="section-kicker">
+            NOTRE REGARD
+        </span>
+
+        <h2>
+            Comprendre avant de conclure.
+        </h2>
+
+        <p>
+            L'information ne se limite pas à l'événement.
+            Il faut également comprendre son contexte,
+            les intérêts en présence, ses conséquences
+            possibles et les incertitudes qui demeurent.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ARTICLES À LA UNE
+========================================================= -->
+
+<section class="featured-section section">
+
+    <div class="section-header">
+
         <div>
-            <span class="eyebrow">PUBLICATION DU JOUR</span>
-            <h2>À la une</h2>
+            <span class="section-kicker">
+                À LA UNE
+            </span>
+
+            <h2>
+                Les derniers articles
+            </h2>
         </div>
 
         <a href="articles/index.html"
-           class="text-link">
-            Tous les articles →
+           class="section-link">
+            Voir tous les articles →
         </a>
 
     </div>
 
 
-    <article class="featured-card">
+    <div class="article-grid">
 
-        <div class="featured-label">
-            ARTICLE 01 · 8 OCTOBRE 2026
-        </div>
 
-        <h3>
-            France, tensions internationales et risques économiques :
-            les principaux enjeux du 8 octobre 2026
-        </h3>
+        <!-- ARTICLE 02 -->
 
-        <p>
-            Mobilisation lycéenne en France, guerre en Ukraine,
-            situation au Moyen-Orient, tensions maritimes dans le détroit
-            d'Ormuz et situation des finances publiques françaises :
-            Observatoire Mondial rassemble les principaux faits vérifiés
-            et distingue les faits, déclarations et analyses.
-        </p>
+        <article class="article-card article-card-featured">
 
-        <div class="card-meta">
-            <span>Actualité</span>
-            <span>Géopolitique</span>
-            <span>Économie</span>
-        </div>
+            <div class="article-card-top">
+
+                <span class="article-category">
+                    MONDE
+                </span>
+
+                <span class="article-date">
+                    8 OCT. 2026
+                </span>
+
+            </div>
+
+            <div class="article-card-content">
+
+                <span class="certainty-badge confirmed">
+                    CONFIRMÉ
+                </span>
+
+                <h3>
+                    Les grands faits marquants
+                    à retenir aujourd'hui
+                </h3>
+
+                <p>
+                    Une sélection des principaux événements
+                    internationaux et français à retenir,
+                    avec leurs principaux enjeux et éléments
+                    de contexte.
+                </p>
+
+                <a href="articles/2026/10/08/article-02/"
+                   class="article-link">
+                    Lire l'article
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </article>
+
 
         <!-- ARTICLE 01 -->
-        <a class="button button-primary"
-           href="articles/2026/10/08/article-01/">
-            Lire l'article 01
+
+        <article class="article-card">
+
+            <div class="article-card-top">
+
+                <span class="article-category">
+                    ANALYSE
+                </span>
+
+                <span class="article-date">
+                    8 OCT. 2026
+                </span>
+
+            </div>
+
+            <div class="article-card-content">
+
+                <span class="certainty-badge analysis">
+                    ANALYSE
+                </span>
+
+                <h3>
+                    Les transformations
+                    du monde contemporain
+                </h3>
+
+                <p>
+                    Une lecture stratégique des évolutions
+                    qui transforment progressivement les
+                    relations internationales.
+                </p>
+
+                <a href="articles/2026/10/08/article-01/"
+                   class="article-link">
+                    Lire l'article
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     DOMAINES
+========================================================= -->
+
+<section class="domains-section section">
+
+    <div class="section-heading">
+
+        <span class="section-kicker">
+            DOMAINES
+        </span>
+
+        <h2>
+            Observer le monde
+        </h2>
+
+        <p>
+            Plusieurs angles pour comprendre les grandes
+            transformations politiques, économiques,
+            scientifiques et stratégiques.
+        </p>
+
+    </div>
+
+
+    <div class="domain-grid">
+
+        <a href="monde/index.html"
+           class="domain-card">
+
+            <span class="domain-number">01</span>
+
+            <div>
+                <h3>Monde</h3>
+                <p>
+                    Les principaux événements internationaux
+                    et leurs évolutions.
+                </p>
+            </div>
+
+            <span class="domain-arrow">↗</span>
+
         </a>
 
-    </article>
+
+        <a href="geopolitique/index.html"
+           class="domain-card">
+
+            <span class="domain-number">02</span>
+
+            <div>
+                <h3>Géopolitique</h3>
+                <p>
+                    Rapports de force, territoires,
+                    alliances et stratégies.
+                </p>
+            </div>
+
+            <span class="domain-arrow">↗</span>
+
+        </a>
+
+
+        <a href="economie/index.html"
+           class="domain-card">
+
+            <span class="domain-number">03</span>
+
+            <div>
+                <h3>Économie</h3>
+                <p>
+                    Échanges, ressources, marchés
+                    et transformations économiques.
+                </p>
+            </div>
+
+            <span class="domain-arrow">↗</span>
+
+        </a>
+
+
+        <a href="sciences/index.html"
+           class="domain-card">
+
+            <span class="domain-number">04</span>
+
+            <div>
+                <h3>Sciences</h3>
+                <p>
+                    Découvertes, technologies et
+                    transformations scientifiques.
+                </p>
+            </div>
+
+            <span class="domain-arrow">↗</span>
+
+        </a>
+
+
+        <a href="reunion/index.html"
+           class="domain-card">
+
+            <span class="domain-number">05</span>
+
+            <div>
+                <h3>La Réunion</h3>
+                <p>
+                    Actualité et enjeux de La Réunion
+                    dans son environnement régional.
+                </p>
+            </div>
+
+            <span class="domain-arrow">↗</span>
+
+        </a>
+
+
+        <a href="analyses/index.html"
+           class="domain-card">
+
+            <span class="domain-number">06</span>
+
+            <div>
+                <h3>Analyses</h3>
+                <p>
+                    Décryptages, contexte, conséquences
+                    et hypothèses.
+                </p>
+            </div>
+
+            <span class="domain-arrow">↗</span>
+
+        </a>
+
+    </div>
 
 </section>
 
 
-<section class="section section-dark">
+<!-- =========================================================
+     MÉTHODE
+========================================================= -->
 
-    <div class="section-heading">
+<section class="method-section section">
 
-        <div>
-            <span class="eyebrow">NOS PRINCIPES</span>
-            <h2>Une information structurée</h2>
+    <div class="method-layout">
+
+        <div class="method-intro">
+
+            <span class="section-kicker">
+                MÉTHODOLOGIE
+            </span>
+
+            <h2>
+                Une information
+                <span>traçable.</span>
+            </h2>
+
+            <p>
+                Observatoire Mondial distingue les faits
+                établis, les déclarations officielles,
+                les analyses et les hypothèses.
+            </p>
+
+            <a href="methodologie/index.html"
+               class="button button-secondary">
+                Découvrir notre méthode
+            </a>
+
         </div>
 
-    </div>
+
+        <div class="method-principles">
+
+            <div class="principle">
+
+                <span>01</span>
+
+                <div>
+                    <h3>Sources</h3>
+                    <p>
+                        Privilégier les sources publiques,
+                        officielles et vérifiables.
+                    </p>
+                </div>
+
+            </div>
 
 
-    <div class="principles-grid">
+            <div class="principle">
 
-        <article class="principle">
+                <span>02</span>
 
-            <span class="principle-icon">✓</span>
+                <div>
+                    <h3>Attribution</h3>
+                    <p>
+                        Identifier clairement l'origine
+                        des informations rapportées.
+                    </p>
+                </div>
 
-            <h3>Faits vérifiés</h3>
-
-            <p>
-                Les informations sont recherchées auprès de sources
-                publiques, officielles et journalistiques reconnues.
-            </p>
-
-        </article>
-
-
-        <article class="principle">
-
-            <span class="principle-icon">◎</span>
-
-            <h3>Attribution</h3>
-
-            <p>
-                Une déclaration officielle est présentée comme une
-                déclaration et non automatiquement comme un fait établi.
-            </p>
-
-        </article>
+            </div>
 
 
-        <article class="principle">
+            <div class="principle">
 
-            <span class="principle-icon">◇</span>
+                <span>03</span>
 
-            <h3>Analyse séparée</h3>
+                <div>
+                    <h3>Distinction</h3>
+                    <p>
+                        Séparer les faits, déclarations,
+                        analyses et hypothèses.
+                    </p>
+                </div>
 
-            <p>
-                Les analyses d'Observatoire Mondial sont distinguées
-                des informations factuelles.
-            </p>
-
-        </article>
+            </div>
 
 
-        <article class="principle">
+            <div class="principle">
 
-            <span class="principle-icon">!</span>
+                <span>04</span>
 
-            <h3>Incertitude</h3>
+                <div>
+                    <h3>Transparence</h3>
+                    <p>
+                        Présenter les limites et les
+                        incertitudes lorsqu'elles existent.
+                    </p>
+                </div>
 
-            <p>
-                Lorsque l'information n'est pas suffisamment établie,
-                nous le signalons.
-            </p>
+            </div>
 
-        </article>
+        </div>
 
     </div>
 
 </section>
 
 
-<section class="section">
+<!-- =========================================================
+     NIVEAUX DE CERTITUDE
+========================================================= -->
+
+<section class="certainty-section section">
 
     <div class="section-heading">
 
-        <div>
-            <span class="eyebrow">MÉTHODE</span>
-            <h2>Nos niveaux de certitude</h2>
-        </div>
+        <span class="section-kicker">
+            LECTURE DE L'INFORMATION
+        </span>
+
+        <h2>
+            Identifier le niveau de certitude
+        </h2>
+
+        <p>
+            Tous les contenus ne présentent pas le même
+            niveau de certitude. Nous cherchons à le rendre
+            visible au lecteur.
+        </p>
 
     </div>
 
 
     <div class="certainty-grid">
 
-        <div class="certainty confirmed">
+        <div class="certainty-item">
 
-            <strong>🟢 CONFIRMÉ</strong>
+            <span class="certainty-icon confirmed">
+                01
+            </span>
+
+            <h3>
+                Confirmé
+            </h3>
 
             <p>
-                Fait établi par une source officielle ou suffisamment corroboré.
+                Fait établi par des sources vérifiables.
             </p>
 
         </div>
 
 
-        <div class="certainty declared">
+        <div class="certainty-item">
 
-            <strong>🔵 DÉCLARÉ</strong>
+            <span class="certainty-icon declared">
+                02
+            </span>
+
+            <h3>
+                Déclaré
+            </h3>
 
             <p>
-                Déclaration attribuée à un gouvernement,
-                une organisation ou un acteur.
+                Information attribuée à une personne
+                ou à une institution.
             </p>
 
         </div>
 
 
-        <div class="certainty analysis">
+        <div class="certainty-item">
 
-            <strong>🟠 ANALYSE</strong>
+            <span class="certainty-icon analysis">
+                03
+            </span>
+
+            <h3>
+                Analyse
+            </h3>
 
             <p>
-                Interprétation d'Observatoire Mondial fondée
-                sur les faits disponibles.
+                Interprétation fondée sur les éléments
+                disponibles.
             </p>
 
         </div>
 
 
-        <div class="certainty hypothesis">
+        <div class="certainty-item">
 
-            <strong>⚪ HYPOTHÈSE</strong>
+            <span class="certainty-icon hypothesis">
+                04
+            </span>
 
-            <p>
-                Scénario possible qui ne constitue pas une certitude.
-            </p>
-
-        </div>
-
-
-        <div class="certainty unconfirmed">
-
-            <strong>🔴 NON CONFIRMÉ</strong>
+            <h3>
+                Hypothèse
+            </h3>
 
             <p>
-                Information insuffisamment corroborée.
+                Scénario possible qui ne constitue
+                pas un fait établi.
             </p>
 
         </div>
@@ -304,26 +707,165 @@
 
 </section>
 
+
+<!-- =========================================================
+     TRANSPARENCE
+========================================================= -->
+
+<section class="transparency-section section">
+
+    <div class="transparency-box">
+
+        <div class="transparency-label">
+            TRANSPARENCE ÉDITORIALE
+        </div>
+
+        <h2>
+            Observer sans prétendre tout savoir.
+        </h2>
+
+        <p>
+            Observatoire Mondial s'appuie sur les informations
+            publiques et les sources accessibles et vérifiables
+            au moment de la rédaction. Les faits rapportés sont
+            attribués aux organismes concernés.
+        </p>
+
+        <p>
+            Les analyses et interprétations sont présentées
+            séparément et restent soumises à l'appréciation
+            du lecteur.
+        </p>
+
+        <p>
+            Les effets éventuels sur La Réunion sont des pistes
+            d'analyse lorsqu'ils ne sont pas directement établis
+            par les sources.
+        </p>
+
+        <strong>
+            Observatoire Mondial ne prétend pas que cet article
+            est exempt de toute erreur.
+        </strong>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SIGNATURE
+========================================================= -->
+
+<section class="signature-section">
+
+    <div class="signature-line"></div>
+
+    <p class="signature-slogan">
+        Observer le monde.<br>
+        Comprendre les enjeux.<br>
+        Anticiper les transformations.
+    </p>
+
+    <p class="signature-name">
+        OBSERVATOIRE MONDIAL
+    </p>
+
+</section>
+
 </main>
 
 
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
 <footer class="site-footer">
 
-    <div class="footer-inner">
+    <div class="footer-main">
 
-        <div>
+        <div class="footer-brand">
 
-            <strong>OBSERVATOIRE MONDIAL</strong>
+            <a href="index.html"
+               class="site-brand">
+
+                <span class="brand-mark">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+
+                <span class="brand-text">
+                    <strong>OBSERVATOIRE</strong>
+                    <span>MONDIAL</span>
+                </span>
+
+            </a>
 
             <p>
-                Observer le monde. Comprendre les enjeux.
+                Observer le monde.<br>
+                Comprendre les enjeux.<br>
                 Anticiper les transformations.
             </p>
 
         </div>
 
 
-        <div class="footer-links">
+        <div class="footer-column">
+
+            <h3>
+                Navigation
+            </h3>
+
+            <a href="index.html">
+                Accueil
+            </a>
+
+            <a href="articles/index.html">
+                Articles
+            </a>
+
+            <a href="analyses/index.html">
+                Analyses
+            </a>
+
+            <a href="monde/index.html">
+                Monde
+            </a>
+
+            <a href="geopolitique/index.html">
+                Géopolitique
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Thématiques
+            </h3>
+
+            <a href="economie/index.html">
+                Économie
+            </a>
+
+            <a href="sciences/index.html">
+                Sciences
+            </a>
+
+            <a href="reunion/index.html">
+                La Réunion
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Informations
+            </h3>
 
             <a href="methodologie/index.html">
                 Méthodologie
@@ -348,15 +890,18 @@
 
     <div class="footer-bottom">
 
-        Copyright © 2026 Observatoire Mondial.
-        Tous droits réservés, sauf indication contraire.
+        <span>
+            © 2026 Observatoire Mondial — JJCK
+        </span>
+
+        <span>
+            Information indépendante
+        </span>
 
     </div>
 
 </footer>
 
-
-<script src="assets/js/script.js"></script>
 
 </body>
 </html>
