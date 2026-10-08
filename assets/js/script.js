@@ -1,48 +1,150 @@
-"use strict";
+(() => {
 
-document.addEventListener("DOMContentLoaded", () => {
+    "use strict";
 
-    const menuToggle =
-        document.querySelector(".menu-toggle");
 
-    const mainNav =
-        document.querySelector(".main-nav");
+    const menuButton =
+        document.querySelector("[data-menu-button]");
 
-    if (menuToggle && mainNav) {
+    const navigation =
+        document.querySelector("[data-navigation]");
 
-        menuToggle.addEventListener("click", () => {
+
+    if (menuButton && navigation) {
+
+        menuButton.addEventListener("click", () => {
 
             const opened =
-                mainNav.classList.toggle("open");
+                navigation.classList.toggle("is-open");
 
-            menuToggle.setAttribute(
+            menuButton.setAttribute(
                 "aria-expanded",
                 String(opened)
             );
 
         });
 
-        mainNav.querySelectorAll("a").forEach(link => {
+    }
 
-            link.addEventListener("click", () => {
-                mainNav.classList.remove("open");
 
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
+    const shareButton =
+        document.querySelector("[data-share]");
+
+
+    if (shareButton) {
+
+        shareButton.addEventListener("click", async () => {
+
+            const data = {
+
+                title: document.title,
+
+                text:
+                    "Observatoire Mondial — article",
+
+                url:
+                    window.location.href
+
+            };
+
+
+            if (navigator.share) {
+
+                try {
+
+                    await navigator.share(data);
+
+                } catch (error) {
+
+                    if (error.name !== "AbortError") {
+                        console.error(error);
+                    }
+
+                }
+
+            } else {
+
+                await navigator.clipboard.writeText(
+                    window.location.href
                 );
-            });
+
+                shareButton.textContent =
+                    "Lien copié";
+
+                setTimeout(() => {
+
+                    shareButton.textContent =
+                        "Partager";
+
+                }, 2000);
+
+            }
 
         });
+
     }
 
 
-    const year =
-        document.querySelector("#year");
+    const copyButton =
+        document.querySelector("[data-copy]");
 
-    if (year) {
-        year.textContent =
-            new Date().getFullYear();
+
+    if (copyButton) {
+
+        copyButton.addEventListener("click", async () => {
+
+            try {
+
+                await navigator.clipboard.writeText(
+                    window.location.href
+                );
+
+                copyButton.textContent =
+                    "Lien copié";
+
+                setTimeout(() => {
+
+                    copyButton.textContent =
+                        "Copier le lien";
+
+                }, 2000);
+
+            } catch (error) {
+
+                console.error(error);
+
+                copyButton.textContent =
+                    "Copie impossible";
+
+            }
+
+        });
+
     }
 
-});
+
+    document.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            if (navigation &&
+                navigation.classList.contains("is-open")) {
+
+                navigation.classList.remove("is-open");
+
+                if (menuButton) {
+
+                    menuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+
+            }
+
+        });
+
+    });
+
+})();
