@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Science et technologie — Article 01 | Observatoire Mondial</title>
+
+  <meta name="description" content="Analyse de l'évolution technologique mondiale : intelligence artificielle, robotique, biotechnologies, énergie, espace, économie et enjeux internationaux.">
+
+  <meta name="author" content="Observatoire Mondial">
+  <meta name="theme-color" content="#02050b">
+
+  <link rel="stylesheet" href="../../../../assets/css/style.css">
+
+  <style>
+    :root {
+      --science-bg: #02050b;
+      --science-panel: #081321;
+      --science-blue: #168cff;
+      --science-cyan: #54d9ff;
+      --science-gold: #e4b44c;
+      --science-white: #f3f7fc;
+      --science-muted: #a9b7c9;
+      --science-border: rgba(84, 217, 255, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--science-bg);
+      color: var(--science-white);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--science-cyan);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--science-gold);
+    }
+
+    .science-container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    .science-topbar {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--science-border);
+      background: rgba(2, 5, 11, 0.96);
+    }
+
+    .science-brand {
+      color: var(--science-white);
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    .science-brand span {
+      color: var(--science-gold);
+    }
+
+    .science-breadcrumb {
+      margin: 22px 0;
+      color: var(--science-muted);
+      font-size: 0.9rem;
+    }
+
+    .science-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 36px;
+      border: 1px solid var(--science-border);
+      border-radius: 20px;
+      background:
+        radial-gradient(circle at 85% 10%, rgba(0, 130, 255, 0.22), transparent 38%),
+        linear-gradient(135deg, #09182a, #03070e 75%);
+    }
+
+    .science-label {
+      display: inline-block;
+      padding: 6px 12px;
+      border: 1px solid rgba(84, 217, 255, 0.35);
+      border-radius: 30px;
+      color: var(--science-cyan);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 18px 0;
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      line-height: 1.13;
+      letter-spacing: -1px;
+    }
+
+    h2 {
+      margin-top: 44px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--science-border);
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin-top: 28px;
+      color: var(--science-cyan);
+      font-size: 1.2rem;
+    }
+
+    .science-subtitle {
+      max-width: 800px;
+      color: var(--science-muted);
+      font-size: 1.12rem;
+    }
+
+    .science-meta {
+      margin-top: 22px;
+      color: var(--science-muted);
+      font-size: 0.9rem;
+    }
+
+    .science-cover {
+      margin: 26px 0 10px;
+    }
+
+    .science-cover img,
+    .science-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--science-border);
+      border-radius: 14px;
+    }
+
+    .science-caption {
+      margin-top: 8px;
+      color: var(--science-muted);
+      font-size: 0.82rem;
+      font-style: italic;
+    }
+
+    .science-article {
+      padding: 28px 0 45px;
+    }
+
+    .science-article p {
+      margin: 17px 0;
+    }
+
+    .science-article li {
+      margin: 9px 0;
+    }
+
+    .science-figure {
+      margin: 28px 0;
+    }
+
+    .science-callout {
+      margin: 28px 0;
+      padding: 20px 22px;
+      border-left: 3px solid var(--science-gold);
+      border-radius: 0 12px 12px 0;
+      background: var(--science-panel);
+    }
+
+    .science-callout strong {
+      color: var(--science-gold);
+    }
+
+    .science-sources {
+      padding: 24px;
+      border: 1px solid var(--science-border);
+      border-radius: 16px;
+      background: var(--science-panel);
+    }
+
+    .science-sources li {
+      overflow-wrap: anywhere;
+    }
+
+    .science-method {
+      margin-top: 26px;
+      padding: 18px;
+      border: 1px solid rgba(228, 180, 76, 0.3);
+      border-radius: 12px;
+      color: var(--science-muted);
+      font-size: 0.92rem;
+    }
+
+    .science-navigation {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 32px 0;
+    }
+
+    .science-button {
+      display: inline-block;
+      padding: 12px 18px;
+      border: 1px solid var(--science-border);
+      border-radius: 9px;
+      background: #09182a;
+      color: var(--science-white);
+      font-weight: 700;
+    }
+
+    .science-button:hover {
+      border-color: var(--science-cyan);
+      color: var(--science-cyan);
+    }
+
+    .science-footer {
+      margin-top: 30px;
+      padding: 28px 0;
+      border-top: 1px solid var(--science-border);
+      color: var(--science-muted);
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 600px) {
+      .science-hero {
+        padding: 23px;
+      }
+
+      .science-article {
+        padding-top: 12px;
+      }
+
+      .science-sources {
+        padding: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="science-topbar">
+    <div class="science-container">
+      <a class="science-brand" href="../../../../index.html">
+        OBSERVATOIRE <span>MONDIAL</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="science-container">
+
+    <nav class="science-breadcrumb" aria-label="Fil d’Ariane">
+      <a href="../../../../index.html">Accueil</a>
+      /
+      <a href="../../../index.html">Science et technologie</a>
+      /
+      Article 01
+    </nav>
+
+    <header class="science-hero">
+      <span class="science-label">Science et technologie · Article 01</span>
+
+      <h1>La transformation technologique du monde : progrès, puissance et conséquences</h1>
+
+      <p class="science-subtitle">
+        Intelligence artificielle, robotique, biotechnologies, énergie et conquête
+        spatiale : comment les innovations transforment les sociétés, les économies
+        et les rapports de force internationaux.
+      </p>
+
+      <div class="science-meta">
+        Publication : 9 octobre 2026 · Observatoire Mondial
+      </div>
+    </header>
+
+    <figure class="science-cover">
+      <img
+        src="images/couverture-science.png"
+        alt="Illustration éditoriale représentant plusieurs domaines de la science et de la technologie"
+        loading="eager"
+      >
+      <figcaption class="science-caption">
+        Illustration — ne représente pas la situation en temps réel.
+      </figcaption>
+    </figure>
+
+    <article class="science-article">
+
+      <section>
+        <h2>Introduction — Une transformation mondiale</h2>
+
+        <p>
+          La science et la technologie occupent une place centrale dans l'évolution
+          du monde contemporain. Elles modifient les moyens de produire, de
+          communiquer, de se soigner, de se déplacer et d'accéder à l'information.
+          Elles influencent également les stratégies des États et la compétitivité
+          des entreprises.
+        </p>
+
+        <p>
+          Cette transformation ne repose pas sur une invention unique. Elle résulte
+          de la combinaison de plusieurs domaines : informatique, intelligence
+          artificielle, robotique, biologie, nouveaux matériaux, production
+          énergétique, télécommunications et technologies spatiales.
+        </p>
+
+        <p>
+          Les bénéfices possibles sont considérables, mais ils ne sont ni
+          automatiques ni répartis équitablement. Les effets dépendent notamment
+          des choix politiques, des investissements, des compétences disponibles,
+          des infrastructures et des règles qui encadrent les innovations.
+        </p>
+
+        <div class="science-callout">
+          <strong>Question centrale :</strong>
+          comment faire en sorte que les progrès technologiques améliorent
+          les conditions de vie sans aggraver les inégalités, les dépendances
+          économiques et les risques environnementaux ?
+        </div>
+      </section>
+
+      <section>
+        <h2>1. L’intelligence artificielle : une nouvelle capacité de traitement</h2>
+
+        <figure class="science-figure">
+          <img
+            src="images/intelligence-artificielle.png"
+            alt="Illustration de systèmes informatiques et d'intelligence artificielle"
+            loading="lazy"
+          >
+          <figcaption class="science-caption">
+            Illustration — ne représente pas la situation en temps réel.
+          </figcaption>
+        </figure>
+
+        <p>
+          L'intelligence artificielle regroupe des techniques permettant à des
+          systèmes informatiques d'effectuer certaines tâches associées à des
+          capacités humaines : reconnaître des images, analyser des textes,
+          traduire des langues, identifier des tendances ou produire du contenu.
+        </p>
+
+        <p>
+          Dans la recherche scientifique, ces outils peuvent aider à explorer
+          de grands volumes de données. Dans les entreprises, ils peuvent assister
+          le service client, la programmation, la maintenance ou l'analyse
+          documentaire. Dans la santé, certaines applications soutiennent
+          l'interprétation d'images médicales ou la recherche, sans remplacer
+          systématiquement les professionnels.
+        </p>
+
+        <p>
+          Les résultats dépendent cependant de la qualité des données, de la
+          méthode utilisée et du contexte d'application. Un système peut produire
+          des erreurs, reproduire des biais ou fournir une réponse convaincante
+          mais inexacte. Une vérification humaine reste importante lorsque
+          les conséquences d'une erreur sont significatives.
+        </p>
+
+        <h3>Les conséquences économiques</h3>
+
+        <p>
+          L'automatisation peut réduire le temps nécessaire à certaines tâches,
+          améliorer la productivité et faire apparaître de nouvelles activités.
+          Elle peut aussi transformer les métiers, modifier les besoins en
+          compétences et fragiliser certaines fonctions lorsque les tâches
+          sont automatisées.
+        </p>
+
+        <p>
+          Il ne faut pas confondre l'automatisation d'une tâche avec la disparition
+          complète d'un métier. Les effets sur l'emploi varient selon les secteurs,
+          les entreprises, les politiques de formation et la vitesse d'adoption.
+        </p>
+
+        <p>
+          L'accès aux infrastructures informatiques, aux données, aux compétences
+          et aux financements peut favoriser les entreprises déjà bien établies.
+          La question de la concentration du pouvoir économique se pose donc
+          en parallèle de celle des gains de productivité.
+        </p>
+      </section>
+
+      <section>
+        <h2>2. La robotique et l’évolution de l’industrie</h2>
+
+        <figure class="science-figure">
+          <img
+            src="images/robotique-industrie.png"
+            alt="Illustration de robots industriels dans un environnement de production"
+            loading="lazy"
+          >
+          <figcaption class="science-caption">
+            Illustration — ne représente pas la situation en temps réel.
+          </figcaption>
+        </figure>
+
+        <p>
+          Les robots industriels sont utilisés depuis plusieurs décennies dans
+          des activités comme l'assemblage, la manutention et le contrôle qualité.
+          Les progrès des capteurs, des logiciels et de l'intelligence artificielle
+          élargissent progressivement certaines possibilités d'automatisation.
+        </p>
+
+        <p>
+          Dans de bonnes conditions, la robotique peut améliorer la régularité
+          de certaines opérations, limiter l'exposition à des tâches dangereuses
+          et soutenir la production. Elle exige toutefois des investissements,
+          une maintenance adaptée, une alimentation énergétique et des personnels
+          capables de superviser les installations.
+        </p>
+
+        <p>
+          L'automatisation peut renforcer la compétitivité de certains sites
+          industriels, mais elle ne suffit pas à expliquer la localisation
+          d'une usine. Les coûts, les fournisseurs, les infrastructures, l'accès
+          aux marchés, la stabilité réglementaire et la disponibilité des
+          compétences comptent également.
+        </p>
+
+        <p>
+          Pour les salariés, les enjeux comprennent la formation continue,
+          l'adaptation des postes, la santé au travail et le partage des gains
+          de productivité. L'impact réel doit être évalué secteur par secteur,
+          plutôt que résumé à une opposition générale entre humains et machines.
+        </p>
+      </section>
+
+      <section>
+        <h2>3. Les biotechnologies et la santé</h2>
+
+        <figure class="science-figure">
+          <img
+            src="images/biotechnologies.png"
+            alt="Illustration scientifique de laboratoire et de recherche biologique"
+            loading="lazy"
+          >
+          <figcaption class="science-caption">
+            Illustration — ne représente pas la situation en temps réel.
+          </figcaption>
+        </figure>
+
+        <p>
+          Les biotechnologies utilisent des organismes vivants, des cellules
+          ou des mécanismes biologiques pour développer des connaissances,
+          des produits et des procédés. Elles couvrent notamment le diagnostic,
+          la fabrication de certains médicaments, l'agriculture et la recherche
+          sur les maladies.
+        </p>
+
+        <p>
+          Les progrès de la génomique et des outils d'analyse biologique peuvent
+          contribuer à mieux comprendre certaines pathologies. Des approches
+          ciblées peuvent également ouvrir des pistes thérapeutiques, mais
+          leurs résultats, leurs risques et leurs indications doivent être
+          évalués par des études appropriées.
+        </p>
+
+        <p>
+          Ces technologies soulèvent des questions éthiques et sociales :
+          protection des données génétiques, consentement, accès aux traitements,
+          sécurité des recherches et limites des interventions sur le vivant.
+          Les bénéfices scientifiques ne dispensent pas d'une évaluation
+          indépendante des risques.
+        </p>
+
+        <p>
+          L'accès aux traitements peut aussi dépendre du prix, de la capacité
+          industrielle, des systèmes de santé et des règles de remboursement.
+          Une innovation médicale ne produit donc pas nécessairement les mêmes
+          effets pour toutes les populations.
+        </p>
+      </section>
+
+      <section>
+        <h2>4. Énergie, ressources et transition industrielle</h2>
+
+        <figure class="science-figure">
+          <img
+            src="images/transition-energetique.png"
+            alt="Illustration de technologies de production et de stockage de l'énergie"
+            loading="lazy"
+          >
+          <figcaption class="science-caption">
+            Illustration — ne représente pas la situation en temps réel.
+          </figcaption>
+        </figure>
+
+        <p>
+          Le développement numérique et industriel dépend de ressources
+          matérielles et énergétiques. Les centres de données, les réseaux,
+          les équipements électroniques et les systèmes automatisés nécessitent
+          de l'électricité, des infrastructures et des chaînes d'approvisionnement.
+        </p>
+
+        <p>
+          Les énergies renouvelables, le stockage, l'efficacité énergétique,
+          les réseaux électriques et certaines technologies bas carbone peuvent
+          participer à la transformation des systèmes énergétiques. Leur
+          contribution dépend néanmoins des conditions locales, des coûts,
+          des capacités de raccordement et des choix d'investissement.
+        </p>
+
+        <p>
+          La fabrication de batteries, de panneaux solaires, de composants
+          électroniques et d'autres équipements mobilise différentes matières
+          premières. Leur extraction et leur transformation peuvent produire
+          des impacts environnementaux et sociaux. Le recyclage, la réparabilité,
+          la diversification des fournisseurs et la réduction des consommations
+          sont donc des sujets importants.
+        </p>
+
+        <p>
+          Le numérique n'est pas immatériel : les équipements ont une durée
+          de vie, consomment des ressources et génèrent des déchets. Évaluer
+          une innovation demande de considérer son cycle de vie, et pas seulement
+          son fonctionnement à l'utilisation.
+        </p>
+      </section>
+
+      <section>
+        <h2>5. Les technologies spatiales et les télécommunications</h2>
+
+        <figure class="science-figure">
+          <img
+            src="images/technologie-spatiale.png"
+            alt="Illustration d'un satellite en orbite autour de la Terre"
+            loading="lazy"
+          >
+          <figcaption class="science-caption">
+            Illustration — ne représente pas la situation en temps réel.
+          </figcaption>
+        </figure>
+
+        <p>
+          Les satellites jouent un rôle dans les télécommunications, la
+          navigation, l'observation de la Terre et le suivi de certains
+          phénomènes environnementaux. Les données satellitaires peuvent
+          notamment contribuer à l'étude des océans, des cultures, des
+          incendies et des évolutions du territoire.
+        </p>
+
+        <p>
+          Les constellations de satellites peuvent étendre l'accès à certaines
+          communications dans des régions mal desservies par les réseaux
+          terrestres. Cet accès dépend cependant du coût des équipements,
+          des abonnements, de la couverture, de la réglementation et des
+          conditions techniques.
+        </p>
+
+        <p>
+          Le développement spatial comporte aussi des enjeux : accumulation
+          de débris orbitaux, gestion du trafic spatial, sécurité des systèmes,
+          protection des données et dépendance envers des opérateurs ou des
+          infrastructures étrangères.
+        </p>
+
+        <p>
+          Les technologies spatiales sont ainsi à la fois des outils
+          scientifiques, des infrastructures économiques et des éléments
+          de stratégie internationale.
+        </p>
+      </section>
+
+      <section>
+        <h2>6. Quels pays dominent les technologies mondiales ?</h2>
+
+        <p>
+          Il n'existe pas un classement unique qui mesure à lui seul la
+          puissance technologique d'un pays. La recherche scientifique,
+          les brevets, les capacités industrielles, les investissements,
+          les compétences, les infrastructures et la production de composants
+          sont des indicateurs différents.
+        </p>
+
+        <p>
+          Les États-Unis occupent une place importante dans plusieurs domaines,
+          notamment les logiciels, les services numériques, les investissements
+          technologiques et la recherche en intelligence artificielle.
+          La Chine dispose d'une base industrielle majeure et d'importantes
+          capacités dans plusieurs secteurs numériques et manufacturiers.
+        </p>
+
+        <p>
+          Taïwan occupe une place essentielle dans la fabrication de certaines
+          puces électroniques avancées. La Corée du Sud est un acteur important
+          des semi-conducteurs, des écrans et de l'électronique. Le Japon
+          conserve des compétences industrielles et technologiques significatives.
+        </p>
+
+        <p>
+          L'Union européenne contribue à la recherche, aux équipements
+          industriels, aux télécommunications, à l'aéronautique et à plusieurs
+          technologies de pointe. D'autres économies, notamment l'Inde,
+          développent des capacités dans les services numériques, les logiciels,
+          la recherche et certaines industries.
+        </p>
+
+        <p>
+          Ces exemples ne constituent pas un classement absolu. La position
+          d'un pays varie selon la technologie étudiée et l'indicateur choisi.
+          Un pays peut être très performant en recherche sans fabriquer seul
+          tous les composants nécessaires à ses produits.
+        </p>
+
+        <div class="science-callout">
+          <strong>Enjeu stratégique :</strong>
+          les technologies sont souvent produites par des chaînes
+          internationales. La conception, les matières premières, les
+          équipements, la fabrication et l'assemblage peuvent dépendre
+          de pays différents. Cette interdépendance crée des opportunités,
+          mais aussi des vulnérabilités en cas de crise commerciale ou politique.
+        </div>
+      </section>
+
+      <section>
+        <h2>7. Les risques et les conséquences négatives</h2>
+
+        <p>
+          Les progrès technologiques ne sont pas négatifs par nature, mais
+          leur conception, leur déploiement et leur contrôle peuvent entraîner
+          des risques. Ceux-ci doivent être examinés au cas par cas, en tenant
+          compte des bénéfices attendus et des personnes concernées.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Inégalités d'accès :</strong> les équipements, les compétences
+            et les services numériques ne sont pas accessibles partout dans
+            les mêmes conditions.
+          </li>
+          <li>
+            <strong>Emploi et formation :</strong> certaines tâches peuvent
+            être automatisées et certains métiers transformés, ce qui peut
+            nécessiter des formations et des transitions professionnelles.
+          </li>
+          <li>
+            <strong>Vie privée :</strong> la collecte et le traitement de
+            données peuvent menacer la confidentialité lorsqu'ils sont
+            mal encadrés.
+          </li>
+          <li>
+            <strong>Cybersécurité :</strong> les systèmes connectés peuvent
+            être exposés à des intrusions, à des interruptions ou à des
+            manipulations.
+          </li>
+          <li>
+            <strong>Environnement :</strong> l'extraction de matières premières,
+            la consommation d'énergie et les déchets électroniques doivent
+            être pris en compte.
+          </li>
+          <li>
+            <strong>Concentration économique :</strong> le contrôle de certaines
+            infrastructures ou technologies peut renforcer le pouvoir de
+            quelques entreprises ou pays.
+          </li>
+          <li>
+            <strong>Dépendance technologique :</strong> un manque de fournisseurs
+            alternatifs ou de capacités locales peut fragiliser des secteurs
+            essentiels.
+          </li>
+        </ul>
+
+        <p>
+          Ces risques ne se manifestent pas partout de la même manière.
+          Leur importance dépend des usages, des règles applicables, des
+          dispositifs de sécurité et des possibilités de contrôle et de recours.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. L'enjeu économique : qui bénéficie du progrès ?</h2>
+
+        <p>
+          Une innovation peut créer de la valeur économique en améliorant
+          la productivité, en réduisant certains coûts ou en permettant
+          l'apparition de nouveaux produits et services. Mais les gains
+          ne sont pas automatiquement distribués entre les entreprises,
+          les salariés, les consommateurs et les collectivités.
+        </p>
+
+        <p>
+          La recherche, la formation, les infrastructures et l'accès au
+          financement influencent la capacité d'un territoire à transformer
+          une découverte en activité productive. Les petites entreprises
+          peuvent bénéficier d'outils accessibles, tout en rencontrant des
+          obstacles liés aux coûts, aux compétences ou à la dépendance
+          envers des plateformes.
+        </p>
+
+        <p>
+          Pour les pouvoirs publics, les choix portent notamment sur le
+          financement de la recherche, l'éducation, la concurrence, la
+          protection des données, les infrastructures, la politique
+          industrielle et les règles environnementales.
+        </p>
+
+        <p>
+          L'évaluation d'une politique technologique devrait ainsi examiner
+          non seulement les investissements et les annonces, mais aussi
+          les résultats observables : diffusion des innovations, qualité
+          des emplois, accessibilité des services, effets sur la productivité
+          et coûts environnementaux.
+        </p>
+      </section>
+
+      <section>
+        <h2>9. Les questions essentielles pour les années à venir</h2>
+
+        <p>
+          Plusieurs questions resteront centrales pour comprendre l'évolution
+          technologique mondiale :
+        </p>
+
+        <ul>
+          <li>Comment garantir un accès plus équitable aux outils numériques ?</li>
+          <li>Comment former les travailleurs aux transformations de leurs métiers ?</li>
+          <li>Comment limiter les risques liés aux données et à la cybersécurité ?</li>
+          <li>Comment réduire l'impact matériel et énergétique du numérique ?</li>
+          <li>Comment renforcer la résilience des chaînes d'approvisionnement ?</li>
+          <li>Comment évaluer les innovations sans confondre promesses et résultats ?</li>
+          <li>Comment préserver le contrôle humain dans les décisions sensibles ?</li>
+        </ul>
+
+        <p>
+          Les réponses ne relèvent pas uniquement des scientifiques ou des
+          entreprises. Elles concernent également les citoyens, les travailleurs,
+          les institutions, les systèmes éducatifs et les autorités de régulation.
+        </p>
+      </section>
+
+      <section>
+        <h2>Conclusion — Le progrès doit être évalué par ses effets</h2>
+
+        <p>
+          La science et la technologie transforment les capacités humaines
+          et les rapports économiques internationaux. Elles peuvent contribuer
+          à améliorer la santé, la production, les communications et la
+          compréhension du monde. Elles peuvent aussi créer de nouvelles
+          dépendances et accentuer certaines inégalités.
+        </p>
+
+        <p>
+          Il est donc nécessaire de distinguer les découvertes scientifiques,
+          les applications réellement disponibles, les promesses commerciales
+          et les scénarios encore incertains. Une annonce technologique
+          ne constitue pas, à elle seule, la preuve d'un bénéfice généralisé.
+        </p>
+
+        <p>
+          L'enjeu collectif consiste à développer les connaissances, à
+          évaluer les risques, à renforcer les compétences et à mettre
+          en place des règles adaptées. Le progrès technologique mérite
+          d'être apprécié à partir de ses résultats concrets, de ses coûts
+          et de ses conséquences humaines, économiques et environnementales.
+        </p>
+      </section>
+
+      <section>
+        <h2>Sources et références documentaires</h2>
+
+        <div class="science-sources">
+          <p>
+            Les ressources suivantes permettent de consulter des données,
+            des rapports et des cadres de référence sur les thèmes abordés.
+            Elles ne valident pas nécessairement chacune des interprétations
+            présentées dans cet article.
+          </p>
+
+          <ol>
+            <li>
+              <a href="https://www.wipo.int/global_innovation_index/" target="_blank" rel="noopener noreferrer">
+                Organisation Mondiale de la Propriété Intellectuelle (OMPI) —
+                Global Innovation Index
+              </a>
+              : indicateurs comparatifs sur l'innovation.
+            </li>
+
+            <li>
+              <a href="https://hai.stanford.edu/ai-index" target="_blank" rel="noopener noreferrer">
+                Stanford Institute for Human-Centered Artificial Intelligence —
+                AI Index
+              </a>
+              : ressources et rapports sur l'évolution de l'intelligence artificielle.
+            </li>
+
+            <li>
+              <a href="https://www.iea.org/" target="_blank" rel="noopener noreferrer">
+                Agence internationale de l'énergie (AIE)
+              </a>
+              : données et analyses sur l'énergie, les technologies et les transitions énergétiques.
+            </li>
+
+            <li>
+              <a href="https://unctad.org/topic/technology-and-innovation" target="_blank" rel="noopener noreferrer">
+                Conférence des Nations unies sur le commerce et le développement (CNUCED) —
+                Technologie et innovation
+              </a>
+              : analyses sur les technologies et le développement économique.
+            </li>
+
+            <li>
+              <a href="https://www.unesco.org/en/artificial-intelligence/recommendation-ethics" target="_blank" rel="noopener noreferrer">
+                UNESCO — Éthique de l'intelligence artificielle
+              </a>
+              : principes et recommandations sur les enjeux éthiques.
+            </li>
+
+            <li>
+              <a href="https://www.who.int/" target="_blank" rel="noopener noreferrer">
+                Organisation mondiale de la Santé (OMS)
+              </a>
+              : ressources sur la santé et les enjeux liés aux nouvelles technologies.
+            </li>
+
+            <li>
+              <a href="https://www.oecd.org/digital/" target="_blank" rel="noopener noreferrer">
+                Organisation de coopération et de développement économiques (OCDE) —
+                Économie numérique
+              </a>
+              : travaux sur la transformation numérique et ses effets économiques.
+            </li>
+          </ol>
+        </div>
+
+        <div class="science-method">
+          <strong>Méthodologie éditoriale</strong>
+
+          <p>
+            Cet article propose une synthèse générale et une analyse des enjeux
+            technologiques mondiaux. Les constats généraux, les interprétations
+            et les questions prospectives doivent être distingués. Les données
+            chiffrées et les affirmations portant sur une situation récente
+            doivent être vérifiées dans les publications originales avant
+            leur utilisation comme faits établis.
+          </p>
+
+          <p>
+            Observatoire Mondial privilégie les sources identifiables, la
+            traçabilité de l'information, la distinction entre faits et analyses
+            et la transparence sur les limites de ses publications.
+          </p>
+
+          <p>
+            Nous ne pouvons prétendre que cet article est exempt de toute erreur.
+            Les corrections documentées peuvent être intégrées lorsque des
+            informations inexactes sont identifiées.
+          </p>
+        </div>
+      </section>
+
+      <nav class="science-navigation" aria-label="Navigation des articles">
+        <a class="science-button" href="../../../index.html">
+          ← Retour à Science et technologie
+        </a>
+
+        <a class="science-button" href="../../../../index.html">
+          Accueil du site
+        </a>
+      </nav>
+
+    </article>
+  </main>
+
+  <footer class="science-footer">
+    <div class="science-container">
+      <p><strong>OBSERVATOIRE MONDIAL</strong></p>
+      <p>Observer le monde. Comprendre les enjeux. Anticiper les transformations.</p>
+      <p>Science et technologie — Article 01 — 9 octobre 2026</p>
+    </div>
+  </footer>
+
+</body>
+</html>
