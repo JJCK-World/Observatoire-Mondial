@@ -1,0 +1,29 @@
+<article class="article-card">
+
+    <div class="article-meta">
+        <span>10 octobre 2026</span>
+        <span>Emploi et formation</span>
+    </div>
+
+    <h3>
+        <a href="article-01/10/10/2026/">
+            Métiers d’avenir à La Réunion :
+            formations, aides et débouchés
+        </a>
+    </h3>
+
+    <p>
+        Quels métiers rechercher à La Réunion ?
+        Où se former, quelles aides demander et comment
+        préparer son avenir professionnel ? Découvrez
+        notre guide pratique.
+    </p>
+
+    <a
+        class="button button-secondary"
+        href="article-01/10/10/2026/"
+    >
+        Lire l’article
+    </a>
+
+</article>
