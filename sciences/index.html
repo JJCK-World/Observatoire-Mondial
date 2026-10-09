@@ -1,77 +1,189 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sciences — Observatoire Mondial</title>
+  <title>Science et technologie — Observatoire Mondial</title>
 
-    <meta name="description"
-          content="Sciences, technologies et innovation.">
+  <meta
+    name="description"
+    content="Découvrez les analyses d'Observatoire Mondial sur les sciences, les innovations technologiques et leurs conséquences économiques et internationales."
+  >
 
-    <link rel="stylesheet"
-          href="../assets/css/style.css">
+  <meta name="author" content="Observatoire Mondial">
+  <meta name="theme-color" content="#02050b">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <style>
+    .science-page {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+      padding: 35px 0 60px;
+    }
+
+    .science-page-hero {
+      padding: 35px;
+      border: 1px solid rgba(84, 217, 255, 0.25);
+      border-radius: 20px;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(0, 130, 255, 0.22), transparent 40%),
+        linear-gradient(135deg, #09182a, #02050b);
+    }
+
+    .science-page h1 {
+      margin: 15px 0;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.15;
+    }
+
+    .science-page p {
+      line-height: 1.75;
+    }
+
+    .science-page-label {
+      color: #54d9ff;
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .science-page-card {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 24px;
+      margin-top: 30px;
+      padding: 22px;
+      border: 1px solid rgba(84, 217, 255, 0.2);
+      border-radius: 18px;
+      background: #081321;
+    }
+
+    .science-page-card img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-height: 330px;
+      min-height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .science-page-card h2 {
+      margin-top: 0;
+      line-height: 1.35;
+    }
+
+    .science-page-meta {
+      color: #a9b7c9;
+      font-size: 0.9rem;
+    }
+
+    .science-page-link {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 11px 16px;
+      border: 1px solid rgba(84, 217, 255, 0.35);
+      border-radius: 9px;
+      color: #54d9ff;
+      font-weight: bold;
+    }
+
+    .science-page-link:hover {
+      border-color: #e4b44c;
+      color: #e4b44c;
+    }
+
+    .science-page-footer {
+      margin-top: 40px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(84, 217, 255, 0.2);
+    }
+
+    @media (max-width: 700px) {
+      .science-page-hero {
+        padding: 23px;
+      }
+
+      .science-page-card {
+        grid-template-columns: 1fr;
+        padding: 16px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="site-header">
-    <div class="container header-inner">
+  <main class="science-page">
 
-        <a href="../index.html" class="logo">
-            <span class="logo-symbol">◎</span>
-            <span>
-                <strong>OBSERVATOIRE</strong>
-                <small>MONDIAL</small>
-            </span>
-        </a>
+    <p>
+      <a href="../index.html">← Retour à l'accueil du site</a>
+    </p>
 
-        <button class="menu-toggle"
-                aria-label="Ouvrir le menu"
-                aria-expanded="false">
-            ☰
-        </button>
+    <header class="science-page-hero">
+      <span class="science-page-label">Observatoire Mondial · Rubrique</span>
 
-        <nav class="main-nav">
-            <a href="../index.html">Accueil</a>
-            <a href="../monde/index.html">Monde</a>
-            <a href="../economie/index.html">Économie</a>
-            <a href="index.html">Sciences</a>
-            <a href="../articles/index.html">Articles</a>
-            <a href="../analyses/index.html">Analyses</a>
-            <a href="../contact/index.html">Contact</a>
-        </nav>
+      <h1>Science et technologie</h1>
 
-    </div>
-</header>
+      <p>
+        Comprendre les découvertes scientifiques, les innovations
+        technologiques et leurs conséquences sur les sociétés,
+        l'économie, l'environnement et les relations internationales.
+      </p>
 
-<main>
+      <p>
+        Notre approche distingue les faits documentés, les analyses
+        et les évolutions qui restent incertaines.
+      </p>
+    </header>
 
-<section class="section">
-    <div class="container">
+    <section aria-labelledby="articles-science-title">
+      <h2 id="articles-science-title">Derniers articles</h2>
 
-        <p class="eyebrow">SCIENCES & TECHNOLOGIES</p>
+      <article class="science-page-card">
+        <div>
+          <img
+            src="article-01/09/10/2026/images/couverture-science.png"
+            alt="Illustration éditoriale sur les innovations scientifiques et technologiques"
+            loading="lazy"
+          >
+          <p class="science-page-meta">
+            Article 01 · 9 octobre 2026
+          </p>
+        </div>
 
-        <h1>Sciences</h1>
+        <div>
+          <h2>
+            La transformation technologique du monde :
+            progrès, puissance et conséquences
+          </h2>
 
-        <p class="hero-text">
-            Innovation, sciences, technologies
-            et enjeux de puissance.
-        </p>
+          <p>
+            Intelligence artificielle, robotique, biotechnologies,
+            énergie et technologies spatiales : une analyse des
+            transformations en cours, de leurs effets économiques
+            et des enjeux stratégiques mondiaux.
+          </p>
 
-    </div>
-</section>
+          <a
+            class="science-page-link"
+            href="article-01/09/10/2026/index.html"
+          >
+            Lire l'article →
+          </a>
+        </div>
+      </article>
+    </section>
 
-</main>
+    <footer class="science-page-footer">
+      <p><strong>OBSERVATOIRE MONDIAL</strong></p>
+      <p>Observer le monde. Comprendre les enjeux. Anticiper les transformations.</p>
+    </footer>
 
-<footer class="site-footer">
-    <div class="container footer-bottom">
-        © <span id="year"></span> Observatoire Mondial.
-    </div>
-</footer>
-
-<script src="../assets/js/script.js"></script>
+  </main>
 
 </body>
 </html>
