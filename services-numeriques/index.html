@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#02050b">
+
+  <title>JJCK Services Numériques Entrepreneurial — Observatoire Mondial</title>
+  <meta name="description" content="Un espace dédié aux entrepreneurs : structuration de projet, étude de marché, business plan, prévisions financières, stratégie numérique et développement commercial.">
+  <link rel="canonical" href="https://jjck-world.github.io/Observatoire-Mondial/services-numeriques/">
+  <meta name="author" content="JJCK">
+  <meta property="og:title" content="JJCK Services Numériques Entrepreneurial">
+  <meta property="og:description" content="Transformez votre idée en projet structuré. Étudiez, planifiez et développez votre activité avec une approche méthodique.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <style>
+    :root {
+      --sn-bg: #02050b;
+      --sn-panel: #081321;
+      --sn-panel-2: #0b1b2c;
+      --sn-blue: #006eff;
+      --sn-cyan: #59d9ff;
+      --sn-gold: #ffd45a;
+      --sn-text: #edf5ff;
+      --sn-muted: #a8b9cc;
+      --sn-border: rgba(89, 217, 255, .2);
+    }
+
+    .sn-page {
+      color: var(--sn-text);
+      background:
+        radial-gradient(ellipse at 75% 0%, rgba(0, 110, 255, .15), transparent 38%),
+        var(--sn-bg);
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .sn-container {
+      width: min(1180px, calc(100% - 36px));
+      margin-inline: auto;
+    }
+
+    .sn-topline {
+      border-bottom: 1px solid var(--sn-border);
+      background: rgba(2, 5, 11, .94);
+    }
+
+    .sn-brandline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-block: 17px;
+    }
+
+    .sn-brand {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: .09em;
+      line-height: 1.45;
+    }
+
+    .sn-brand small {
+      display: block;
+      color: var(--sn-cyan);
+      font-size: .69rem;
+      letter-spacing: .17em;
+    }
+
+    .sn-home {
+      color: var(--sn-muted);
+      text-decoration: none;
+      font-size: .9rem;
+    }
+
+    .sn-home:hover,
+    .sn-footer a:hover {
+      color: var(--sn-cyan);
+    }
+
+    .sn-hero {
+      position: relative;
+      padding-block: clamp(64px, 10vw, 125px) 76px;
+    }
+
+    .sn-hero::before {
+      content: "";
+      position: absolute;
+      width: 340px;
+      height: 340px;
+      right: -150px;
+      top: 50px;
+      border: 1px solid rgba(0, 168, 255, .18);
+      border-radius: 50%;
+      box-shadow: 0 0 90px rgba(0, 110, 255, .12),
+                  inset 0 0 70px rgba(0, 110, 255, .07);
+      pointer-events: none;
+    }
+
+    .sn-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border: 1px solid rgba(89, 217, 255, .3);
+      border-radius: 999px;
+      color: var(--sn-cyan);
+      background: rgba(0, 110, 255, .08);
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .sn-kicker::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--sn-gold);
+      box-shadow: 0 0 12px rgba(255, 212, 90, .7);
+    }
+
+    .sn-hero h1 {
+      max-width: 900px;
+      margin: 25px 0 20px;
+      color: #fff;
+      font-size: clamp(2.35rem, 6vw, 5rem);
+      line-height: 1.06;
+      letter-spacing: -.045em;
+    }
+
+    .sn-hero h1 span {
+      color: var(--sn-cyan);
+      text-shadow: 0 0 35px rgba(0, 110, 255, .24);
+    }
+
+    .sn-lead {
+      max-width: 760px;
+      color: var(--sn-muted);
+      font-size: clamp(1.04rem, 2vw, 1.22rem);
+      line-height: 1.85;
+    }
+
+    .sn-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 30px;
+    }
+
+    .sn-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 13px 20px;
+      border: 1px solid var(--sn-border);
+      border-radius: 9px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 750;
+      transition: transform .18s ease, border-color .18s ease;
+    }
+
+    .sn-button:hover {
+      transform: translateY(-2px);
+      border-color: var(--sn-cyan);
+    }
+
+    .sn-button-primary {
+      color: #fff;
+      background: linear-gradient(110deg, #005de8, #008edb);
+      border-color: #168dff;
+      box-shadow: 0 8px 28px rgba(0, 110, 255, .18);
+    }
+
+    .sn-button-secondary {
+      background: rgba(255, 255, 255, .025);
+    }
+
+    .sn-proofline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 26px;
+      margin-top: 32px;
+      color: var(--sn-muted);
+      font-size: .88rem;
+    }
+
+    .sn-proofline span::before {
+      content: "✓";
+      color: var(--sn-gold);
+      margin-right: 8px;
+      font-weight: 800;
+    }
+
+    .sn-section {
+      padding-block: 68px;
+      border-top: 1px solid rgba(89, 217, 255, .1);
+    }
+
+    .sn-section-heading {
+      max-width: 790px;
+      margin-bottom: 32px;
+    }
+
+    .sn-eyebrow {
+      color: var(--sn-gold);
+      font-size: .77rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .sn-section h2 {
+      margin: 12px 0;
+      color: #fff;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1.18;
+    }
+
+    .sn-section-heading p {
+      color: var(--sn-muted);
+      line-height: 1.8;
+    }
+
+    .sn-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .sn-card {
+      min-width: 0;
+      padding: 25px;
+      border: 1px solid var(--sn-border);
+      border-radius: 16px;
+      background: linear-gradient(145deg, rgba(11, 27, 44, .95), rgba(5, 12, 22, .94));
+      box-shadow: 0 14px 35px rgba(0, 0, 0, .12);
+    }
+
+    .sn-card-number {
+      display: inline-grid;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      margin-bottom: 17px;
+      border: 1px solid rgba(89, 217, 255, .28);
+      border-radius: 12px;
+      color: var(--sn-cyan);
+      background: rgba(0, 110, 255, .12);
+      font-weight: 800;
+    }
+
+    .sn-card h3 {
+      margin: 0 0 11px;
+      color: #fff;
+      font-size: 1.13rem;
+    }
+
+    .sn-card p {
+      margin: 0;
+      color: var(--sn-muted);
+      line-height: 1.75;
+      font-size: .96rem;
+    }
+
+    .sn-process {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 15px;
+      counter-reset: sn-step;
+    }
+
+    .sn-step {
+      position: relative;
+      padding: 23px 20px;
+      border-top: 2px solid var(--sn-blue);
+      background: rgba(8, 19, 33, .8);
+      counter-increment: sn-step;
+    }
+
+    .sn-step::before {
+      content: "0" counter(sn-step);
+      display: block;
+      margin-bottom: 18px;
+      color: var(--sn-gold);
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+
+    .sn-step h3 {
+      margin: 0 0 10px;
+      color: #fff;
+      font-size: 1.05rem;
+    }
+
+    .sn-step p {
+      color: var(--sn-muted);
+      line-height: 1.7;
+      font-size: .92rem;
+    }
+
+    .sn-principles {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+    }
+
+    .sn-principle {
+      padding: 20px;
+      border: 1px solid rgba(89, 217, 255, .14);
+      border-radius: 12px;
+      background: rgba(8, 19, 33, .55);
+    }
+
+    .sn-principle h3 {
+      margin: 0 0 8px;
+      color: var(--sn-cyan);
+      font-size: 1rem;
+    }
+
+    .sn-principle p {
+      margin: 0;
+      color: var(--sn-muted);
+      line-height: 1.7;
+      font-size: .94rem;
+    }
+
+    .sn-callout {
+      padding: clamp(25px, 5vw, 48px);
+      border: 1px solid rgba(255, 212, 90, .28);
+      border-radius: 18px;
+      background:
+        radial-gradient(ellipse at 100% 0%, rgba(0, 110, 255, .17), transparent 60%),
+        var(--sn-panel);
+    }
+
+    .sn-callout h2 {
+      margin-top: 0;
+    }
+
+    .sn-callout p {
+      max-width: 760px;
+      color: var(--sn-muted);
+      line-height: 1.8;
+    }
+
+    .sn-status {
+      display: inline-block;
+      padding: 7px 10px;
+      border: 1px solid rgba(255, 212, 90, .4);
+      border-radius: 7px;
+      color: var(--sn-gold);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+
+    .sn-footer {
+      padding-block: 30px;
+      border-top: 1px solid var(--sn-border);
+      color: var(--sn-muted);
+      font-size: .88rem;
+    }
+
+    .sn-footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .sn-footer a {
+      color: var(--sn-muted);
+      text-decoration: none;
+    }
+
+    .sn-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    @media (max-width: 850px) {
+      .sn-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .sn-process {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .sn-container {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .sn-brandline {
+        align-items: flex-start;
+      }
+
+      .sn-home {
+        font-size: .8rem;
+        text-align: right;
+      }
+
+      .sn-hero {
+        padding-block: 56px;
+      }
+
+      .sn-grid,
+      .sn-process,
+      .sn-principles {
+        grid-template-columns: 1fr;
+      }
+
+      .sn-card {
+        padding: 22px;
+      }
+
+      .sn-actions {
+        flex-direction: column;
+      }
+
+      .sn-button {
+        width: 100%;
+      }
+
+      .sn-section {
+        padding-block: 50px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .sn-button {
+        transition: none;
+      }
+    }
+
+    .sn-faq {
+      display: grid;
+      gap: 12px;
+      max-width: 920px;
+      margin-inline: auto;
+    }
+    .sn-faq details {
+      border: 1px solid var(--sn-border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      background: var(--sn-panel);
+    }
+    .sn-faq summary {
+      color: var(--sn-text);
+      font-weight: 700;
+      cursor: pointer;
+      line-height: 1.6;
+    }
+    .sn-faq details p {
+      color: var(--sn-muted);
+      line-height: 1.8;
+      margin: 14px 0 0;
+    }
+    .sn-small {
+      color: var(--sn-muted);
+      font-size: .86rem;
+      line-height: 1.7;
+    }
+    .sn-faq summary:focus-visible,
+    .sn-actions a:focus-visible {
+      outline: 2px solid var(--sn-cyan);
+      outline-offset: 4px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="sn-page">
+    <header class="sn-topline">
+      <div class="sn-container sn-brandline">
+        <a class="sn-brand" href="../index.html">
+          JJCK
+          <small>SERVICES NUMÉRIQUES ENTREPRENEURIAL</small>
+        </a>
+        <a class="sn-home" href="../index.html">← Observatoire Mondial</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="sn-hero">
+        <div class="sn-container">
+          <span class="sn-kicker">Pôle entrepreneurial JJCK</span>
+
+          <h1>
+            Votre idée mérite une
+            <span>stratégie solide.</span>
+          </h1>
+
+          <p class="sn-lead">
+            Un espace conçu pour structurer un projet, comprendre son marché,
+            construire un modèle économique et préparer son développement.
+            De la première idée au pilotage de l'activité, chaque décision
+            doit reposer sur des éléments identifiables, des hypothèses
+            explicites et une méthode claire.
+          </p>
+
+          <div class="sn-actions">
+            <a class="sn-button sn-button-primary"
+               href="mailto:observatoiremondial.officiel@gmail.com?subject=Demande%20de%20services%20num%C3%A9riques">
+              Présenter mon projet
+            </a>
+            <a class="sn-button sn-button-secondary"
+               href="#services">
+              Découvrir les services
+            </a>
+          </div>
+
+          <div class="sn-proofline">
+            <span>Approche structurée</span>
+            <span>Hypothèses identifiées</span>
+            <span>Décisions sous contrôle humain</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="sn-section" id="services">
+        <div class="sn-container">
+          <div class="sn-section-heading">
+            <span class="sn-eyebrow">Un projet, plusieurs dimensions</span>
+            <h2>Les piliers de votre développement</h2>
+            <p>
+              Les services ci-dessous définissent le périmètre prévu de la
+              plateforme. Leur présentation ne signifie pas que chaque outil
+              automatisé est déjà disponible.
+            </p>
+          </div>
+
+          <div class="sn-grid">
+            <article class="sn-card">
+              <span class="sn-card-number">01</span>
+              <h3>Diagnostic entrepreneurial</h3>
+              <p>
+                Clarifier l'idée, le besoin auquel elle répond, les clients
+                visés, les ressources disponibles et les principaux risques
+                à examiner avant d'investir.
+              </p>
+            </article>
+
+            <article class="sn-card">
+              <span class="sn-card-number">02</span>
+              <h3>Étude de marché</h3>
+              <p>
+                Organiser les données disponibles, analyser la demande,
+                repérer les tendances et distinguer les informations
+                vérifiées des estimations et des inconnues.
+              </p>
+            </article>
+
+            <article class="sn-card">
+              <span class="sn-card-number">03</span>
+              <h3>Concurrence et positionnement</h3>
+              <p>
+                Comparer les offres, les clientèles, les tarifs publiés et
+                les différences de positionnement à partir de sources
+                identifiables et datées.
+              </p>
+            </article>
+
+            <article class="sn-card">
+              <span class="sn-card-number">04</span>
+              <h3>Business plan</h3>
+              <p>
+                Structurer le projet, son modèle de revenus, ses coûts,
+                ses ressources, sa stratégie et les étapes nécessaires
+                à sa mise en œuvre.
+              </p>
+            </article>
+
+            <article class="sn-card">
+              <span class="sn-card-number">05</span>
+              <h3>Prévisions financières</h3>
+              <p>
+                Préparer des budgets, des scénarios, une estimation du
+                seuil de rentabilité et des simulations qui explicitent
+                les hypothèses utilisées.
+              </p>
+            </article>
+
+            <article class="sn-card">
+              <span class="sn-card-number">06</span>
+              <h3>Marque et stratégie numérique</h3>
+              <p>
+                Définir l'identité, l'offre, les messages, les canaux
+                numériques et une stratégie de communication adaptée
+                aux moyens du projet.
+              </p>
+            </article>
+
+            <article class="sn-card">
+              <span class="sn-card-number">07</span>
+              <h3>Prospection et suivi commercial</h3>
+              <p>
+                Préparer un processus de prospection responsable,
+                organiser les contacts professionnels autorisés et
+                suivre les opportunités sans envoi automatique non validé.
+              </p>
+            </article>
+
+            <article class="sn-card">
+              <span class="sn-card-number">08</span>
+              <h3>Dossiers et rapports exportables</h3>
+              <p>
+                Prévoir des dossiers de projet versionnés, des synthèses
+                et des documents PDF structurés, avec sources, dates,
+                limites et hypothèses clairement présentées.
+              </p>
+            </article>
+
+            <article class="sn-card">
+              <span class="sn-card-number">09</span>
+              <h3>Suivi de l'activité</h3>
+              <p>
+                Préparer le suivi des objectifs, des indicateurs,
+                des dépenses et des résultats pour faciliter les
+                décisions et les ajustements de stratégie.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="sn-section" id="methode">
+        <div class="sn-container">
+          <div class="sn-section-heading">
+            <span class="sn-eyebrow">Une progression logique</span>
+            <h2>De l'idée au pilotage</h2>
+            <p>
+              Le projet entrepreneurial est traité comme un dossier évolutif :
+              les décisions, les informations collectées et les hypothèses
+              doivent pouvoir être retrouvées et révisées.
+            </p>
+          </div>
+
+          <div class="sn-process">
+            <article class="sn-step">
+              <h3>Comprendre</h3>
+              <p>
+                Définir le besoin, le public cible, les objectifs et
+                les contraintes de départ.
+              </p>
+            </article>
+
+            <article class="sn-step">
+              <h3>Vérifier</h3>
+              <p>
+                Rechercher les sources pertinentes, examiner le marché
+                et identifier les informations manquantes.
+              </p>
+            </article>
+
+            <article class="sn-step">
+              <h3>Construire</h3>
+              <p>
+                Élaborer le modèle économique, le plan d'action
+                et les scénarios financiers.
+              </p>
+            </article>
+
+            <article class="sn-step">
+              <h3>Améliorer</h3>
+              <p>
+                Comparer les résultats aux objectifs et mettre à jour
+                le dossier selon les nouvelles informations.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="sn-section" id="engagements">
+        <div class="sn-container">
+          <div class="sn-section-heading">
+            <span class="sn-eyebrow">Méthode et responsabilité</span>
+            <h2>Des décisions éclairées, pas des promesses faciles</h2>
+            <p>
+              Une étude ou une simulation ne garantit ni la réussite
+              commerciale ni la rentabilité d'une entreprise. La qualité
+              du travail dépend des données disponibles, des hypothèses
+              retenues et de leur actualisation.
+            </p>
+          </div>
+
+          <div class="sn-principles">
+            <article class="sn-principle">
+              <h3>Sources traçables</h3>
+              <p>
+                Les informations utilisées doivent être accompagnées,
+                lorsque cela est possible, de leurs sources et de leurs dates.
+              </p>
+            </article>
+
+            <article class="sn-principle">
+              <h3>Faits et estimations séparés</h3>
+              <p>
+                Les données établies, les hypothèses, les estimations
+                et les points inconnus ne doivent pas être confondus.
+              </p>
+            </article>
+
+            <article class="sn-principle">
+              <h3>Confidentialité à concevoir</h3>
+              <p>
+                La future plateforme devra définir ses règles de collecte,
+                d'accès, de conservation, d'export et de suppression
+                des données des clients.
+              </p>
+            </article>
+
+            <article class="sn-principle">
+              <h3>Validation humaine</h3>
+              <p>
+                Les engagements financiers, les démarches officielles,
+                les suppressions de données et l'envoi de campagnes
+                devront rester soumis à une validation explicite.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="sn-section" id="questions-frequentes">
+        <div class="sn-container">
+          <div class="sn-section-heading">
+            <span class="sn-eyebrow">Questions fréquentes</span>
+            <h2>Avant de nous contacter</h2>
+          </div>
+
+          <div class="sn-faq">
+            <details>
+              <summary>Les services sont-ils tous disponibles immédiatement ?</summary>
+              <p>Non. Cette page présente l'offre et le périmètre envisagé.
+              La disponibilité de chaque prestation doit être confirmée avant
+              tout engagement. Les fonctions automatisées sont encore à
+              développer et à tester.</p>
+            </details>
+            <details>
+              <summary>Comment connaître le prix d'une prestation ?</summary>
+              <p>Envoyez une description de votre besoin. Le périmètre,
+              les livrables, le délai et le prix éventuel devront être
+              confirmés avant le début du travail.</p>
+            </details>
+            <details>
+              <summary>Puis-je acheter un PDF directement sur cette page ?</summary>
+              <p>Pas pour le moment. Le catalogue, le paiement et la livraison
+              numérique restent à mettre en place. Aucun achat ne peut être
+              effectué directement depuis cette vitrine à ce stade.</p>
+            </details>
+            <details>
+              <summary>Que dois-je inclure dans ma demande ?</summary>
+              <p>Indiquez le type de projet, son stade d'avancement, votre
+              objectif, votre échéance et le service qui vous intéresse.
+              Évitez d'envoyer des mots de passe ou des données confidentielles
+              inutiles.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="sn-section" id="demande">
+        <div class="sn-container">
+          <div class="sn-callout">
+            <span class="sn-status">PRISE DE CONTACT</span>
+            <h2>Présentez votre projet</h2>
+            <p>
+              Décrivez votre besoin en quelques lignes. Vous pourrez demander
+              des renseignements sur une prestation, sa faisabilité, les
+              livrables envisageables et les modalités d'un éventuel devis.
+            </p>
+            <div class="sn-actions">
+              <a class="sn-button sn-button-primary"
+                 href="mailto:observatoiremondial.officiel@gmail.com?subject=Demande%20de%20services%20num%C3%A9riques&amp;body=Bonjour%2C%0A%0AJe%20souhaite%20obtenir%20des%20renseignements%20sur%20un%20service%20num%C3%A9rique.%0A%0AType%20de%20projet%20%3A%0AObjectif%20%3A%0AService%20souhait%C3%A9%20%3A%0A%C3%89ch%C3%A9ance%20%C3%A9ventuelle%20%3A%0A%0AMerci.">
+                Envoyer une demande par e-mail
+              </a>
+              <a class="sn-button sn-button-secondary" href="../contact/index.html">
+                Autres moyens de contact
+              </a>
+            </div>
+            <p class="sn-small">
+              L'envoi d'un message ne constitue ni une commande acceptée,
+              ni un contrat, ni un paiement. Ne joignez pas de documents
+              confidentiels avant d'avoir convenu d'un moyen de transmission
+              approprié.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="sn-footer">
+      <div class="sn-container sn-footer-inner">
+        <p>
+          JJCK Services Numériques Entrepreneurial
+          <br>
+          <span>Un pôle commercial de l'écosystème Observatoire Mondial.</span>
+        </p>
+
+        <nav class="sn-footer-links" aria-label="Liens complémentaires">
+          <a href="../index.html">Accueil</a>
+          <a href="../contact/index.html">Contact</a>
+          <a href="../methodologie/index.html">Méthodologie éditoriale</a>
+          <a href="../mentions-legales/index.html">Mentions légales</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

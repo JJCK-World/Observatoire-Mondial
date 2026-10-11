@@ -32,7 +32,7 @@ function initMobileMenu() {
         document.querySelector(".menu-toggle");
 
     const navigation =
-        document.querySelector(".main-navigation");
+        document.querySelector(".main-nav, .main-navigation");
 
     if (!menuButton || !navigation) {
         return;
@@ -357,7 +357,7 @@ function initKeyboardNavigation() {
 
             const navigation =
                 document.querySelector(
-                    ".main-navigation"
+                    ".main-nav, .main-navigation"
                 );
 
             if (!navigation) {

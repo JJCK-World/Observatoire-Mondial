@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#06101d">
+<title>Atelier entrepreneurial JJCK</title>
+<style>
+:root{color-scheme:dark;--bg:#06101d;--panel:#0c1c2e;--border:#23435d;--text:#edf6ff;--muted:#b1c4d8;--cyan:#59d9ff;--gold:#ffd45a}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at top right,#103459,var(--bg) 55%);color:var(--text);font:16px/1.6 system-ui,sans-serif}
+header,main,footer{width:min(100% - 28px,980px);margin:auto}
+header{padding:24px 0 12px;border-bottom:1px solid var(--border)}
+a{color:var(--cyan)}
+h1{line-height:1.2;font-size:clamp(1.8rem,6vw,3rem);margin:.5rem 0}
+h2{font-size:1.35rem}
+header p,.muted,small{color:var(--muted)}
+main{padding:20px 0 50px}
+.panel{background:rgba(12,28,46,.94);border:1px solid var(--border);border-radius:16px;padding:20px;margin:18px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px}
+label{display:block;font-weight:650;margin:12px 0 5px}
+input,select,textarea{display:block;width:100%;padding:12px;border:1px solid #3b5d78;border-radius:9px;background:#061321;color:var(--text);font:inherit}
+textarea{min-height:90px;resize:vertical}
+button,.button{display:inline-block;border:1px solid var(--cyan);border-radius:9px;padding:11px 15px;margin:5px 5px 5px 0;background:#0b3452;color:white;font:inherit;font-weight:700;cursor:pointer;text-decoration:none}
+button:hover,.button:hover{filter:brightness(1.2)}
+.primary{background:#075c91}
+.warning{border-color:#806d32}
+.result{background:#061321;border:1px solid var(--border);border-radius:10px;padding:14px;margin-top:12px;white-space:pre-wrap;overflow-wrap:anywhere}
+.metric{font-size:1.65rem;color:var(--cyan);font-weight:800}
+.status{color:var(--gold);font-weight:700}
+hr{border:0;border-top:1px solid var(--border);margin:22px 0}
+footer{padding:20px 0 35px;border-top:1px solid var(--border)}
+@media print{body{background:white;color:black}.panel{background:white;border:1px solid #aaa}button,.button,header nav{display:none}input,select,textarea{color:black;background:white}}
+</style>
+</head>
+<body>
+<header>
+  <a href="../index.html">← JJCK Services Numériques</a>
+  <p>OUTIL DE TRAVAIL LOCAL · VERSION DE TEST</p>
+  <h1>Atelier entrepreneurial JJCK</h1>
+  <p>Structurez votre idée, examinez sa viabilité et conservez un dossier de travail.</p>
+  <p class="status">Prototype fonctionnel — aucune donnée n'est envoyée à un serveur.</p>
+</header>
+
+<main>
+  <section class="panel">
+    <h2>1. Votre projet</h2>
+    <p class="muted">Remplissez les champs puis enregistrez. Les données restent dans le stockage local de ce navigateur.</p>
+    <form id="projectForm">
+      <div class="grid">
+        <div><label for="name">Nom du projet</label><input id="name" required maxlength="120" placeholder="Ex. Atelier Créole"></div>
+        <div><label for="sector">Secteur d'activité</label><input id="sector" required maxlength="120" placeholder="Ex. Services numériques"></div>
+        <div><label for="location">Zone visée</label><input id="location" maxlength="120" placeholder="Ex. La Réunion"></div>
+        <div><label for="stage">Stade du projet</label><select id="stage"><option>Idée</option><option>Étude en cours</option><option>Préparation du lancement</option><option>Activité déjà lancée</option></select></div>
+      </div>
+      <label for="problem">Quel besoin souhaitez-vous satisfaire ?</label>
+      <textarea id="problem" required maxlength="3000" placeholder="Décrivez le problème rencontré par vos futurs clients."></textarea>
+      <label for="customers">Qui sont vos clients potentiels ?</label>
+      <textarea id="customers" required maxlength="3000" placeholder="Décrivez le public que vous souhaitez servir."></textarea>
+      <label for="offer">Quel produit ou service allez-vous proposer ?</label>
+      <textarea id="offer" required maxlength="3000" placeholder="Décrivez votre offre et ce qui la différencie."></textarea>
+      <label for="evidence">Quelles preuves avez-vous de la demande ?</label>
+      <textarea id="evidence" maxlength="3000" placeholder="Entretiens, demandes reçues, commandes, données publiques… Distinguez les preuves des suppositions."></textarea>
+      <label for="resources">Vos moyens et contraintes</label>
+      <textarea id="resources" maxlength="3000" placeholder="Compétences, temps disponible, matériel, budget, contraintes."></textarea>
+      <button class="primary" type="submit">Enregistrer le projet</button>
+      <button type="button" id="loadBtn">Recharger la sauvegarde</button>
+      <button type="button" id="clearBtn" class="warning">Effacer la sauvegarde locale</button>
+    </form>
+    <div id="saveStatus" class="result" role="status" aria-live="polite">Aucune opération effectuée.</div>
+  </section>
+
+  <section class="panel">
+    <h2>2. Diagnostic entrepreneurial</h2>
+    <p class="muted">Ce score mesure uniquement la complétude de vos réponses. Il ne prouve ni l'existence d'un marché ni la rentabilité du projet.</p>
+    <div class="grid">
+      <div><label for="need">Besoin client identifié</label><select id="need"><option value="0">Pas encore</option><option value="1">Hypothèse à vérifier</option><option value="2">Étayé par des échanges ou données</option></select></div>
+      <div><label for="market">Marché étudié</label><select id="market"><option value="0">Pas encore étudié</option><option value="1">Recherche préliminaire</option><option value="2">Sources et concurrents examinés</option></select></div>
+      <div><label for="model">Modèle de revenus défini</label><select id="model"><option value="0">Pas encore</option><option value="1">En cours</option><option value="2">Prix et revenus envisagés</option></select></div>
+      <div><label for="budgetReady">Budget de départ estimé</label><select id="budgetReady"><option value="0">Pas encore</option><option value="1">Estimation partielle</option><option value="2">Coûts et ressources recensés</option></select></div>
+      <div><label for="test">Premiers tests auprès de clients</label><select id="test"><option value="0">Aucun test</option><option value="1">Tests ou entretiens en cours</option><option value="2">Résultats documentés</option></select></div>
+    </div>
+    <button class="primary" id="diagnoseBtn" type="button">Calculer le diagnostic</button>
+    <div id="diagnosticResult" class="result" aria-live="polite">Le résultat apparaîtra ici.</div>
+  </section>
+
+  <section class="panel">
+    <h2>3. Simulation financière mensuelle</h2>
+    <p class="muted">Simulation simplifiée, avant impôts, cotisations, financement et autres éléments non saisis. Les chiffres sont vos hypothèses, pas des prévisions garanties.</p>
+    <div class="grid">
+      <div><label for="customersCount">Ventes prévues par mois</label><input id="customersCount" type="number" min="0" max="100000000" step="1" value="20"></div>
+      <div><label for="price">Prix moyen par vente (€)</label><input id="price" type="number" min="0" max="100000000" step="0.01" value="50"></div>
+      <div><label for="variable">Coût variable par vente (€)</label><input id="variable" type="number" min="0" max="100000000" step="0.01" value="15"></div>
+      <div><label for="fixed">Autres charges mensuelles (€)</label><input id="fixed" type="number" min="0" max="100000000" step="0.01" value="300"></div>
+      <div><label for="startup">Investissement de départ (€)</label><input id="startup" type="number" min="0" max="1000000000" step="0.01" value="1000"></div>
+    </div>
+    <button type="button" class="primary" id="financeBtn">Calculer le scénario</button>
+    <div id="financeResult" class="result" aria-live="polite">Le calcul apparaîtra ici.</div>
+  </section>
+
+  <section class="panel">
+    <h2>4. Générer votre rapport</h2>
+    <p>Le rapport rassemble le projet, le diagnostic et la simulation calculée. Vérifiez les informations avant de l'utiliser pour une décision.</p>
+    <button type="button" class="primary" id="reportBtn">Télécharger le rapport texte</button>
+    <button type="button" id="jsonBtn">Exporter les données JSON</button>
+    <button type="button" id="printBtn">Imprimer ou enregistrer en PDF</button>
+    <div id="reportStatus" class="result" aria-live="polite">Aucun rapport généré pour le moment.</div>
+  </section>
+
+  <section class="panel">
+    <h2>Limites de cette version</h2>
+    <ul>
+      <li>Pas de compte client ni de synchronisation entre appareils.</li>
+      <li>Pas d'IA connectée, de recherche de marché en direct ou de vérification automatique des sources.</li>
+      <li>Pas de paiement, d'abonnement ni d'envoi automatique de messages.</li>
+      <li>La sauvegarde locale peut être perdue si les données du navigateur sont effacées.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>JJCK Services Numériques Entrepreneurial · Prototype local</p>
+  <p><a href="../../index.html">Observatoire Mondial</a></p>
+</footer>
+
+<script>
+"use strict";
+const $ = id => document.getElementById(id);
+const storageKey = "jjck_atelier_entrepreneurial_v1";
+let latestDiagnostic = null;
+let latestFinance = null;
+
+const projectFields = ["name","sector","location","stage","problem","customers","offer","evidence","resources"];
+const diagnosticFields = ["need","market","model","budgetReady","test"];
+const financeFields = ["customersCount","price","variable","fixed","startup"];
+
+function collect() {
+  const data = {};
+  for (const id of [...projectFields,...diagnosticFields,...financeFields]) data[id] = $(id).value;
+  data.updatedAt = new Date().toISOString();
+  data.diagnostic = latestDiagnostic;
+  data.finance = latestFinance;
+  return data;
+}
+
+function restore(data) {
+  for (const id of [...projectFields,...diagnosticFields,...financeFields]) {
+    if (data[id] !== undefined && $(id)) $(id).value = data[id];
+  }
+  latestDiagnostic = data.diagnostic || null;
+  latestFinance = data.finance || null;
+  if (latestDiagnostic) $("diagnosticResult").textContent = latestDiagnostic.text;
+  if (latestFinance) $("financeResult").textContent = latestFinance.text;
+}
+
+function save() {
+  try {
+    localStorage.setItem(storageKey, JSON.stringify(collect()));
+    $("saveStatus").textContent = "Projet enregistré dans ce navigateur le " + new Date().toLocaleString("fr-FR") + ".";
+    return true;
+  } catch (err) {
+    $("saveStatus").textContent = "Échec de la sauvegarde locale : " + err.message;
+    return false;
+  }
+}
+
+$("projectForm").addEventListener("submit", event => {
+  event.preventDefault();
+  save();
+});
+
+$("loadBtn").addEventListener("click", () => {
+  try {
+    const raw = localStorage.getItem(storageKey);
+    if (!raw) {
+      $("saveStatus").textContent = "Aucune sauvegarde locale trouvée.";
+      return;
+    }
+    restore(JSON.parse(raw));
+    $("saveStatus").textContent = "Sauvegarde rechargée.";
+  } catch (err) {
+    $("saveStatus").textContent = "Impossible de lire la sauvegarde : " + err.message;
+  }
+});
+
+$("clearBtn").addEventListener("click", () => {
+  if (!confirm("Effacer définitivement la sauvegarde de ce projet dans ce navigateur ?")) return;
+  try {
+    localStorage.removeItem(storageKey);
+    latestDiagnostic = null;
+    latestFinance = null;
+    $("projectForm").reset();
+    for (const id of diagnosticFields) $(id).selectedIndex = 0;
+    $("diagnosticResult").textContent = "Le diagnostic apparaîtra ici.";
+    $("financeResult").textContent = "Le calcul apparaîtra ici.";
+    $("saveStatus").textContent = "Sauvegarde locale effacée.";
+  } catch (err) {
+    $("saveStatus").textContent = "Erreur : " + err.message;
+  }
+});
+
+$("diagnoseBtn").addEventListener("click", () => {
+  const score = diagnosticFields.reduce((sum,id) => sum + Number($(id).value), 0);
+  const max = diagnosticFields.length * 2;
+  const percent = Math.round(score / max * 100);
+  let level = "À structurer";
+  if (score >= 7) level = "En progression";
+  if (score >= 9) level = "Bien documenté à ce stade";
+  const advice = [];
+  if (Number($("need").value) < 2) advice.push("Tester le besoin avec des clients potentiels.");
+  if (Number($("market").value) < 2) advice.push("Documenter le marché et les concurrents avec des sources datées.");
+  if (Number($("model").value) < 2) advice.push("Préciser qui paie, pour quoi et à quel prix.");
+  if (Number($("budgetReady").value) < 2) advice.push("Lister les coûts de départ et les charges récurrentes.");
+  if (Number($("test").value) < 2) advice.push("Effectuer et consigner des tests auprès du public visé.");
+  const text = "Résultat : " + level + "\nComplétude déclarative : " + score + "/" + max + " (" + percent + "%).\n\nProchaines actions :\n" + (advice.length ? advice.map(x => "• " + x).join("\n") : "• Vérifier les éléments avec des preuves indépendantes.\n• Mettre à jour les hypothèses.");
+  latestDiagnostic = {score,max,percent,level,text};
+  $("diagnosticResult").textContent = text;
+  save();
+});
+
+function numberValue(id) {
+  const n = Number($(id).value);
+  if (!Number.isFinite(n) || n < 0) throw new Error("Vérifiez les valeurs numériques : elles doivent être positives ou nulles.");
+  return n;
+}
+function euro(n) {
+  return new Intl.NumberFormat("fr-FR",{style:"currency",currency:"EUR"}).format(n);
+}
+
+$("financeBtn").addEventListener("click", () => {
+  try {
+    const count = numberValue("customersCount");
+    const price = numberValue("price");
+    const variable = numberValue("variable");
+    const fixed = numberValue("fixed");
+    const startup = numberValue("startup");
+    if (variable > price) {
+      if (!confirm("Le coût variable dépasse le prix de vente. Calculer quand même ce scénario déficitaire ?")) return;
+    }
+    const revenue = count * price;
+    const variableTotal = count * variable;
+    const margin = revenue - variableTotal;
+    const result = margin - fixed;
+    const breakEven = price > variable ? Math.ceil(fixed / (price - variable)) : null;
+    const text = "Chiffre d'affaires mensuel estimé : " + euro(revenue) +
+      "\nCoûts variables : " + euro(variableTotal) +
+      "\nMarge après coûts variables : " + euro(margin) +
+      "\nAutres charges saisies : " + euro(fixed) +
+      "\nSolde mensuel simplifié : " + euro(result) +
+      "\nInvestissement de départ : " + euro(startup) +
+      "\nVentes mensuelles pour couvrir les charges saisies : " +
+      (breakEven === null ? "non calculable avec ces valeurs" : breakEven + " ventes") +
+      "\n\nCe solde n'est pas un bénéfice net. Il exclut les postes non renseignés, les impôts, les cotisations, le financement et les décalages de trésorerie.";
+    latestFinance = {count,price,variable,fixed,startup,revenue,variableTotal,margin,result,breakEven,text};
+    $("financeResult").textContent = text;
+    save();
+  } catch (err) {
+    $("financeResult").textContent = err.message;
+  }
+});
+
+function reportText() {
+  const d = collect();
+  return [
+    "JJCK — RAPPORT DE TRAVAIL ENTREPRENEURIAL",
+    "Généré le : " + new Date().toLocaleString("fr-FR"),
+    "",
+    "PROJET",
+    "Nom : " + (d.name || "Non renseigné"),
+    "Secteur : " + (d.sector || "Non renseigné"),
+    "Zone : " + (d.location || "Non renseignée"),
+    "Stade : " + (d.stage || "Non renseigné"),
+    "",
+    "BESOIN CLIENT",
+    d.problem || "Non renseigné",
+    "",
+    "CLIENTÈLE POTENTIELLE",
+    d.customers || "Non renseignée",
+    "",
+    "OFFRE",
+    d.offer || "Non renseignée",
+    "",
+    "PREUVES DE DEMANDE",
+    d.evidence || "Non renseignées",
+    "",
+    "MOYENS ET CONTRAINTES",
+    d.resources || "Non renseignés",
+    "",
+    "DIAGNOSTIC",
+    latestDiagnostic ? latestDiagnostic.text : "Non calculé.",
+    "",
+    "SIMULATION FINANCIÈRE",
+    latestFinance ? latestFinance.text : "Non calculée.",
+    "",
+    "LIMITES",
+    "Document généré à partir des données saisies par l'utilisateur.",
+    "Les calculs sont simplifiés. Ils ne constituent ni une étude de marché vérifiée, ni un conseil comptable, juridique ou financier.",
+    "Les hypothèses et informations doivent être vérifiées avant toute décision."
+  ].join("\n");
+}
+
+function download(filename, content, type) {
+  const blob = new Blob([content], {type});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+$("reportBtn").addEventListener("click", () => {
+  download("rapport-jjck-entrepreneurial.txt", reportText(), "text/plain;charset=utf-8");
+  $("reportStatus").textContent = "Rapport texte préparé pour téléchargement.";
+});
+$("jsonBtn").addEventListener("click", () => {
+  download("projet-jjck.json", JSON.stringify(collect(),null,2), "application/json;charset=utf-8");
+  $("reportStatus").textContent = "Export JSON préparé. Conservez ce fichier en lieu sûr.";
+});
+$("printBtn").addEventListener("click", () => {
+  $("reportStatus").textContent = "Utilisez la fonction d'impression du navigateur pour imprimer ou enregistrer en PDF.";
+  window.print();
+});
+
+try {
+  const raw = localStorage.getItem(storageKey);
+  if (raw) {
+    restore(JSON.parse(raw));
+    $("saveStatus").textContent = "Une sauvegarde locale existe. Vérifiez les données puis utilisez « Recharger la sauvegarde » si nécessaire.";
+  }
+} catch (err) {
+  $("saveStatus").textContent = "La sauvegarde existante n'a pas pu être lue.";
+}
+</script>
+</body>
+</html>
