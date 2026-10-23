@@ -1,148 +1,67 @@
-# OBSERVATOIRE MONDIAL
+# Observatoire Mondial
 
-### Observer le monde. Comprendre les enjeux. Anticiper les transformations.
+**Bien s’informer, c’est avoir une vision plus large.**
 
-**Observatoire Mondial** est un média indépendant consacré à l'actualité internationale et aux grandes transformations du monde.
+Observer le monde. Comprendre les enjeux. Anticiper les transformations.
 
-Le projet couvre notamment :
+Observatoire Mondial est un projet éditorial consacré à l’actualité internationale, à la géopolitique, à l’économie, aux sciences et aux transformations du monde.
 
-* l'actualité mondiale ;
-* la géopolitique ;
-* les relations internationales ;
-* l'économie ;
-* les ressources ;
-* les sciences et technologies ;
-* les enjeux stratégiques ;
-* les conséquences possibles des événements internationaux.
+## Objectifs éditoriaux
 
-## Notre approche
+Le projet vise à proposer des contenus documentés, à distinguer les faits confirmés des déclarations, des analyses et des hypothèses, et à rendre les sources consultables par les lecteurs.
 
-Observatoire Mondial cherche à présenter l'information de manière claire, accessible et rigoureuse.
+Les contenus doivent être rédigés avec rigueur, sans présentation trompeuse des faits ni confusion entre information et opinion.
 
-Notre ligne éditoriale repose notamment sur :
+**Note méthodologique :** Nous ne pouvons prétendre qu’il est exempt de toute erreur.
 
-**Vérifier** — privilégier les informations accessibles et vérifiables.
+## Licences et droits d’utilisation
 
-**Attribuer** — identifier clairement l'origine des informations et des déclarations.
+Le dépôt contient plusieurs catégories de ressources. Elles ne sont pas toutes soumises à la même licence.
 
-**Distinguer** — séparer les faits confirmés, les déclarations, les analyses, les hypothèses et les informations non confirmées.
+### 1. Code original du site
 
-**Contextualiser** — replacer les événements dans leur contexte politique, économique, historique et stratégique.
+Le code original du site est distribué sous les conditions de la licence MIT figurant dans le fichier [`LICENSE`](LICENSE), sauf indication explicite différente dans un fichier ou un composant particulier.
 
-**Analyser** — présenter séparément les interprétations et les conséquences possibles.
+La licence MIT s’applique uniquement au code et aux éléments expressément couverts par elle. Elle ne confère pas automatiquement de droits sur les articles, les photographies, les illustrations, les marques ou les ressources tierces.
 
-**Corriger** — reconnaître et corriger les erreurs identifiées.
+### 2. Contenus éditoriaux
 
-## Niveaux de certitude
+Les articles, enquêtes, analyses, dossiers, textes et autres contenus éditoriaux originaux sont soumis aux conditions définies dans [`EDITORIAL-LICENSE.md`](EDITORIAL-LICENSE.md), sauf mention différente clairement indiquée pour un contenu particulier.
 
-Les publications d'Observatoire Mondial peuvent utiliser les catégories suivantes :
+Sauf autorisation ou exception légale applicable, leur reproduction, republication ou exploitation commerciale nécessite l’autorisation du titulaire des droits.
 
-* 🟢 **CONFIRMÉ** — information établie par une source officielle ou suffisamment corroborée.
-* 🔵 **DÉCLARÉ** — information attribuée à une autorité, une organisation ou une partie concernée.
-* 🟠 **ANALYSE** — interprétation fondée sur des faits établis.
-* ⚪ **HYPOTHÈSE** — scénario ou conséquence possible qui ne constitue pas une certitude.
-* 🔴 **NON CONFIRMÉ** — information qui ne dispose pas encore d'un niveau de vérification suffisant.
+### 3. Dénomination, identité et éléments propriétaires
 
-Une déclaration officielle est présentée comme une déclaration officielle et ne constitue pas automatiquement une preuve indépendante de la réalité de ce qu'elle affirme.
+La dénomination Observatoire Mondial, son identité éditoriale et les éléments propriétaires qui ne sont pas expressément couverts par la licence MIT ne sont pas automatiquement libres de réutilisation.
 
-## Sources
+Les précisions complémentaires figurent dans [`COPYRIGHT.md`](COPYRIGHT.md) et, pour les éléments concernés, dans [`LICENCE-PROPRIETAIRE-OBSERVATOIRE-MONDIAL.md`](LICENCE-PROPRIETAIRE-OBSERVATOIRE-MONDIAL.md).
 
-Observatoire Mondial privilégie les sources publiques, accessibles et vérifiables, notamment :
+### 4. Ressources tierces
 
-* organismes publics ;
-* organisations internationales ;
-* institutions scientifiques ;
-* documents officiels ;
-* entreprises et organisations lorsqu'elles sont directement concernées ;
-* médias reconnus, lorsque cela est pertinent.
+Les images, photographies, polices, bibliothèques, icônes, extraits et autres ressources créés par des tiers restent soumis à leurs propres licences et conditions d’utilisation.
 
-Les sources sont attribuées dans les publications afin de permettre au lecteur de distinguer l'information de son interprétation.
+Le fichier [`THIRD-PARTY-LICENSES.md`](THIRD-PARTY-LICENSES.md) est destiné à recenser ces ressources. Il doit être complété et vérifié au fur et à mesure de l’inventaire du dépôt.
 
-## Transparence éditoriale
+Aucune ressource tierce ne doit être considérée comme libre de droits au seul motif qu’elle apparaît dans ce dépôt.
 
-Observatoire Mondial s'appuie sur les informations publiques et les sources accessibles et vérifiables au moment de la rédaction.
+## Principes de contribution et de vérification
 
-Les faits rapportés sont attribués aux organismes concernés.
+Avant d’ajouter ou de modifier une ressource :
 
-Les analyses et interprétations sont présentées séparément et restent soumises à l'appréciation du lecteur.
+- vérifier son origine et les droits permettant son utilisation ;
+- conserver les mentions de copyright et d’attribution requises ;
+- documenter sa licence dans le fichier consacré aux ressources tierces ;
+- ne pas présenter une ressource dont les droits sont inconnus comme autorisée à la réutilisation ;
+- distinguer clairement le code original des contenus éditoriaux et des ressources externes.
 
-Les effets éventuels sur La Réunion sont des pistes d'analyse lorsqu'ils ne sont pas directement établis par les sources.
+## Site officiel
 
-**Observatoire Mondial ne prétend pas que ses publications sont exemptes de toute erreur.**
+[Observatoire Mondial](https://jjck-world.github.io/Observatoire-Mondial/)
 
-Lorsqu'une erreur est identifiée, elle peut faire l'objet d'une correction.
+## Contact
 
-## Structure du projet
-
-```text
-observatoire-mondial/
-│
-├── index.html
-├── README.md
-├── LICENSE
-├── 404.html
-├── robots.txt
-├── sitemap.xml
-│
-├── assets/
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   └── script.js
-│   └── images/
-│
-├── articles/
-├── analyses/
-├── monde/
-├── economie/
-├── sciences/
-└── contact/
-```
-
-## Licence du code
-
-Le code original du site est distribué sous **licence MIT**, sauf indication contraire dans un fichier ou composant particulier.
-
-La licence MIT autorise notamment l'utilisation, la modification et la redistribution du code sous les conditions prévues par cette licence.
-
-## Contenu éditorial
-
-La licence MIT ne s'applique **pas** automatiquement aux articles, analyses, photographies, illustrations, logos, éléments graphiques, marques ou autres contenus éditoriaux d'Observatoire Mondial.
-
-Sauf indication contraire, ces éléments sont protégés et demeurent soumis aux droits applicables.
-
-Toute utilisation d'un contenu tiers doit respecter la licence ou les conditions applicables à ce contenu.
-
-## Identité
-
-**OBSERVATOIRE MONDIAL**
-
-« Observer le monde. Comprendre les enjeux. Anticiper les transformations. »
-
-Le nom, le logo, l'identité visuelle et les signes distinctifs d'Observatoire Mondial ne sont pas concédés sous licence MIT.
-
-## Contributions
-
-Toute contribution au code du projet doit respecter les règles et conditions définies par le projet.
-
-Une contribution acceptée peut être intégrée au code distribué sous la licence applicable au code du projet.
-
-Les contributeurs doivent disposer des droits nécessaires sur les éléments qu'ils soumettent.
-
-## Avertissement
-
-Le contenu de ce dépôt est fourni à titre informatif.
-
-Les informations publiées peuvent évoluer avec le temps. Les lecteurs doivent consulter les sources citées et exercer leur propre jugement.
-
-## Projet
-
-**Nom :** Observatoire Mondial
-**Type :** média indépendant / projet éditorial
-**Domaine :** actualité, géopolitique, économie, sciences, technologies et analyse stratégique
+Pour une demande concernant les droits d’utilisation des contenus, veuillez utiliser les coordonnées officielles publiées sur le site.
 
 ---
 
-**OBSERVATOIRE MONDIAL**
-
-*Observer le monde. Comprendre les enjeux. Anticiper les transformations.*
+© 2026 Observatoire Mondial. Les droits applicables varient selon les fichiers et les catégories de ressources, conformément aux documents de licence du dépôt.
