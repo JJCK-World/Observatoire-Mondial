@@ -1,90 +1,45 @@
-# OBSERVATOIRE MONDIAL — COPYRIGHT ET LICENCES
+# COPYRIGHT — OBSERVATOIRE MONDIAL
 
-**Copyright © 2026 — Observatoire Mondial**  
-**Responsable du projet : JJCK**
+© 2026 Observatoire Mondial. Tous droits réservés pour les éléments qui ne sont pas expressément placés sous une licence autorisant leur réutilisation.
 
-Site officiel : https://jjck-world.github.io/Observatoire-Mondial/  
-Dépôt : https://github.com/JJCK-World/Observatoire-Mondial
+Ce document précise la répartition générale des droits au sein du dépôt. Il doit être lu avec les licences propres aux différentes catégories de ressources.
 
-## 1. Objet
+## 1. Code original du site
 
-Le présent document organise les mentions de propriété intellectuelle et les licences applicables au projet Observatoire Mondial.
+Le code original couvert par la licence MIT est soumis aux conditions du fichier [`LICENSE`](LICENSE).
 
-Il distingue le code informatique, les contenus éditoriaux, les créations graphiques, l'identité du projet et les composants provenant de tiers.
+La licence MIT autorise notamment l’utilisation, la modification et la redistribution du code couvert, sous réserve du respect de ses conditions.
 
-## 2. Code informatique — Licence MIT
+La présence d’un fichier dans ce dépôt ne signifie pas nécessairement qu’il est couvert par la licence MIT. Les exclusions et licences particulières doivent être respectées.
 
-Les fichiers expressément identifiés comme étant distribués sous MIT sont soumis aux conditions du fichier `LICENSE`.
+## 2. Contenus éditoriaux
 
-La licence MIT autorise notamment l'utilisation, la modification et la redistribution du code concerné, sous réserve de ses conditions.
+Les articles, enquêtes, dossiers, analyses, textes et autres productions éditoriales originales sont soumis à [`EDITORIAL-LICENSE.md`](EDITORIAL-LICENSE.md), sauf mention contraire associée au contenu concerné.
 
-Elle ne s'applique pas automatiquement aux articles, enquêtes, photographies, logos ou autres contenus éditoriaux.
+Leur présence dans le dépôt ou sur le site n’autorise pas, à elle seule, leur reproduction, leur republication ou leur exploitation commerciale.
 
-Les composants tiers conservent leurs propres licences.
+## 3. Identité et éléments propriétaires
 
-## 3. Contenus éditoriaux
+La dénomination « Observatoire Mondial », l’identité éditoriale, les signes distinctifs et les éléments propriétaires ne sont pas automatiquement couverts par la licence MIT.
 
-Les articles, enquêtes, analyses, dossiers et textes originaux sont soumis au droit d'auteur dans les conditions prévues par la législation applicable.
+Les précisions applicables figurent dans [`LICENCE-PROPRIETAIRE-OBSERVATOIRE-MONDIAL.md`](LICENCE-PROPRIETAIRE-OBSERVATOIRE-MONDIAL.md).
 
-Le fichier `EDITORIAL-LICENSE.md` précise les conditions d'utilisation des contenus éditoriaux couverts par cette licence.
+Ce document ne doit pas être interprété comme supprimant ou restreignant rétroactivement les droits déjà accordés par une licence applicable à un élément.
 
-La consultation du site n'autorise pas automatiquement la reproduction intégrale, la republication ou l'exploitation commerciale de ces contenus.
+## 4. Ressources tierces
 
-Les exceptions légales, notamment la courte citation lorsque ses conditions sont réunies, restent applicables.
+Les ressources créées par des tiers — notamment les photographies, illustrations, polices, icônes, bibliothèques et extraits — demeurent soumises à leurs licences et conditions propres.
 
-## 4. Licence propriétaire complémentaire
+Leur utilisation doit être vérifiée individuellement. Les ressources dont l’origine ou les conditions d’utilisation ne sont pas établies doivent rester signalées comme non vérifiées jusqu’à clarification.
 
-Le fichier `LICENCE-PROPRIETAIRE-OBSERVATOIRE-MONDIAL.md` définit les conditions complémentaires proposées pour les créations originales protégées dont les droits sont effectivement détenus par leurs titulaires.
+L’inventaire est tenu dans [`THIRD-PARTY-LICENSES.md`](THIRD-PARTY-LICENSES.md).
 
-Il ne peut pas annuler une licence antérieurement accordée ni restreindre les droits légalement acquis par des tiers.
+## 5. Demandes d’autorisation
 
-## 5. Logiciels propriétaires
+Pour demander une autorisation concernant un contenu éditorial ou un élément propriétaire, veuillez consulter les coordonnées officielles publiées sur le site Observatoire Mondial.
 
-Tout logiciel propriétaire développé ou acquis pour JJCK Services Numériques doit faire l'objet d'une identification distincte.
+## 6. Portée de ce document
 
-Sa documentation doit préciser, selon le cas :
+Ce document fournit une répartition générale des droits. En cas de différence, la licence applicable au fichier ou à la ressource concernée prévaut pour cet élément, dans les limites du droit applicable.
 
-- le nom du logiciel et sa version ;
-- le titulaire des droits ;
-- la licence applicable ;
-- les droits d'utilisation, de modification et de redistribution ;
-- les restrictions contractuelles ;
-- les composants et dépendances externes ;
-- les obligations de conservation des mentions de copyright ;
-- les conditions commerciales et d'abonnement éventuelles.
-
-Un logiciel appartenant à un tiers reste soumis à sa licence ou à son contrat. Le présent document ne transfère aucun droit sur ce logiciel.
-
-## 6. Logiciels libres et composants tiers
-
-Les bibliothèques, frameworks, polices, images, icônes et autres ressources externes restent soumis à leurs licences respectives.
-
-Les obligations de chaque licence doivent être examinées avant intégration ou redistribution.
-
-Aucune licence propriétaire du projet ne peut supprimer les droits accordés par une licence tierce applicable.
-
-## 7. Identité visuelle
-
-Le nom « Observatoire Mondial », les logos et les créations graphiques sont soumis aux droits effectivement détenus par leurs titulaires.
-
-Le présent document ne constitue pas, à lui seul, une preuve d'enregistrement de marque.
-
-## 8. Attribution et sources
-
-Les auteurs et sources doivent être mentionnés lorsque la loi, la licence applicable ou les conditions d'utilisation l'exigent.
-
-La citation d'une source ne transfère pas sa propriété intellectuelle.
-
-## 9. Autorisations
-
-Toute utilisation dépassant les droits accordés par la licence applicable doit faire l'objet de l'autorisation du titulaire compétent, lorsqu'une telle autorisation est requise.
-
-Les autorisations ne peuvent pas porter atteinte aux droits des tiers.
-
-## 10. Réserve légale
-
-Le présent document s'applique sous réserve du droit applicable, des licences existantes, des contrats et des droits des tiers.
-
-Il ne modifie pas rétroactivement les licences valablement accordées.
-
-**© 2026 — Observatoire Mondial. Tous droits réservés pour les créations originales protégées dont les droits sont effectivement détenus par leurs titulaires, sous réserve des licences accordées et des exceptions légales.**
+Dernière révision : 23 octobre 2026.
