@@ -1,54 +1,48 @@
-# INVENTAIRE DES LICENCES TIERCES
+# RESSOURCES TIERCES ET LICENCES
 
-**Projet :** Observatoire Mondial  
-**Organisation :** JJCK Services Numériques
+Dépôt : Observatoire Mondial
 
 ## 1. Objet
 
-Ce document recense les logiciels, bibliothèques, frameworks et ressources externes utilisés dans le projet.
+Ce document recense les ressources créées par des tiers qui sont utilisées dans le site ou dans son dépôt.
 
-Chaque composant doit être soumis à une vérification de licence avant son intégration ou sa redistribution.
+Chaque ressource doit être vérifiée individuellement. La présence d'un fichier dans le dépôt ne prouve pas que sa réutilisation est autorisée.
 
-## 2. Registre des composants
+## 2. Inventaire
 
-Pour chaque composant, renseigner les informations suivantes :
+L'inventaire ci-dessous doit être complété après vérification des fichiers réellement présents dans le dépôt.
 
-- Nom :
-- Version :
-- Éditeur ou auteur :
-- Source officielle :
-- Type de licence :
-- Fichier de licence :
-- Modifications apportées :
-- Obligations d'attribution :
-- Conditions de redistribution :
-- Compatibilité avec le projet :
-- Date de vérification :
+| Ressource ou fichier | Auteur ou titulaire | Source d'origine | Licence ou autorisation | Vérification |
+|---|---|---|---|---|
+| Images et photographies du dépôt | À identifier | À vérifier | À vérifier | Non vérifié |
+| Polices de caractères externes éventuelles | À identifier | À vérifier | À vérifier | Non vérifié |
+| Bibliothèques JavaScript éventuelles | À identifier | À vérifier | À vérifier | Non vérifié |
+| Icônes et illustrations externes éventuelles | À identifier | À vérifier | À vérifier | Non vérifié |
 
-## 3. Catégories
+Ces lignes sont des catégories à examiner, pas la confirmation que toutes ces ressources sont présentes dans le dépôt.
 
-Les composants doivent être distingués selon leur régime juridique :
+## 3. Conditions avant publication
 
-1. Logiciels propriétaires commerciaux.
-2. Logiciels libres.
-3. Logiciels open source.
-4. Bibliothèques et dépendances.
-5. Polices et ressources graphiques.
-6. Images et médias externes.
-7. API et services tiers.
+Pour chaque ressource identifiée, consigner :
 
-## 4. Règles d'intégration
+- le nom exact du fichier ou du composant ;
+- le nom de l'auteur ou du titulaire des droits, lorsqu'il est connu ;
+- l'URL ou la référence de la source d'origine ;
+- le nom et la version de la licence applicable ;
+- les obligations d'attribution ;
+- les éventuelles restrictions commerciales, de modification ou de redistribution ;
+- la date de vérification.
 
-Aucun composant ne doit être déclaré compatible avant vérification de sa licence et de ses conditions d'utilisation.
+## 4. Ressources dont les droits ne sont pas établis
 
-Les mentions de copyright et les textes de licence exigés doivent être conservés.
+Une ressource dont l'origine ou les conditions d'utilisation restent inconnues doit être signalée comme non vérifiée.
 
-Les licences des tiers ne sont pas remplacées par la licence générale du projet.
+Ne pas la déclarer libre de droits, sous licence MIT ou sous licence propriétaire sans preuve suffisante.
 
-Les éventuelles restrictions commerciales, obligations de redistribution du code source et conditions d'attribution doivent être examinées avant utilisation.
+Avant toute nouvelle publication ou réutilisation, rechercher une licence explicite ou remplacer la ressource par un élément dont les conditions d'utilisation sont établies.
 
-## 5. Mise à jour
+## 5. Mises à jour
 
-Le registre doit être actualisé lors de l'ajout, du remplacement ou de la mise à jour d'un composant.
+Cet inventaire doit être actualisé à chaque ajout, suppression ou remplacement d'une ressource tierce.
 
-**© 2026 — JJCK Services Numériques.**
+Dernière révision du document : 23 octobre 2026.
