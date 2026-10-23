@@ -21,7 +21,7 @@ Source :S'ouvre dans une nouvelle fenêtre
 Évolution des régimes fonciers et des périmètres de colonisation en Algérie. Source : OpenEdition Journals / Les archives vivantes des conservations foncières en Algérie 
 Date :
 Licence :
-URL de la source :2555.html
+URL de la source :https://journals.openedition.org/anneemaghreb/2555.html
 
 ## Image 03 — Simandou
 Sujet : site minier, voie ferrée ou port.
