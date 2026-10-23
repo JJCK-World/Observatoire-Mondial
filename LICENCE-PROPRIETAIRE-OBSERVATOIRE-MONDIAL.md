@@ -1,114 +1,50 @@
-# LICENCE PROPRIÉTAIRE — OBSERVATOIRE MONDIAL
+# LICENCE DES ÉLÉMENTS PROPRIÉTAIRES — OBSERVATOIRE MONDIAL
 
-**Version 1.0 — 23 octobre 2026**
+© 2026 Observatoire Mondial. Tous droits réservés pour les éléments concernés.
 
-**Projet :** Observatoire Mondial  
-**Éditeur :** JJCK — Observatoire Mondial  
-**Site officiel :** https://jjck-world.github.io/Observatoire-Mondial/
+## 1. Objet
 
-## ARTICLE 1 — OBJET
+Le présent document précise les conditions applicables aux éléments propriétaires d’Observatoire Mondial qui ne sont pas expressément placés sous une licence libre ou sous une autre licence autorisant leur réutilisation.
 
-La présente licence définit les conditions d'utilisation des contenus éditoriaux, des documents originaux, des éléments graphiques et des autres créations protégées publiés par Observatoire Mondial, sous réserve des droits appartenant à des tiers.
+Il complète les fichiers LICENSE, COPYRIGHT.md et EDITORIAL-LICENSE.md.
 
-Elle vise à protéger le travail éditorial, la propriété intellectuelle et l'identité du projet, tout en permettant au public de consulter les publications accessibles sur le site.
+## 2. Éléments concernés
 
-## ARTICLE 2 — PROPRIÉTÉ INTELLECTUELLE
+Sous réserve des droits de tiers et du droit applicable, les éléments concernés peuvent notamment comprendre :
 
-Les créations originales appartenant à Observatoire Mondial restent la propriété de leurs titulaires respectifs.
+- la dénomination « Observatoire Mondial » ;
+- l'identité éditoriale et les signes distinctifs propres au projet ;
+- les éléments originaux de présentation et de communication qui ne sont pas couverts par une autre licence ;
+- les éléments propriétaires expressément identifiés comme tels dans le dépôt ou sur le site.
 
-Selon les droits effectivement détenus, cette protection peut concerner notamment :
+Les droits sur une marque, un logo ou un autre signe distinctif dépendent notamment de leur titularité et de leur protection effective. Le présent document ne constitue pas, à lui seul, une preuve d'enregistrement ou de propriété.
 
-- les articles, enquêtes et analyses originaux ;
-- les dossiers documentaires et les synthèses originales ;
-- les textes de présentation et les publications éditoriales ;
-- les illustrations et créations graphiques originales ;
-- la structure éditoriale et l'organisation originale des dossiers ;
-- les éléments graphiques et visuels créés spécifiquement pour le projet.
+## 3. Éléments exclus
 
-Les droits portant sur les œuvres de tiers restent la propriété de leurs auteurs ou titulaires respectifs.
+Cette licence ne remplace pas et ne restreint pas :
 
-La mention d'un auteur, d'une source ou d'un titulaire de droits ne transfère aucun droit de propriété à Observatoire Mondial.
+- la licence MIT applicable au code expressément couvert par le fichier LICENSE ;
+- la licence éditoriale applicable aux contenus décrits dans EDITORIAL-LICENSE.md ;
+- les licences et autorisations propres aux ressources tierces ;
+- les droits que la loi accorde aux utilisateurs et qui ne peuvent être exclus.
 
-## ARTICLE 3 — CONSULTATION DU SITE
+## 4. Utilisations nécessitant une autorisation
 
-La consultation des pages publiques du site est autorisée.
+Sauf autorisation du titulaire des droits ou exception légale applicable, aucune permission générale n'est accordée par ce document pour :
 
-Cette consultation ne constitue pas une autorisation générale de reproduire, republier, commercialiser ou modifier les contenus protégés.
+- présenter un tiers comme partenaire officiel d'Observatoire Mondial ;
+- utiliser son identité de manière à laisser croire à une approbation ou à une affiliation inexistante ;
+- exploiter commercialement un élément propriétaire non couvert par une licence autorisant cette exploitation ;
+- reproduire un élément protégé en dehors des usages permis par la loi.
 
-Les droits éventuellement accordés par la loi, notamment les exceptions applicables au droit d'auteur, restent réservés.
+## 5. Demande d'autorisation
 
-## ARTICLE 4 — REPRODUCTION ET REDISTRIBUTION
+Toute demande doit identifier précisément l'élément concerné, l'usage envisagé, le support, la durée et, le cas échéant, le caractère commercial du projet.
 
-Sauf autorisation légale applicable ou autorisation écrite préalable du titulaire des droits, il est interdit de :
+Les coordonnées officielles publiées sur le site peuvent être utilisées pour adresser cette demande.
 
-- reproduire intégralement un article ou une enquête ;
-- republier un dossier éditorial sur un autre site ou une autre plateforme ;
-- constituer une copie substantielle du fonds éditorial ;
-- vendre ou commercialiser des reproductions des contenus protégés ;
-- présenter une publication originale d'Observatoire Mondial comme une création personnelle ;
-- supprimer ou falsifier les mentions de droits d'auteur ;
-- exploiter commercialement une création graphique protégée sans autorisation.
+## 6. Interprétation
 
-Les courtes citations peuvent être utilisées dans les limites prévues par la législation applicable, notamment lorsque les conditions de l'exception de courte citation sont réunies.
+Le présent document doit être interprété conformément au droit applicable. Il ne transfère pas la propriété des éléments concernés et ne modifie pas rétroactivement les autorisations déjà accordées.
 
-Lorsque la loi l'exige, la source et le nom de l'auteur doivent être indiqués.
-
-## ARTICLE 5 — MODIFICATION ET ADAPTATION
-
-Aucune autorisation générale de modifier, traduire, adapter ou transformer les contenus protégés n'est accordée par la présente licence.
-
-Les autorisations particulières restent possibles avec l'accord du titulaire des droits, sous réserve des droits moraux et des droits de tiers.
-
-## ARTICLE 6 — PHOTOGRAPHIES, ILLUSTRATIONS ET CONTENUS EXTERNES
-
-Les photographies, cartes, vidéos, documents, citations et illustrations provenant de tiers sont soumis à leurs licences et conditions d'utilisation respectives.
-
-La présente licence ne remplace pas ces conditions et ne permet pas à Observatoire Mondial d'accorder des droits qu'il ne possède pas.
-
-Les contenus relevant du domaine public ou bénéficiant d'une licence autorisant certains usages restent soumis à leur régime juridique propre.
-
-## ARTICLE 7 — NOM ET IDENTITÉ DU PROJET
-
-Le nom « Observatoire Mondial », les logos et les éléments distinctifs du projet ne peuvent pas être utilisés d'une manière susceptible de faire croire à une affiliation, une validation ou une publication officielle inexistante.
-
-La présente clause s'applique dans les limites des droits effectivement détenus et des règles légales applicables.
-
-## ARTICLE 8 — CODE INFORMATIQUE ET LICENCES DISTINCTES
-
-Le code informatique du site peut être régi par une licence distincte, notamment la licence MIT mentionnée dans le fichier LICENSE, si cette licence y est effectivement applicable.
-
-La licence du code ne confère pas automatiquement de droits supplémentaires sur les articles, photographies, illustrations, logos ou autres contenus éditoriaux.
-
-En cas de licences distinctes, chaque catégorie de contenu est soumise à la licence qui lui est applicable.
-
-## ARTICLE 9 — AUTORISATIONS PARTICULIÈRES
-
-Toute demande de reproduction ou d'exploitation dépassant les autorisations prévues par la loi peut être adressée au responsable éditorial d'Observatoire Mondial.
-
-Toute autorisation doit préciser, si nécessaire, les contenus concernés, les usages permis, la durée, le territoire et les conditions de publication.
-
-Aucune autorisation ne peut porter atteinte aux droits de tiers.
-
-## ARTICLE 10 — RESPECT DE LA LÉGISLATION
-
-La présente licence s'applique sous réserve du droit applicable, notamment des dispositions relatives au droit d'auteur, aux droits moraux, aux exceptions légales et aux droits des tiers.
-
-Aucune disposition de cette licence n'a pour objet de supprimer un droit qui ne peut légalement être écarté.
-
-## ARTICLE 11 — ABSENCE DE GARANTIE ÉDITORIALE ABSOLUE
-
-Les publications d'Observatoire Mondial sont réalisées selon une démarche éditoriale visant la rigueur, la vérification des sources et la distinction entre faits établis, déclarations, analyses et informations non confirmées.
-
-Cette démarche ne constitue pas une garantie d'absence absolue d'erreur.
-
-Les éventuelles limitations de responsabilité demeurent soumises aux dispositions légales applicables.
-
-## ARTICLE 12 — ENTRÉE EN VIGUEUR
-
-La présente version constitue un projet de licence destiné à encadrer les contenus protégés d'Observatoire Mondial.
-
-Elle ne modifie pas rétroactivement les licences ou autorisations déjà accordées par les titulaires des droits.
-
-**© 2026 — Observatoire Mondial. Tous droits réservés pour les créations originales dont les droits sont effectivement détenus par leurs titulaires.**
-
-Cette licence est un texte personnalisé. Elle n'est ni la GNU General Public License ni une licence officielle approuvée par la Free Software Foundation.
+Dernière révision : 23 octobre 2026.
