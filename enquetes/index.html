@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Les enquêtes documentées d'Observatoire Mondial : faits, sources, vérifications et analyses.">
+  <meta name="author" content="Observatoire Mondial">
+  <meta name="theme-color" content="#07111f">
+  <title>Enquêtes | Observatoire Mondial</title>
+  <link rel="canonical" href="https://jjck-world.github.io/Observatoire-Mondial/enquetes/">
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --fond: #07111f;
+      --panneau: #101d30;
+      --texte: #edf2f8;
+      --secondaire: #b7c3d3;
+      --or: #d8bd78;
+      --bordure: #2c3d54;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--fond);
+      color: var(--texte);
+      font-family: system-ui, sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: var(--or); }
+
+    .entete, main, .pied {
+      width: min(1100px, 92%);
+      margin-inline: auto;
+    }
+
+    .entete {
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--bordure);
+    }
+
+    .marque {
+      color: var(--texte);
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: .1em;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: .7rem;
+    }
+
+    .hero { padding: 4rem 0 2rem; }
+
+    .surtitre {
+      color: var(--or);
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: .8rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 6vw, 4.2rem);
+      line-height: 1.1;
+      margin: .5rem 0 1rem;
+    }
+
+    .intro {
+      max-width: 760px;
+      color: var(--secondaire);
+    }
+
+    .dossier {
+      background: var(--panneau);
+      border: 1px solid var(--bordure);
+      border-radius: 16px;
+      padding: clamp(1.2rem, 4vw, 2rem);
+      margin: 1.5rem 0;
+    }
+
+    .dossier h2 { line-height: 1.3; }
+
+    .meta {
+      color: var(--secondaire);
+      font-size: .9rem;
+    }
+
+    .lien-dossier {
+      display: inline-block;
+      margin-top: .5rem;
+      padding: .7rem 1rem;
+      background: var(--or);
+      color: #07111f;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .note {
+      border-left: 3px solid var(--or);
+      padding: 1rem;
+      background: rgba(216, 189, 120, .08);
+    }
+
+    .pied {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--bordure);
+      color: var(--secondaire);
+    }
+  </style>
+</head>
+
+<body>
+<header class="entete">
+  <a class="marque" href="../index.html">OBSERVATOIRE MONDIAL</a>
+  <nav aria-label="Navigation principale">
+    <a href="../index.html">Accueil</a>
+    <a href="../articles/index.html">Articles</a>
+    <a href="../analyses/index.html">Analyses</a>
+    <a href="./index.html" aria-current="page">Enquêtes</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="surtitre">Sources · Documents · Vérifications</p>
+    <h1>Enquêtes d'Observatoire Mondial</h1>
+    <p class="intro">
+      Des dossiers documentés pour comprendre les événements, examiner
+      les décisions publiques et économiques, confronter les déclarations
+      aux documents disponibles et signaler les informations qui restent
+      à vérifier.
+    </p>
+  </section>
+
+  <article class="dossier">
+    <p class="meta">DOSSIER 01 · PROPRIÉTÉ · HISTOIRE · RESSOURCES</p>
+    <h2>À qui appartient réellement la Terre ?</h2>
+    <p>
+      Enquête sur la propriété, le pouvoir et l'appropriation des richesses
+      humaines : héritages coloniaux, droits fonciers, exploitation minière,
+      contrôle des infrastructures et partage des revenus.
+    </p>
+    <p class="meta">
+      Dossier évolutif · Version initiale du 23 octobre 2026
+    </p>
+    <a class="lien-dossier"
+       href="2026/10/23/appropriation-richesses/index.html">
+      Consulter l'enquête
+    </a>
+  </article>
+
+  <p class="note">
+    <strong>Engagement éditorial :</strong> les faits, les déclarations,
+    les analyses et les hypothèses doivent être distingués. Les projections
+    financières ne sont pas présentées comme des recettes déjà encaissées.
+  </p>
+</main>
+
+<footer class="pied">
+  <p>Observer le monde. Comprendre les enjeux. Anticiper les transformations.</p>
+  <p>Informer avec rigueur, décrypter sans polémique.</p>
+</footer>
+
+<script src="../assets/js/lectorat.js" defer></script>
+</body>
+</html>
