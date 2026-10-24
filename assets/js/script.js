@@ -1,80 +1,145 @@
-/*
- * OBSERVATOIRE MONDIAL
- * Navigation principale et menu mobile.
- */
+'use strict';
 
-"use strict";
+(() => {
+    const initNavigation = () => {
+        const menuButton = document.querySelector('.menu-toggle');
+        const navigation = document.getElementById('main-navigation');
 
-document.addEventListener("DOMContentLoaded", () => {
-    const menuButton = document.querySelector(".menu-toggle");
-    const navigation = document.querySelector("#main-navigation");
-
-    if (!menuButton || !navigation) {
-        return;
-    }
-
-    const mobileQuery = window.matchMedia("(max-width: 900px)");
-
-    function openMenu() {
-        navigation.classList.add("is-open");
-        menuButton.setAttribute("aria-expanded", "true");
-        menuButton.setAttribute("aria-label", "Fermer le menu");
-    }
-
-    function closeMenu() {
-        navigation.classList.remove("is-open");
-        menuButton.setAttribute("aria-expanded", "false");
-        menuButton.setAttribute("aria-label", "Ouvrir le menu");
-    }
-
-    function toggleMenu() {
-        const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-
-        if (isOpen) {
-            closeMenu();
-        } else {
-            openMenu();
+        if (!menuButton || !navigation) {
+            console.warn(
+                'Observatoire Mondial : bouton ou navigation introuvable.'
+            );
+            return;
         }
-    }
 
-    menuButton.addEventListener("click", toggleMenu);
+        const mobileQuery = window.matchMedia('(max-width: 850px)');
 
-    navigation.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-            closeMenu();
+        const setMenuState = (isOpen) => {
+            menuButton.setAttribute('aria-expanded', String(isOpen));
+            menuButton.setAttribute(
+                'aria-label',
+                isOpen ? 'Fermer le menu' : 'Ouvrir le menu'
+            );
+
+            navigation.classList.toggle('is-open', isOpen);
+        };
+
+        const closeMenu = () => setMenuState(false);
+
+        menuButton.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            const isExpanded =
+                menuButton.getAttribute('aria-expanded') === 'true';
+
+            setMenuState(!isExpanded);
         });
-    });
 
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
+        navigation.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                if (mobileQuery.matches) {
+                    closeMenu();
+                }
+            });
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeMenu();
+                menuButton.focus();
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            if (
+                mobileQuery.matches &&
+                !navigation.contains(event.target) &&
+                !menuButton.contains(event.target)
+            ) {
+                closeMenu();
+            }
+        });
+
+        const handleViewportChange = () => {
             closeMenu();
-            menuButton.focus();
+        };
+
+        if (typeof mobileQuery.addEventListener === 'function') {
+            mobileQuery.addEventListener('change', handleViewportChange);
+        } else {
+            mobileQuery.addListener(handleViewportChange);
         }
-    });
 
-    document.addEventListener("click", (event) => {
-        const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+        closeMenu();
+    };
 
-        if (
-            isOpen &&
-            !navigation.contains(event.target) &&
-            !menuButton.contains(event.target)
-        ) {
-            closeMenu();
-        }
-    });
+    const initAnchorNavigation = () => {
+        document.querySelectorAll('a[href^="#"]').forEach((link) => {
+            link.addEventListener('click', (event) => {
+                const targetId = link.getAttribute('href');
 
-    function handleViewportChange(event) {
-        if (!event.matches) {
-            closeMenu();
-        }
-    }
+                if (!targetId || targetId === '#') {
+                    return;
+                }
 
-    if (typeof mobileQuery.addEventListener === "function") {
-        mobileQuery.addEventListener("change", handleViewportChange);
+                let target;
+
+                try {
+                    target = document.querySelector(targetId);
+                } catch {
+                    return;
+                }
+
+                if (!target) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: window.matchMedia(
+                        '(prefers-reduced-motion: reduce)'
+                    ).matches ? 'auto' : 'smooth',
+                    block: 'start'
+                });
+
+                if (!target.hasAttribute('tabindex')) {
+                    target.setAttribute('tabindex', '-1');
+                }
+
+                target.focus({ preventScroll: true });
+
+                if (window.location.hash !== targetId) {
+                    history.replaceState(null, '', targetId);
+                }
+            });
+        });
+    };
+
+    const initExternalLinks = () => {
+        document.querySelectorAll('a[target="_blank"]').forEach((link) => {
+            const relValues = new Set(
+                (link.getAttribute('rel') || '')
+                    .split(/\s+/)
+                    .filter(Boolean)
+            );
+
+            relValues.add('noopener');
+            relValues.add('noreferrer');
+
+            link.setAttribute('rel', [...relValues].join(' '));
+        });
+    };
+
+    const init = () => {
+        initNavigation();
+        initAnchorNavigation();
+        initExternalLinks();
+    };
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init, { once: true });
     } else {
-        mobileQuery.addListener(handleViewportChange);
+        init();
     }
-
-    closeMenu();
-});
+})();
