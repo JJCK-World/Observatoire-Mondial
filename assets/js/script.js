@@ -1,140 +1,84 @@
 'use strict';
 
 (() => {
-    const initNavigation = () => {
-        const menuButton = document.querySelector('.menu-toggle');
+    const init = () => {
+        const button = document.querySelector('.menu-toggle');
         const navigation = document.getElementById('main-navigation');
 
-        if (!menuButton || !navigation) {
-            console.warn(
-                'Observatoire Mondial : bouton ou navigation introuvable.'
-            );
-            return;
-        }
+        // Navigation mobile
+        if (button && navigation) {
+            const mobile = window.matchMedia('(max-width: 1000px)');
 
-        const mobileQuery = window.matchMedia('(max-width: 850px)');
+            const setMenu = (open) => {
+                button.setAttribute('aria-expanded', String(open));
+                button.setAttribute(
+                    'aria-label',
+                    open ? 'Fermer le menu' : 'Ouvrir le menu'
+                );
+                navigation.classList.toggle('is-open', open);
+            };
 
-        const setMenuState = (isOpen) => {
-            menuButton.setAttribute('aria-expanded', String(isOpen));
-            menuButton.setAttribute(
-                'aria-label',
-                isOpen ? 'Fermer le menu' : 'Ouvrir le menu'
-            );
+            button.addEventListener('click', () => {
+                setMenu(button.getAttribute('aria-expanded') !== 'true');
+            });
 
-            navigation.classList.toggle('is-open', isOpen);
-        };
+            navigation.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', () => {
+                    if (mobile.matches) setMenu(false);
+                });
+            });
 
-        const closeMenu = () => setMenuState(false);
-
-        menuButton.addEventListener('click', (event) => {
-            event.preventDefault();
-
-            const isExpanded =
-                menuButton.getAttribute('aria-expanded') === 'true';
-
-            setMenuState(!isExpanded);
-        });
-
-        navigation.querySelectorAll('a').forEach((link) => {
-            link.addEventListener('click', () => {
-                if (mobileQuery.matches) {
-                    closeMenu();
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape') {
+                    setMenu(false);
+                    button.focus();
                 }
             });
-        });
 
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape') {
-                closeMenu();
-                menuButton.focus();
-            }
-        });
+            document.addEventListener('click', (event) => {
+                if (
+                    mobile.matches &&
+                    !navigation.contains(event.target) &&
+                    !button.contains(event.target)
+                ) {
+                    setMenu(false);
+                }
+            });
 
-        document.addEventListener('click', (event) => {
-            if (
-                mobileQuery.matches &&
-                !navigation.contains(event.target) &&
-                !menuButton.contains(event.target)
-            ) {
-                closeMenu();
-            }
-        });
-
-        const handleViewportChange = () => {
-            closeMenu();
-        };
-
-        if (typeof mobileQuery.addEventListener === 'function') {
-            mobileQuery.addEventListener('change', handleViewportChange);
-        } else {
-            mobileQuery.addListener(handleViewportChange);
+            mobile.addEventListener?.('change', () => setMenu(false));
+            setMenu(false);
         }
 
-        closeMenu();
-    };
+        // Année automatique dans le pied de page
+        const year = document.getElementById('current-year');
+        if (year) year.textContent = String(new Date().getFullYear());
 
-    const initAnchorNavigation = () => {
+        // Défilement doux vers les ancres internes
         document.querySelectorAll('a[href^="#"]').forEach((link) => {
             link.addEventListener('click', (event) => {
-                const targetId = link.getAttribute('href');
+                const id = link.getAttribute('href');
+                if (!id || id === '#') return;
 
-                if (!targetId || targetId === '#') {
-                    return;
-                }
-
-                let target;
-
-                try {
-                    target = document.querySelector(targetId);
-                } catch {
-                    return;
-                }
-
-                if (!target) {
-                    return;
-                }
+                const target = document.querySelector(id);
+                if (!target) return;
 
                 event.preventDefault();
-
                 target.scrollIntoView({
-                    behavior: window.matchMedia(
-                        '(prefers-reduced-motion: reduce)'
-                    ).matches ? 'auto' : 'smooth',
+                    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+                        ? 'auto'
+                        : 'smooth',
                     block: 'start'
                 });
-
-                if (!target.hasAttribute('tabindex')) {
-                    target.setAttribute('tabindex', '-1');
-                }
-
-                target.focus({ preventScroll: true });
-
-                if (window.location.hash !== targetId) {
-                    history.replaceState(null, '', targetId);
-                }
             });
         });
-    };
 
-    const initExternalLinks = () => {
+        // Sécurité des liens externes ouverts dans un nouvel onglet
         document.querySelectorAll('a[target="_blank"]').forEach((link) => {
-            const relValues = new Set(
-                (link.getAttribute('rel') || '')
-                    .split(/\s+/)
-                    .filter(Boolean)
-            );
-
-            relValues.add('noopener');
-            relValues.add('noreferrer');
-
-            link.setAttribute('rel', [...relValues].join(' '));
+            const rel = new Set((link.getAttribute('rel') || '').split(/\s+/).filter(Boolean));
+            rel.add('noopener');
+            rel.add('noreferrer');
+            link.setAttribute('rel', [...rel].join(' '));
         });
-    };
-
-    const init = () => {
-        initNavigation();
-        initAnchorNavigation();
-        initExternalLinks();
     };
 
     if (document.readyState === 'loading') {
