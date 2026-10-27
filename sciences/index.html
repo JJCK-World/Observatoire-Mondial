@@ -1,191 +1,223 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Science et technologie — Observatoire Mondial</title>
+    <title>Sciences et technologies — Observatoire Mondial</title>
 
-  <meta
-    name="description"
-    content="Découvrez les analyses d'Observatoire Mondial sur les sciences, les innovations technologiques et leurs conséquences économiques et internationales."
-  >
+    <meta
+        name="description"
+        content="Découvrez les articles d'Observatoire Mondial sur les sciences, l'intelligence artificielle, les semi-conducteurs, les innovations technologiques et leurs conséquences économiques et internationales."
+    >
 
-  <meta name="author" content="Observatoire Mondial">
-  <meta name="theme-color" content="#02050b">
+    <meta name="author" content="Observatoire Mondial">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#02050b">
 
-  <link rel="stylesheet" href="../assets/css/style.css">
-
-  <style>
-    .science-page {
-      width: min(1100px, 92%);
-      margin: 0 auto;
-      padding: 35px 0 60px;
-    }
-
-    .science-page-hero {
-      padding: 35px;
-      border: 1px solid rgba(84, 217, 255, 0.25);
-      border-radius: 20px;
-      background:
-        radial-gradient(circle at 85% 15%, rgba(0, 130, 255, 0.22), transparent 40%),
-        linear-gradient(135deg, #09182a, #02050b);
-    }
-
-    .science-page h1 {
-      margin: 15px 0;
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      line-height: 1.15;
-    }
-
-    .science-page p {
-      line-height: 1.75;
-    }
-
-    .science-page-label {
-      color: #54d9ff;
-      font-size: 0.8rem;
-      font-weight: bold;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-
-    .science-page-card {
-      display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-      gap: 24px;
-      margin-top: 30px;
-      padding: 22px;
-      border: 1px solid rgba(84, 217, 255, 0.2);
-      border-radius: 18px;
-      background: #081321;
-    }
-
-    .science-page-card img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      max-height: 330px;
-      min-height: 200px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-
-    .science-page-card h2 {
-      margin-top: 0;
-      line-height: 1.35;
-    }
-
-    .science-page-meta {
-      color: #a9b7c9;
-      font-size: 0.9rem;
-    }
-
-    .science-page-link {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 11px 16px;
-      border: 1px solid rgba(84, 217, 255, 0.35);
-      border-radius: 9px;
-      color: #54d9ff;
-      font-weight: bold;
-    }
-
-    .science-page-link:hover {
-      border-color: #e4b44c;
-      color: #e4b44c;
-    }
-
-    .science-page-footer {
-      margin-top: 40px;
-      padding-top: 22px;
-      border-top: 1px solid rgba(84, 217, 255, 0.2);
-    }
-
-    @media (max-width: 700px) {
-      .science-page-hero {
-        padding: 23px;
-      }
-
-      .science-page-card {
-        grid-template-columns: 1fr;
-        padding: 16px;
-      }
-    }
-  </style>
+    <link rel="canonical" href="https://jjck-world.github.io/Observatoire-Mondial/sciences/">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
 
-  <main class="science-page">
+<header class="site-header">
+    <div class="container">
 
-    <p>
-      <a href="../index.html">← Retour à l'accueil du site</a>
-    </p>
+        <a class="brand" href="../index.html" aria-label="Accueil Observatoire Mondial">
+            <span class="brand-title">OBSERVATOIRE MONDIAL</span>
+            <span class="brand-subtitle">Observer. Comprendre. Anticiper.</span>
+        </a>
 
-    <header class="science-page-hero">
-      <span class="science-page-label">Observatoire Mondial · Rubrique</span>
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
 
-      <h1>Science et technologie</h1>
+        <nav class="main-nav" aria-label="Navigation principale">
+            <a href="../index.html">Accueil</a>
+            <a href="../articles/index.html">Articles</a>
+            <a href="../analyses/index.html">Analyses</a>
+            <a href="../monde/index.html">Monde</a>
+            <a href="../geopolitique/index.html">Géopolitique</a>
+            <a href="../economie/index.html">Économie</a>
+            <a href="index.html" aria-current="page">Sciences</a>
+            <a href="../reunion/index.html">La Réunion</a>
+            <a href="../organismes-mondiaux/index.html">Organismes mondiaux</a>
+            <a href="../services-numeriques/index.html">Services numériques</a>
+        </nav>
 
-      <p>
-        Comprendre les découvertes scientifiques, les innovations
-        technologiques et leurs conséquences sur les sociétés,
-        l'économie, l'environnement et les relations internationales.
-      </p>
+    </div>
+</header>
 
-      <p>
-        Notre approche distingue les faits documentés, les analyses
-        et les évolutions qui restent incertaines.
-      </p>
-    </header>
+<main class="container">
 
-    <section aria-labelledby="articles-science-title">
-      <h2 id="articles-science-title">Derniers articles</h2>
+    <nav aria-label="Fil d’Ariane" class="breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span aria-hidden="true"> / </span>
+        <span aria-current="page">Sciences et technologies</span>
+    </nav>
 
-      <article class="science-page-card">
-        <div>
-          <img
-            src="image/couverture-science.png"
-            alt="Illustration éditoriale sur les innovations scientifiques et technologiques"
-            loading="lazy"
-          >
+    <section class="hero">
+        <p class="article-category">OBSERVATOIRE MONDIAL · SCIENCES</p>
 
-          <p class="science-page-meta">
-            Article 01 · 9 octobre 2026
-          </p>
-        </div>
+        <h1>Sciences et technologies</h1>
 
-        <div>
-          <h2>
-            La transformation technologique du monde :
-            progrès, puissance et conséquences
-          </h2>
+        <p class="article-lead">
+            Comprendre les découvertes scientifiques, les innovations
+            technologiques et leurs conséquences sur les sociétés,
+            l'économie, l'environnement et les relations internationales.
+        </p>
 
-          <p>
-            Intelligence artificielle, robotique, biotechnologies,
-            énergie et technologies spatiales : une analyse des
-            transformations en cours, de leurs effets économiques
-            et des enjeux stratégiques mondiaux.
-          </p>
-
-          <a
-            class="science-page-link"
-            href="article-01/09/10/2026/index.html"
-          >
-            Lire l'article →
-          </a>
-        </div>
-      </article>
+        <p>
+            Notre approche distingue les faits documentés, les analyses
+            et les évolutions qui restent incertaines.
+        </p>
     </section>
 
-    <footer class="science-page-footer">
-      <p><strong>OBSERVATOIRE MONDIAL</strong></p>
-      <p>Observer le monde. Comprendre les enjeux. Anticiper les transformations.</p>
-      <p><a href="../services-numeriques/index.html">Services numériques</a></p>
+    <section aria-labelledby="articles-science-title">
+
+        <h2 id="articles-science-title">Derniers articles</h2>
+
+        <!-- ARTICLE 02 : ACTUALITÉS TECHNOLOGIQUES DU 27 OCTOBRE 2026 -->
+
+        <article class="card">
+
+            <p class="article-category">
+                SCIENCES · TECHNOLOGIE · ÉCONOMIE NUMÉRIQUE
+            </p>
+
+            <h3>
+                L’IA, les puces électroniques et les nouveaux rapports
+                de force technologiques
+            </h3>
+
+            <p>
+                Intelligence artificielle, investissements mondiaux,
+                semi-conducteurs, marchés asiatiques, cybersécurité et
+                énergie : une analyse des transformations techniques,
+                économiques et industrielles qui façonnent la compétition
+                technologique mondiale.
+            </p>
+
+            <p>
+                <small>
+                    Publication : 27 octobre 2026
+                </small>
+            </p>
+
+            <p>
+                <a
+                    class="button"
+                    href="article-02/27/10/2026/index.html"
+                    aria-label="Lire l'article sur l'intelligence artificielle et les semi-conducteurs"
+                >
+                    Lire l'article →
+                </a>
+            </p>
+
+        </article>
+
+        <!-- ARTICLE 01 : TRANSFORMATION TECHNOLOGIQUE DU MONDE -->
+
+        <article class="card">
+
+            <p class="article-category">
+                SCIENCES · INNOVATION · TECHNOLOGIES
+            </p>
+
+            <h3>
+                La transformation technologique du monde :
+                progrès, puissance et conséquences
+            </h3>
+
+            <p>
+                Intelligence artificielle, robotique, biotechnologies,
+                énergie et technologies spatiales : une analyse des
+                transformations en cours, de leurs effets économiques
+                et des enjeux stratégiques mondiaux.
+            </p>
+
+            <p>
+                <small>
+                    Publication : 9 octobre 2026
+                </small>
+            </p>
+
+            <p>
+                <a
+                    class="button"
+                    href="article-01/09/10/2026/index.html"
+                >
+                    Lire l'article →
+                </a>
+            </p>
+
+        </article>
+
+    </section>
+
+    <section>
+        <h2>Notre approche éditoriale</h2>
+
+        <div class="cards-grid">
+
+            <article class="card">
+                <h3>Comprendre les innovations</h3>
+                <p>
+                    Expliquer les technologies, leur fonctionnement,
+                    leurs usages et les limites des performances annoncées.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Examiner les enjeux mondiaux</h3>
+                <p>
+                    Mettre en perspective les conséquences économiques,
+                    industrielles, environnementales et internationales
+                    des transformations scientifiques.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Identifier les sources</h3>
+                <p>
+                    Distinguer les informations attribuées à leurs sources,
+                    les faits vérifiables, les déclarations et les analyses
+                    éditoriales.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+    <footer class="article-footer">
+        <p><strong>OBSERVATOIRE MONDIAL</strong></p>
+
+        <p>
+            Observer le monde. Comprendre les enjeux.
+            Anticiper les transformations.
+        </p>
+
+        <p>
+            Informer avec rigueur, décrypter sans polémique.
+        </p>
+
+        <p>
+            <a href="../index.html">Retour à l'accueil</a>
+            <span aria-hidden="true"> · </span>
+            <a href="../articles/index.html">Toutes les publications</a>
+        </p>
     </footer>
 
-  </main>
+</main>
+
+<script src="../assets/js/script.js"></script>
 
 </body>
 </html>
