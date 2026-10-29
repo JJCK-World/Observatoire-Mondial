@@ -63,4 +63,20 @@
         <priority>0.8</priority>
     </url>
 
+    <!-- Dossier de saison sportive 2026-2027 -->
+    <url>
+        <loc>https://jjck-world.github.io/Observatoire-Mondial/sport/saisons/2026-2027/</loc>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Article : calendrier sportif 2027 -->
+    <url>
+        <loc>https://jjck-world.github.io/Observatoire-Mondial/sport/2026/10/29/calendrier-sportif-2027/</loc>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
 </urlset>
