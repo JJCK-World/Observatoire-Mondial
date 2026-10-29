@@ -79,4 +79,27 @@
         <priority>0.8</priority>
     </url>
 
+    <!-- Rubrique Annonces & Développements -->
+    <url>
+        <loc>https://jjck-world.github.io/Observatoire-Mondial/annonces-developpements/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Annonce officielle du 29 octobre 2026 -->
+    <url>
+        <loc>https://jjck-world.github.io/Observatoire-Mondial/annonces-developpements/2026/10/29/annonce-officielle-developpement/</loc>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Présentation officielle de l'écosystème technologique JJCK -->
+    <url>
+        <loc>https://jjck-world.github.io/Observatoire-Mondial/annonces-developpements/2026/10/30/ecosysteme-technologique-jjck/</loc>
+        <lastmod>2026-10-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
 </urlset>
