@@ -1,0 +1,16 @@
+{
+  "source": "/data/data/com.termux/files/home/JJCK-Mecha-Arena-arene-perspective-personnages/public/assets",
+  "fighters": [
+    {
+      "name": "sentinelle-x1",
+      "source": "fighters/sentinelle-x1.glb",
+      "objects": 99
+    },
+    {
+      "name": "titan-r9",
+      "source": "fighters/titan-r9.glb",
+      "objects": 104
+    }
+  ],
+  "missing": []
+}

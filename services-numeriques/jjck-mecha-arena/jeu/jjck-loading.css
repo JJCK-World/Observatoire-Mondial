@@ -1,0 +1,30 @@
+/* JJCK: ecran de chargement 2D. N'affecte pas le jeu. */
+#jjck-loading{position:fixed;inset:0;z-index:2147483000;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(ellipse at 50% 42%,#123c65 0%,#071a35 53%,#030a19 100%);color:#eaf8ff;font-family:system-ui,Arial,sans-serif;isolation:isolate;transition:opacity .7s ease,visibility .7s}
+#jjck-loading.jjck-finish{opacity:0;visibility:hidden;pointer-events:none}
+#jjck-loading::before{content:"";position:absolute;inset:-60%;background:repeating-linear-gradient(90deg,transparent 0 84px,#2c91c71b 85px 86px),repeating-linear-gradient(0deg,transparent 0 84px,#2c91c71b 85px 86px);transform:perspective(600px) rotateX(65deg) translateY(20%);animation:jjck-grid 8s linear infinite}
+#jjck-loading::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 22%,#020813b5 100%);pointer-events:none}
+.jjck-splash-content{width:min(94vw,800px);position:relative;z-index:1;text-align:center}
+.jjck-splash-title{font-weight:900;font-size:clamp(25px,6vw,55px);letter-spacing:.085em;line-height:1.15;text-shadow:0 0 25px #00b7ffad,0 3px 3px #000;margin:0}
+.jjck-splash-sub{margin:10px 0 24px;color:#8adfff;font-weight:700;letter-spacing:.24em;font-size:clamp(11px,2.6vw,16px)}
+.jjck-splash-gallery{height:clamp(160px,39vh,360px);display:flex;justify-content:center;align-items:center;gap:clamp(5px,2vw,18px);overflow:hidden}
+.jjck-splash-card{height:83%;width:29%;max-width:200px;flex:none;position:relative;overflow:hidden;border:2px solid #37c5ff99;border-radius:16px;background:linear-gradient(160deg,#173d65,#07142b);box-shadow:0 0 24px #0099ff4b,inset 0 0 28px #1d9fe92e;animation:jjck-float 3.3s ease-in-out infinite;transform-origin:center}
+.jjck-splash-card:nth-child(2){height:100%;width:35%;animation-delay:-1.1s;box-shadow:0 0 35px #2bd4ff88}
+.jjck-splash-card:nth-child(3){animation-delay:-2.2s}
+.jjck-splash-card img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;filter:drop-shadow(0 0 8px #14b9ff55)}
+.jjck-splash-card .jjck-fallback{display:grid;place-items:center;height:100%;font-size:clamp(15px,3vw,25px);font-weight:900;color:#8de5ff;text-shadow:0 0 20px #00baff}
+.jjck-splash-card::after{content:"";position:absolute;inset:-150% -80%;background:linear-gradient(110deg,transparent 42%,#baf6ff33 50%,transparent 58%);transform:rotate(12deg);animation:jjck-shine 3.2s ease-in-out infinite}
+.jjck-splash-card:nth-child(2)::after{animation-delay:.7s}
+.jjck-splash-progress{height:7px;border-radius:20px;overflow:hidden;background:#244c6b;margin:26px auto 8px;width:min(80%,430px);border:1px solid #49c9ff88}
+.jjck-splash-bar{height:100%;width:0%;background:linear-gradient(90deg,#0574dd,#00dfff,#a3ffff);box-shadow:0 0 18px #16cfff;transition:width .14s linear}
+.jjck-splash-status{font-size:12px;letter-spacing:.15em;color:#9bcbe4}
+@keyframes jjck-float{0%,100%{transform:translateY(7px) scale(.98)}50%{transform:translateY(-8px) scale(1.025)}}
+@keyframes jjck-shine{0%,35%{transform:translateX(-120%) rotate(12deg)}70%,100%{transform:translateX(120%) rotate(12deg)}}
+@keyframes jjck-grid{from{background-position:0 0,0 0}to{background-position:86px 0,0 86px}}
+@media(prefers-reduced-motion:reduce){#jjck-loading *,#jjck-loading::before{animation:none!important;transition:none!important}}
+
+/* JJCK-CARTES-DECK-EXACTES */
+#jjck-loading .jjck-splash-gallery{height:clamp(205px,43vh,410px);align-items:center;gap:clamp(5px,1.6vw,14px)}
+#jjck-loading .jjck-splash-card{height:88%;width:30%;max-width:210px;border-radius:12px;border:2px solid #29c8ff;box-shadow:0 0 18px #12aaff66;overflow:hidden;background:#0c213e}
+#jjck-loading .jjck-splash-card:nth-child(2){height:100%;width:34%}
+#jjck-loading .jjck-splash-card img{display:block;width:100%;height:100%;object-fit:fill;object-position:center;filter:none}
+#jjck-loading .jjck-splash-card::after{pointer-events:none}

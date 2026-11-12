@@ -1,0 +1,60 @@
+/* JJCK splash: utilise uniquement les illustrations deja presentes dans le jeu. */
+(()=>{
+  'use strict';
+  const splash=document.getElementById('jjck-loading');
+  if(!splash)return;
+  const cards=[...splash.querySelectorAll('.jjck-splash-card')];
+  const bar=splash.querySelector('.jjck-splash-bar');
+  const status=splash.querySelector('.jjck-splash-status');
+  const app=document.getElementById('app');
+  const start=performance.now();
+  const minMs=2600,maxMs=6500;
+  let found=0,finished=false;
+  const valid=(img)=>{
+    const src=img.currentSrc||img.src||'';
+    if(!src||src.startsWith('data:image/svg'))return false;
+    const w=img.naturalWidth||img.width||0,h=img.naturalHeight||img.height||0;
+    return w>=85&&h>=105;
+  };
+  function collect(){
+    if(!app||finished)return;
+    const imgs=[...app.querySelectorAll('img')].filter(valid);
+    const unique=[];
+    for(const img of imgs){const src=img.currentSrc||img.src;if(!unique.some(x=>(x.currentSrc||x.src)===src))unique.push(img);}
+    if(!unique.length)return;
+    // Choix de trois illustrations originales du jeu, sans les modifier.
+    const chosen=unique.length>=3?[unique[0],unique[1],unique[2]]:unique;
+    chosen.forEach((img,i)=>{
+      const slot=cards[i];if(!slot)return;
+      const url=img.currentSrc||img.src;
+      if(slot.dataset.src===url)return;
+      slot.dataset.src=url;
+      slot.replaceChildren();
+      const clone=document.createElement('img');clone.src=url;clone.alt=img.alt||'Personnage JJCK';
+      slot.appendChild(clone);
+    });
+    found=chosen.length;
+  }
+  const observer=new MutationObserver(collect);
+  if(app)observer.observe(app,{subtree:true,childList:true,attributes:true,attributeFilter:['src']});
+  const imagesTimer=setInterval(collect,250);
+  function close(){
+    if(finished)return;
+    finished=true;clearInterval(imagesTimer);observer.disconnect();
+    bar.style.width='100%';status.textContent='COMBAT PRÊT';
+    splash.classList.add('jjck-finish');
+    setTimeout(()=>splash.remove(),800);
+  }
+  function tick(now){
+    if(finished)return;
+    const elapsed=now-start;
+    const ready=app&&app.children.length>0;
+    const progress=Math.min(95,Math.floor(elapsed/minMs*90));
+    bar.style.width=progress+'%';
+    if(elapsed>=minMs&&ready){close();return;}
+    if(elapsed>=maxMs){close();return;}
+    requestAnimationFrame(tick);
+  }
+  collect();requestAnimationFrame(tick);
+  window.addEventListener('pagehide',()=>{clearInterval(imagesTimer);observer.disconnect();},{once:true});
+})();

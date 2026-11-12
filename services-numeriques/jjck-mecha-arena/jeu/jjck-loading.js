@@ -1,0 +1,35 @@
+/* JJCK splash: utilise uniquement les illustrations deja presentes dans le jeu. */
+(()=>{
+  'use strict';
+  const splash=document.getElementById('jjck-loading');
+  if(!splash)return;
+  const cards=[...splash.querySelectorAll('.jjck-splash-card')];
+  const bar=splash.querySelector('.jjck-splash-bar');
+  const status=splash.querySelector('.jjck-splash-status');
+  const app=document.getElementById('app');
+  const start=performance.now();
+  const minMs=2600,maxMs=6500;
+  let found=0,finished=false;
+  // Les trois illustrations sont fixées dans index.html, jamais remplacées.
+  const observer={disconnect(){}};
+  const imagesTimer=null;
+  function close(){
+    if(finished)return;
+    finished=true;clearInterval(imagesTimer);observer.disconnect();
+    bar.style.width='100%';status.textContent='COMBAT PRÊT';
+    splash.classList.add('jjck-finish');
+    setTimeout(()=>splash.remove(),800);
+  }
+  function tick(now){
+    if(finished)return;
+    const elapsed=now-start;
+    const ready=app&&app.children.length>0;
+    const progress=Math.min(95,Math.floor(elapsed/minMs*90));
+    bar.style.width=progress+'%';
+    if(elapsed>=minMs&&ready){close();return;}
+    if(elapsed>=maxMs){close();return;}
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+  window.addEventListener('pagehide',()=>{clearInterval(imagesTimer);observer.disconnect();},{once:true});
+})();
